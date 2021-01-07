@@ -13,6 +13,7 @@ return array(
     'WPMedia\\Cloudflare\\' => array($baseDir . '/plugins/wp-rocket/inc/Addon/Cloudflare'),
     'WPGraphqlGutenberg\\' => array($baseDir . '/plugins/wp-graphql-gutenberg/src'),
     'WPGraphQL\\ACF\\' => array($baseDir . '/plugins/wp-graphql-acf/src'),
+    'WPGraphQLGravityForms\\' => array($baseDir . '/plugins/wp-graphql-gravity-forms/src'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),

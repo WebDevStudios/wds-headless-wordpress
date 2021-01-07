@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf5ef35c33677493ae22314b066192f69
+class ComposerStaticInit6b22ec883d85f78c122f046510370b60
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -31,6 +31,7 @@ class ComposerStaticInitf5ef35c33677493ae22314b066192f69
             'WPMedia\\Cloudflare\\' => 19,
             'WPGraphqlGutenberg\\' => 19,
             'WPGraphQL\\ACF\\' => 14,
+            'WPGraphQLGravityForms\\' => 22,
         ),
         'S' => 
         array (
@@ -98,6 +99,10 @@ class ComposerStaticInitf5ef35c33677493ae22314b066192f69
         'WPGraphQL\\ACF\\' => 
         array (
             0 => __DIR__ . '/../..' . '/plugins/wp-graphql-acf/src',
+        ),
+        'WPGraphQLGravityForms\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/plugins/wp-graphql-gravity-forms/src',
         ),
         'Symfony\\Component\\CssSelector\\' => 
         array (
@@ -281,10 +286,10 @@ class ComposerStaticInitf5ef35c33677493ae22314b066192f69
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf5ef35c33677493ae22314b066192f69::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf5ef35c33677493ae22314b066192f69::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf5ef35c33677493ae22314b066192f69::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf5ef35c33677493ae22314b066192f69::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6b22ec883d85f78c122f046510370b60::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6b22ec883d85f78c122f046510370b60::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6b22ec883d85f78c122f046510370b60::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6b22ec883d85f78c122f046510370b60::$classMap;
 
         }, null, ClassLoader::class);
     }

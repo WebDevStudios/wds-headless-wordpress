@@ -577,6 +577,44 @@
         ]
     },
     {
+        "name": "harness-software/wp-graphql-gravity-forms",
+        "version": "0.1.0",
+        "version_normalized": "0.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git",
+            "reference": "e93948d6807a59721024434fbebe189c513de2f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/e93948d6807a59721024434fbebe189c513de2f6",
+            "reference": "e93948d6807a59721024434fbebe189c513de2f6",
+            "shasum": ""
+        },
+        "time": "2019-08-19T16:12:25+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "WPGraphQLGravityForms\\": "src/"
+            }
+        },
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Kellen Mace",
+                "email": "kellen@harnessup.com"
+            }
+        ],
+        "description": "WPGraphQL for Gravity Forms",
+        "support": {
+            "source": "https://github.com/harness-software/wp-graphql-gravity-forms/tree/0.1.0",
+            "issues": "https://github.com/harness-software/wp-graphql-gravity-forms/issues"
+        }
+    },
+    {
         "name": "monolog/monolog",
         "version": "1.26.0",
         "version_normalized": "1.26.0.0",
