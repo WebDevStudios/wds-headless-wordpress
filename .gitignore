@@ -17,6 +17,7 @@ node_modules/
 
 # composer
 vendor/
+!plugins/wp-graphql-gravity-forms/vendor
 
 # wordpress
 uploads/
