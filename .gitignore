@@ -20,8 +20,6 @@ vendor/
 
 # wordpress
 uploads/
-plugins/
-!plugins/wordpress-seo/vendor/
 
 # theme
 twentytwentyone
