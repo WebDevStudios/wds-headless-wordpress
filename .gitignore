@@ -15,9 +15,6 @@ yarn-debug.log*
 yarn-error.log*
 node_modules/
 
-# composer
-vendor/
-
 # wordpress
 uploads/
 

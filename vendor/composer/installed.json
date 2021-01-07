@@ -1,0 +1,1895 @@
+[
+    {
+        "name": "composer/installers",
+        "version": "v1.9.0",
+        "version_normalized": "1.9.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/installers.git",
+            "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+            "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0 || ^2.0"
+        },
+        "replace": {
+            "roundcube/plugin-installer": "*",
+            "shama/baton": "*"
+        },
+        "require-dev": {
+            "composer/composer": "1.6.* || 2.0.*@dev",
+            "composer/semver": "1.0.* || 2.0.*@dev",
+            "phpunit/phpunit": "^4.8.36",
+            "sebastian/comparator": "^1.2.4",
+            "symfony/process": "^2.3"
+        },
+        "time": "2020-04-07T06:57:05+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Composer\\Installers\\Plugin",
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\Installers\\": "src/Composer/Installers"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }
+        ],
+        "description": "A multi-framework Composer library installer",
+        "homepage": "https://composer.github.io/installers/",
+        "keywords": [
+            "Craft",
+            "Dolibarr",
+            "Eliasis",
+            "Hurad",
+            "ImageCMS",
+            "Kanboard",
+            "Lan Management System",
+            "MODX Evo",
+            "MantisBT",
+            "Mautic",
+            "Maya",
+            "OXID",
+            "Plentymarkets",
+            "Porto",
+            "RadPHP",
+            "SMF",
+            "Thelia",
+            "Whmcs",
+            "WolfCMS",
+            "agl",
+            "aimeos",
+            "annotatecms",
+            "attogram",
+            "bitrix",
+            "cakephp",
+            "chef",
+            "cockpit",
+            "codeigniter",
+            "concrete5",
+            "croogo",
+            "dokuwiki",
+            "drupal",
+            "eZ Platform",
+            "elgg",
+            "expressionengine",
+            "fuelphp",
+            "grav",
+            "installer",
+            "itop",
+            "joomla",
+            "known",
+            "kohana",
+            "laravel",
+            "lavalite",
+            "lithium",
+            "magento",
+            "majima",
+            "mako",
+            "mediawiki",
+            "modulework",
+            "modx",
+            "moodle",
+            "osclass",
+            "phpbb",
+            "piwik",
+            "ppi",
+            "puppet",
+            "pxcms",
+            "reindex",
+            "roundcube",
+            "shopware",
+            "silverstripe",
+            "sydes",
+            "sylius",
+            "symfony",
+            "typo3",
+            "wordpress",
+            "yawik",
+            "zend",
+            "zikula"
+        ],
+        "funding": [
+            {
+                "url": "https://packagist.com",
+                "type": "custom"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "firebase/php-jwt",
+        "version": "v5.2.0",
+        "version_normalized": "5.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/firebase/php-jwt.git",
+            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
+            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.8 <=9"
+        },
+        "time": "2020-03-25T18:49:23+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Firebase\\JWT\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Neuman Vong",
+                "email": "neuman+pear@twilio.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Anant Narayanan",
+                "email": "anant@php.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+        "homepage": "https://github.com/firebase/php-jwt",
+        "keywords": [
+            "jwt",
+            "php"
+        ]
+    },
+    {
+        "name": "google/apiclient",
+        "version": "v2.8.3",
+        "version_normalized": "2.8.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/googleapis/google-api-php-client.git",
+            "reference": "81696e6206322e38c643cfcc96c4494ccfef8a32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/81696e6206322e38c643cfcc96c4494ccfef8a32",
+            "reference": "81696e6206322e38c643cfcc96c4494ccfef8a32",
+            "shasum": ""
+        },
+        "require": {
+            "firebase/php-jwt": "~2.0||~3.0||~4.0||~5.0",
+            "google/apiclient-services": "~0.13",
+            "google/auth": "^1.10",
+            "guzzlehttp/guzzle": "~5.3.1||~6.0||~7.0",
+            "guzzlehttp/psr7": "^1.2",
+            "monolog/monolog": "^1.17|^2.0",
+            "php": ">=5.4",
+            "phpseclib/phpseclib": "~0.3.10||~2.0"
+        },
+        "require-dev": {
+            "cache/filesystem-adapter": "^0.3.2",
+            "composer/composer": "^1.10",
+            "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+            "phpcompatibility/php-compatibility": "^9.2",
+            "phpunit/phpunit": "^4.8.36|^5.0",
+            "squizlabs/php_codesniffer": "~2.3",
+            "symfony/css-selector": "~2.1",
+            "symfony/dom-crawler": "~2.1"
+        },
+        "suggest": {
+            "cache/filesystem-adapter": "For caching certs and tokens (using Google\\Client::setCache)"
+        },
+        "time": "2020-11-17T17:33:35+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Google\\": "src/"
+            },
+            "files": [
+                "src/aliases.php"
+            ],
+            "classmap": [
+                "src/aliases.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "Client library for Google APIs",
+        "homepage": "http://developers.google.com/api-client-library/php",
+        "keywords": [
+            "google"
+        ]
+    },
+    {
+        "name": "google/apiclient-services",
+        "version": "v0.156",
+        "version_normalized": "0.156.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/googleapis/google-api-php-client-services.git",
+            "reference": "2f5e54fdef034f856208328126bddd8376dae4b3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/2f5e54fdef034f856208328126bddd8376dae4b3",
+            "reference": "2f5e54fdef034f856208328126bddd8376dae4b3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8|^5"
+        },
+        "time": "2020-11-30T20:03:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Google_Service_": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "Client library for Google APIs",
+        "homepage": "http://developers.google.com/api-client-library/php",
+        "keywords": [
+            "google"
+        ]
+    },
+    {
+        "name": "google/auth",
+        "version": "v1.14.3",
+        "version_normalized": "1.14.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/googleapis/google-auth-library-php.git",
+            "reference": "c1503299c779af0cbc99b43788f75930988852cf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/c1503299c779af0cbc99b43788f75930988852cf",
+            "reference": "c1503299c779af0cbc99b43788f75930988852cf",
+            "shasum": ""
+        },
+        "require": {
+            "firebase/php-jwt": "~2.0|~3.0|~4.0|~5.0",
+            "guzzlehttp/guzzle": "^5.3.1|^6.2.1|^7.0",
+            "guzzlehttp/psr7": "^1.2",
+            "php": ">=5.4",
+            "psr/cache": "^1.0",
+            "psr/http-message": "^1.0"
+        },
+        "require-dev": {
+            "guzzlehttp/promises": "0.1.1|^1.3",
+            "kelvinmo/simplejwt": "^0.2.5",
+            "phpseclib/phpseclib": "^2",
+            "phpunit/phpunit": "^4.8.36|^5.7",
+            "sebastian/comparator": ">=1.2.3",
+            "squizlabs/php_codesniffer": "^3.5"
+        },
+        "suggest": {
+            "phpseclib/phpseclib": "May be used in place of OpenSSL for signing strings or for token management. Please require version ^2."
+        },
+        "time": "2020-10-16T21:33:48+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Google\\Auth\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "Google Auth Library for PHP",
+        "homepage": "http://github.com/google/google-auth-library-php",
+        "keywords": [
+            "Authentication",
+            "google",
+            "oauth2"
+        ]
+    },
+    {
+        "name": "guzzlehttp/guzzle",
+        "version": "7.2.0",
+        "version_normalized": "7.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle.git",
+            "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
+            "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "guzzlehttp/promises": "^1.4",
+            "guzzlehttp/psr7": "^1.7",
+            "php": "^7.2.5 || ^8.0",
+            "psr/http-client": "^1.0"
+        },
+        "provide": {
+            "psr/http-client-implementation": "1.0"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "php-http/client-integration-tests": "^3.0",
+            "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+            "psr/log": "^1.1"
+        },
+        "suggest": {
+            "ext-curl": "Required for CURL handler support",
+            "ext-intl": "Required for Internationalized Domain Name (IDN) support",
+            "psr/log": "Required for using the Log middleware"
+        },
+        "time": "2020-10-10T11:47:56+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "7.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Márk Sági-Kazár",
+                "email": "mark.sagikazar@gmail.com",
+                "homepage": "https://sagikazarmark.hu"
+            }
+        ],
+        "description": "Guzzle is a PHP HTTP client library",
+        "homepage": "http://guzzlephp.org/",
+        "keywords": [
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "psr-18",
+            "psr-7",
+            "rest",
+            "web service"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/GrahamCampbell",
+                "type": "github"
+            },
+            {
+                "url": "https://github.com/Nyholm",
+                "type": "github"
+            },
+            {
+                "url": "https://github.com/alexeyshockov",
+                "type": "github"
+            },
+            {
+                "url": "https://github.com/gmponos",
+                "type": "github"
+            }
+        ]
+    },
+    {
+        "name": "guzzlehttp/promises",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/promises.git",
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/60d379c243457e073cff02bc323a2a86cb355631",
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^4.4 || ^5.1"
+        },
+        "time": "2020-09-30T07:37:28+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Promise\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle promises library",
+        "keywords": [
+            "promise"
+        ]
+    },
+    {
+        "name": "guzzlehttp/psr7",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/psr7.git",
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "psr/http-message": "~1.0",
+            "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "ext-zlib": "*",
+            "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+        },
+        "suggest": {
+            "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
+        },
+        "time": "2020-09-30T07:37:11+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Psr7\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Tobias Schultze",
+                "homepage": "https://github.com/Tobion"
+            }
+        ],
+        "description": "PSR-7 message implementation that also provides common utility methods",
+        "keywords": [
+            "http",
+            "message",
+            "psr-7",
+            "request",
+            "response",
+            "stream",
+            "uri",
+            "url"
+        ]
+    },
+    {
+        "name": "monolog/monolog",
+        "version": "1.26.0",
+        "version_normalized": "1.26.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Seldaek/monolog.git",
+            "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
+            "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/log": "~1.0"
+        },
+        "provide": {
+            "psr/log-implementation": "1.0.0"
+        },
+        "require-dev": {
+            "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+            "doctrine/couchdb": "~1.0@dev",
+            "graylog2/gelf-php": "~1.0",
+            "php-amqplib/php-amqplib": "~2.4",
+            "php-console/php-console": "^3.1.3",
+            "phpstan/phpstan": "^0.12.59",
+            "phpunit/phpunit": "~4.5",
+            "ruflin/elastica": ">=0.90 <3.0",
+            "sentry/sentry": "^0.13",
+            "swiftmailer/swiftmailer": "^5.3|^6.0"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+            "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+            "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+            "ext-mongo": "Allow sending log messages to a MongoDB server",
+            "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+            "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+            "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+            "php-console/php-console": "Allow sending log messages to Google Chrome",
+            "rollbar/rollbar": "Allow sending log messages to Rollbar",
+            "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+            "sentry/sentry": "Allow sending log messages to a Sentry server"
+        },
+        "time": "2020-12-14T12:56:38+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Monolog\\": "src/Monolog"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be"
+            }
+        ],
+        "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+        "homepage": "http://github.com/Seldaek/monolog",
+        "keywords": [
+            "log",
+            "logging",
+            "psr-3"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/Seldaek",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "opis/json-schema",
+        "version": "1.0.19",
+        "version_normalized": "1.0.19.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/opis/json-schema.git",
+            "reference": "1bcb3582881d0692d002537a4472964280f71313"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/opis/json-schema/zipball/1bcb3582881d0692d002537a4472964280f71313",
+            "reference": "1bcb3582881d0692d002537a4472964280f71313",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "ext-bcmath": "*",
+            "ext-intl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "opis/string": "^1.4",
+            "phpunit/phpunit": "^6.5 || ^7.0"
+        },
+        "suggest": {
+            "opis/string": "A standalone library for manipulating multibyte strings"
+        },
+        "time": "2020-06-07T20:56:25+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Opis\\JsonSchema\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Sorin Sarca",
+                "email": "sarca_sorin@hotmail.com"
+            },
+            {
+                "name": "Marius Sarca",
+                "email": "marius.sarca@gmail.com"
+            }
+        ],
+        "description": "Json Schema Validator",
+        "homepage": "http://www.opis.io/json-schema",
+        "keywords": [
+            "json",
+            "schema",
+            "validation",
+            "validator"
+        ]
+    },
+    {
+        "name": "phpseclib/phpseclib",
+        "version": "2.0.30",
+        "version_normalized": "2.0.30.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phpseclib/phpseclib.git",
+            "reference": "136b9ca7eebef78be14abf90d65c5e57b6bc5d36"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/136b9ca7eebef78be14abf90d65c5e57b6bc5d36",
+            "reference": "136b9ca7eebef78be14abf90d65c5e57b6bc5d36",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phing/phing": "~2.7",
+            "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
+            "squizlabs/php_codesniffer": "~2.0"
+        },
+        "suggest": {
+            "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
+            "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
+            "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
+            "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+        },
+        "time": "2020-12-17T05:42:04+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "phpseclib/bootstrap.php"
+            ],
+            "psr-4": {
+                "phpseclib\\": "phpseclib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jim Wigginton",
+                "email": "terrafrost@php.net",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Patrick Monnerat",
+                "email": "pm@datasphere.ch",
+                "role": "Developer"
+            },
+            {
+                "name": "Andreas Fischer",
+                "email": "bantu@phpbb.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Hans-Jürgen Petrich",
+                "email": "petrich@tronic-media.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Graham Campbell",
+                "email": "graham@alt-three.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
+        "homepage": "http://phpseclib.sourceforge.net",
+        "keywords": [
+            "BigInteger",
+            "aes",
+            "asn.1",
+            "asn1",
+            "blowfish",
+            "crypto",
+            "cryptography",
+            "encryption",
+            "rsa",
+            "security",
+            "sftp",
+            "signature",
+            "signing",
+            "ssh",
+            "twofish",
+            "x.509",
+            "x509"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/terrafrost",
+                "type": "github"
+            },
+            {
+                "url": "https://www.patreon.com/phpseclib",
+                "type": "patreon"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "pristas-peter/wp-graphql-gutenberg",
+        "version": "v0.3.6",
+        "version_normalized": "0.3.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
+            "reference": "119deebe5c63a22f039fcb724af5d3310924faa5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/119deebe5c63a22f039fcb724af5d3310924faa5",
+            "reference": "119deebe5c63a22f039fcb724af5d3310924faa5",
+            "shasum": ""
+        },
+        "require": {
+            "opis/json-schema": "^1.0",
+            "voku/simple_html_dom": "4.7.17"
+        },
+        "require-dev": {
+            "dealerdirect/phpcodesniffer-composer-installer": "0.5.0",
+            "phpcompatibility/phpcompatibility-wp": "2.1.0",
+            "squizlabs/php_codesniffer": "3.5.4",
+            "wp-coding-standards/wpcs": "2.1.1"
+        },
+        "time": "2020-12-10T14:44:27+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "WPGraphqlGutenberg\\": "src/"
+            },
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "Query gutenberg blocks with wp-graphql"
+    },
+    {
+        "name": "psr/cache",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/cache.git",
+            "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+            "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06T20:24:11+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Cache\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for caching libraries",
+        "keywords": [
+            "cache",
+            "psr",
+            "psr-6"
+        ]
+    },
+    {
+        "name": "psr/container",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/container.git",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-02-14T16:28:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Container\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common Container Interface (PHP FIG PSR-11)",
+        "homepage": "https://github.com/php-fig/container",
+        "keywords": [
+            "PSR-11",
+            "container",
+            "container-interface",
+            "container-interop",
+            "psr"
+        ]
+    },
+    {
+        "name": "psr/http-client",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-client.git",
+            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0 || ^8.0",
+            "psr/http-message": "^1.0"
+        },
+        "time": "2020-06-29T06:28:15+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Client\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP clients",
+        "homepage": "https://github.com/php-fig/http-client",
+        "keywords": [
+            "http",
+            "http-client",
+            "psr",
+            "psr-18"
+        ]
+    },
+    {
+        "name": "psr/http-message",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06T14:39:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "homepage": "https://github.com/php-fig/http-message",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
+        "name": "psr/log",
+        "version": "1.1.3",
+        "version_normalized": "1.1.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+            "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2020-03-23T09:12:05+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
+        "name": "ralouphie/getallheaders",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ralouphie/getallheaders.git",
+            "reference": "120b605dfeb996808c31b6477290a714d356e822"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+            "reference": "120b605dfeb996808c31b6477290a714d356e822",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^5 || ^6.5"
+        },
+        "time": "2019-03-08T08:55:37+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/getallheaders.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ralph Khattar",
+                "email": "ralph.khattar@gmail.com"
+            }
+        ],
+        "description": "A polyfill for getallheaders."
+    },
+    {
+        "name": "symfony/css-selector",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/css-selector.git",
+            "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
+            "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.2.5"
+        },
+        "time": "2020-12-08T17:02:38+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\CssSelector\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Jean-François Simon",
+                "email": "jeanfrancois.simon@sensiolabs.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony CssSelector Component",
+        "homepage": "https://symfony.com",
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "voku/simple_html_dom",
+        "version": "4.7.17",
+        "version_normalized": "4.7.17.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/voku/simple_html_dom.git",
+            "reference": "804aca422f1fe0104b1320ca09fd06cd0062782c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/voku/simple_html_dom/zipball/804aca422f1fe0104b1320ca09fd06cd0062782c",
+            "reference": "804aca422f1fe0104b1320ca09fd06cd0062782c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-dom": "*",
+            "ext-libxml": "*",
+            "ext-simplexml": "*",
+            "php": ">=7.0.0",
+            "symfony/css-selector": "~3.0 || ~4.0 || ~5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~6.0 || ~7.0"
+        },
+        "suggest": {
+            "voku/portable-utf8": "If you need e.g. UTF-8 fixed output."
+        },
+        "time": "2020-04-09T21:20:43+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "voku\\helper\\": "src/voku/helper/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "dimabdc",
+                "email": "support@titor.ru",
+                "homepage": "http://github.com/dimabdc",
+                "role": "Developer"
+            },
+            {
+                "name": "Lars Moelleken",
+                "homepage": "http://www.moelleken.org/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Simple HTML DOM package.",
+        "homepage": "http://simplehtmldom.sourceforge.net/",
+        "keywords": [
+            "HTML Parser",
+            "dom",
+            "php dom"
+        ],
+        "funding": [
+            {
+                "url": "https://www.paypal.me/moelleken",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/voku",
+                "type": "github"
+            },
+            {
+                "url": "https://www.patreon.com/voku",
+                "type": "patreon"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/voku/simple_html_dom",
+                "type": "tidelift"
+            }
+        ]
+    },
+    {
+        "name": "webdevstudios/advanced-custom-fields-pro",
+        "version": "5.9.3",
+        "version_normalized": "5.9.3.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/advanced-custom-fields-pro.git",
+            "reference": "72d2c4f6e277fd5e5acb9b369a8e3ce9ee3123ad"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.3-c95c1f.tar",
+            "reference": "72d2c4f6e277fd5e5acb9b369a8e3ce9ee3123ad",
+            "shasum": "02409e6b1d88cbb5e22b3b1a64491853de7ab4d7"
+        },
+        "time": "2020-11-03T16:49:05+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist"
+    },
+    {
+        "name": "webdevstudios/gravityforms",
+        "version": "2.4.22",
+        "version_normalized": "2.4.22.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/gravityforms.git",
+            "reference": "b2ddd1484f375cadde628acbf775f8b3f74235d2"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.22-8189d3.tar",
+            "reference": "b2ddd1484f375cadde628acbf775f8b3f74235d2",
+            "shasum": "3757f3395e7ecc4405cfc7b909f2093c77d86c70"
+        },
+        "time": "2020-12-23T00:25:06+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist"
+    },
+    {
+        "name": "webdevstudios/mu-autoload",
+        "version": "v1.5",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/mu-autoload.git",
+            "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
+            "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
+            "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "time": "2020-11-13T21:21:25+00:00",
+        "type": "wordpress-muplugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "WebDevStudios\\MUAutoload\\": "src/"
+            }
+        },
+        "scripts": {
+            "post-autoload-dump": [
+                "WebDevStudios\\MUAutoload\\Installer::install"
+            ]
+        },
+        "description": "Generates a file in mu-plugins to include your project's autoload.php"
+    },
+    {
+        "name": "webdevstudios/sso",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/sso.git",
+            "reference": "86259b5e6f788189cab1760d257416f6e76ff226"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-2.0.1-c7f0f6.tar",
+            "reference": "86259b5e6f788189cab1760d257416f6e76ff226",
+            "shasum": "d32c0c90a6804d306f7180d8ca047da5c7162361"
+        },
+        "require": {
+            "composer/installers": "~1.0",
+            "firebase/php-jwt": "^5.0",
+            "google/apiclient": "^2.0"
+        },
+        "require-dev": {
+            "webdevstudios/php-coding-standards": "1.0.0-beta2@dev"
+        },
+        "time": "2019-10-29T21:24:09+00:00",
+        "type": "wordpress-plugin",
+        "extra": {
+            "installer-name": "wds-sso"
+        },
+        "installation-source": "dist",
+        "authors": [
+            {
+                "name": "Justin Foell",
+                "email": "justin.foell@webdevstudios.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Aubrey Portwood",
+                "email": "aubrey@webdevstudios.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "WDS Single Sign-On.",
+        "homepage": "https://github.com/WebDevStudios/sso/",
+        "support": {
+            "email": "justin.foell@webdevstudios.com",
+            "issues": "https://github.com/WebDevStudios/sso/issues/",
+            "wiki": "https://github.com/WebDevStudios/sso/wiki"
+        }
+    },
+    {
+        "name": "webdevstudios/sso-addon",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/sso-addon.git",
+            "reference": "05c879f9bf605050930473842fb3313b21b48588"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-1.0.1-d9b41f.tar",
+            "reference": "05c879f9bf605050930473842fb3313b21b48588",
+            "shasum": "88e98d204460db969207d7f7be8e8914cdcb1fcf"
+        },
+        "require": {
+            "composer/installers": "~1.0",
+            "webdevstudios/sso": "2.0.1"
+        },
+        "require-dev": {
+            "webdevstudios/php-coding-standards": "1.0.0-beta2@dev"
+        },
+        "time": "2019-11-08T17:18:33+00:00",
+        "type": "wordpress-plugin",
+        "extra": {
+            "installer-name": "wds-sso-addon-wds",
+            "installer-paths": {
+                "../{$name}/": [
+                    "type:wordpress-plugin"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "homepage": "https://github.com/WebDevStudios/sso-addon",
+        "support": {
+            "issues": "https://github.com/WebDevStudios/sso-addon/issues",
+            "source": "https://github.com/WebDevStudios/sso-addon"
+        }
+    },
+    {
+        "name": "webdevstudios/wds-blocks",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/WebDevStudios/wds-blocks.git",
+            "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/WebDevStudios/wds-blocks/zipball/6b4a81dfa060e578f9d59d850edd1b3eb07a0d92",
+            "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpcompatibility/php-compatibility": "^9.3",
+            "webdevstudios/php-coding-standards": "^1.0"
+        },
+        "time": "2020-09-08T16:15:34+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "scripts": {
+            "lint": [
+                "composer run compat && composer run lint:php"
+            ],
+            "format": [
+                "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
+            ],
+            "lint:php": [
+                "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
+            ],
+            "compat": [
+                "./vendor/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit"
+            ]
+        },
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "WebDevStudios",
+                "email": "contact@webdevstudios.com"
+            }
+        ],
+        "description": "WebDevStudios library of Gutenberg blocks.",
+        "support": {
+            "source": "https://github.com/WebDevStudios/wds-blocks/tree/2.0.0",
+            "issues": "https://github.com/WebDevStudios/wds-blocks/issues"
+        }
+    },
+    {
+        "name": "webdevstudios/wp-migrate-db-pro",
+        "version": "1.9.13",
+        "version_normalized": "1.9.13.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/wp-migrate-db-pro.git",
+            "reference": "6b7098123cfb05b79d8505e125a0b159da737c24"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro/webdevstudios-wp-migrate-db-pro-1.9.13-b9f104.tar",
+            "reference": "6b7098123cfb05b79d8505e125a0b159da737c24",
+            "shasum": "f164164f61c3d7d9a94f4924f98bd6ef0ed75e69"
+        },
+        "time": "2020-09-14T17:08:50+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "description": "WDS-licensed purchase of the WP Migrate DB Pro plugin."
+    },
+    {
+        "name": "webdevstudios/wp-migrate-db-pro-cli",
+        "version": "1.3.5",
+        "version_normalized": "1.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/wp-migrate-db-pro-cli.git",
+            "reference": "00abe6f5a25ecb787dc75c54ac45b87d9b593a9e"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-cli/webdevstudios-wp-migrate-db-pro-cli-1.3.5-48a27b.tar",
+            "reference": "00abe6f5a25ecb787dc75c54ac45b87d9b593a9e",
+            "shasum": "a86a71aa6eb50731a7697295bd30e59c9ebb57e4"
+        },
+        "time": "2019-02-07T18:20:46+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist"
+    },
+    {
+        "name": "webdevstudios/wp-migrate-db-pro-media-files",
+        "version": "1.4.15",
+        "version_normalized": "1.4.15.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:WebDevStudios/wp-migrate-db-pro-media-files.git",
+            "reference": "4877d2590d68b65eefa83c7bebfca11c81e5ee3b"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-media-files/webdevstudios-wp-migrate-db-pro-media-files-1.4.15-8ce2e9.tar",
+            "reference": "4877d2590d68b65eefa83c7bebfca11c81e5ee3b",
+            "shasum": "f63e7a9c5958d1bee956fe2d3ff6fa21c2c88306"
+        },
+        "time": "2020-02-26T18:56:09+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist"
+    },
+    {
+        "name": "wp-graphql/wp-graphql-acf",
+        "version": "v0.4.0",
+        "version_normalized": "0.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wp-graphql/wp-graphql-acf.git",
+            "reference": "4b0060198f2a5c7a0cc6bec07ce6dd2a7bd2a2f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wp-graphql/wp-graphql-acf/zipball/4b0060198f2a5c7a0cc6bec07ce6dd2a7bd2a2f6",
+            "reference": "4b0060198f2a5c7a0cc6bec07ce6dd2a7bd2a2f6",
+            "shasum": ""
+        },
+        "require-dev": {
+            "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+            "lucatume/wp-browser": "^2.2.",
+            "phpcompatibility/phpcompatibility-wp": "^2.0",
+            "wp-coding-standards/wpcs": "^2.1"
+        },
+        "time": "2020-10-22T14:50:18+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "WPGraphQL\\ACF\\": "src/"
+            },
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "jasonbahl",
+                "email": "jasonbahl@mac.com"
+            }
+        ],
+        "description": "Advanced Custom Fields bindings for wp-graphql"
+    },
+    {
+        "name": "wp-graphql/wp-graphql-custom-post-type-ui",
+        "version": "v1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wp-graphql/wp-graphql-custom-post-type-ui.git",
+            "reference": "aadf7308c9b02a7f355ab593e5cc0759e1c29105"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wp-graphql/wp-graphql-custom-post-type-ui/zipball/aadf7308c9b02a7f355ab593e5cc0759e1c29105",
+            "reference": "aadf7308c9b02a7f355ab593e5cc0759e1c29105",
+            "shasum": ""
+        },
+        "time": "2019-09-09T20:48:57+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Jason Bahl",
+                "email": "jasonbahl@mac.com"
+            },
+            {
+                "name": "Rachel Bahl",
+                "email": "rachelbahl@gmail.com"
+            }
+        ],
+        "description": "Add your Custom Post Types and Custom Taxonomies to the WPGraphQL Schema using Custom Post Type UI plugin"
+    },
+    {
+        "name": "wp-media/wp-rocket",
+        "version": "v3.8.2",
+        "version_normalized": "3.8.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wp-media/wp-rocket.git",
+            "reference": "5674e3fbc0153c1997c3ef3bdabd9c419c562307"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wp-media/wp-rocket/zipball/5674e3fbc0153c1997c3ef3bdabd9c419c562307",
+            "reference": "5674e3fbc0153c1997c3ef3bdabd9c419c562307",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "~1.0",
+            "monolog/monolog": "^1.0",
+            "php": ">=7.0",
+            "psr/container": "^1.0"
+        },
+        "require-dev": {
+            "brain/monkey": "^2.0",
+            "coenjacobs/mozart": "0.6.0-beta-3",
+            "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+            "mikey179/vfsstream": "^1.6",
+            "mnsami/composer-custom-directory-installer": "^2.0",
+            "mobiledetect/mobiledetectlib": "^2.8",
+            "php": "^7",
+            "phpcompatibility/phpcompatibility-wp": "^2.0",
+            "phpstan/phpstan": "^0.12.3",
+            "phpunit/phpunit": "^7",
+            "roave/security-advisories": "dev-master",
+            "szepeviktor/phpstan-wordpress": "^0.5.0",
+            "woocommerce/woocommerce": "^3.9",
+            "wp-coding-standards/wpcs": "^2",
+            "wp-media/background-processing": "^1.3",
+            "wp-media/cloudflare": "^1.0",
+            "wp-media/module-rocketcdn": "^1.0",
+            "wp-media/module-varnish": "^1.0",
+            "wp-media/phpunit": "^1.0",
+            "wp-media/rocket-lazyload-common": "^2",
+            "wp-media/wp-imagify-partner": "^1.0",
+            "wpackagist-plugin/amp": "^1.1.4",
+            "wpackagist-plugin/hummingbird-performance": "2.0.1",
+            "wpackagist-plugin/pdf-embedder": "^4.6",
+            "wpackagist-plugin/simple-custom-css": "^4.0.3",
+            "wpackagist-plugin/spinupwp": "^1.1",
+            "wpackagist-plugin/wp-smushit": "^3.0"
+        },
+        "time": "2021-01-07T17:47:53+00:00",
+        "type": "wordpress-plugin",
+        "extra": {
+            "installer-paths": {
+                "vendor/{$vendor}/{$name}/": [
+                    "type:wordpress-plugin"
+                ],
+                "./inc/Addon/Cloudflare/": [
+                    "wp-media/cloudflare"
+                ],
+                "./inc/Addon/Varnish/": [
+                    "wp-media/module-varnish"
+                ],
+                "./inc/Engine/CDN/RocketCDN/": [
+                    "wp-media/module-rocketcdn"
+                ]
+            },
+            "mozart": {
+                "dep_namespace": "WP_Rocket\\Dependencies\\",
+                "dep_directory": "/inc/Dependencies/",
+                "classmap_directory": "/inc/classes/dependencies/",
+                "classmap_prefix": "WP_Rocket_",
+                "packages": [
+                    "mobiledetect/mobiledetectlib",
+                    "wp-media/background-processing",
+                    "wp-media/rocket-lazyload-common",
+                    "wp-media/wp-imagify-partner"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "inc/classes",
+                "inc/vendors/classes",
+                "inc/deprecated"
+            ],
+            "exclude-from-classmap": [
+                "inc/vendors/classes/class-rocket-mobile-detect.php",
+                "inc/classes/class-wp-rocket-requirements-check.php"
+            ],
+            "psr-4": {
+                "WP_Rocket\\": "inc/",
+                "WPMedia\\Cloudflare\\": "inc/Addon/Cloudflare/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "WP Media",
+                "email": "contact@wp-media.me",
+                "homepage": "https://wp-media.me"
+            }
+        ],
+        "description": "Performance optimization plugin for WordPress",
+        "homepage": "https://wp-rocket.me",
+        "keywords": [
+            "cache",
+            "lazyload",
+            "minification",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "wpackagist-plugin/cookie-notice",
+        "version": "1.3.2",
+        "version_normalized": "1.3.2.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/cookie-notice/",
+            "reference": "tags/1.3.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/cookie-notice.1.3.2.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/cookie-notice/"
+    },
+    {
+        "name": "wpackagist-plugin/custom-post-type-ui",
+        "version": "1.8.2",
+        "version_normalized": "1.8.2.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+            "reference": "tags/1.8.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.8.2.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+    },
+    {
+        "name": "wpackagist-plugin/query-monitor",
+        "version": "3.6.5",
+        "version_normalized": "3.6.5.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/query-monitor/",
+            "reference": "tags/3.6.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.5.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/query-monitor/"
+    },
+    {
+        "name": "wpackagist-plugin/resmushit-image-optimizer",
+        "version": "0.3.11",
+        "version_normalized": "0.3.11.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/resmushit-image-optimizer/",
+            "reference": "tags/0.3.11"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/resmushit-image-optimizer.0.3.11.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/resmushit-image-optimizer/"
+    },
+    {
+        "name": "wpackagist-plugin/stream",
+        "version": "3.6.0",
+        "version_normalized": "3.6.0.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/stream/",
+            "reference": "tags/3.6.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/stream.3.6.0.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/stream/"
+    },
+    {
+        "name": "wpackagist-plugin/wp-search-with-algolia",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/wp-search-with-algolia/",
+            "reference": "tags/1.6.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/wp-search-with-algolia.1.6.0.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/wp-search-with-algolia/"
+    }
+]
