@@ -1,0 +1,29 @@
+# os
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+
+# node
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+
+# composer
+vendor/
+
+# wordpress
+uploads/
+plugins/
+!plugins/wordpress-seo/vendor/
+
+# theme
+themes/THEME/dist
+!themes/THEME/src/scss/plugins
+!themes/THEME/src/scss/vendor
