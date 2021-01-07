@@ -1,0 +1,69 @@
+/*
+Theme Name: WDS Headless
+Theme URI: https://webdevstudios.com
+Description: This theme supports the Jamstack-powered front-end. Do not deactivate!
+Author: WebDevStudios <contact@webdevstudios.com>
+Author URI: https://webdevstudios.com/
+Version: 1.0
+Requires at least: 5.6
+Tested up to: 5.6
+Requires PHP: 7.4
+Text Domain: wds
+*/
+
+.wp-block {
+	max-width: 860px;
+	width: 100%;
+}
+
+.wp-block .acf-field[data-type="message"] h2 {
+	margin: -4px 0 6px;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.wp-block .acf-field[data-type="message"] .acf-label label {
+	margin: 0;
+}
+
+.wp-block .acf-field[data-type="message"] .acf-input p {
+	margin: 0;
+}
+
+.wp-block .acf-field[data-type="message"] img {
+	padding: 10px;
+	margin: 0 0 10px;
+	border: 1px dashed #dfdfdf;
+	display: block;
+	position: relative;
+	top: 10px;
+}
+
+.wp-block .acf-block-body .acf-fields > .acf-field {
+	padding: 20px 20px;
+}
+
+.wp-block .acf-actions {
+	text-align: inherit;
+	padding-top: 15px;
+	border: 1px solid #dfdfdf;
+	background: #f9f9f9;
+	padding: 17px;
+	margin: 15px 0;
+}
+
+.wp-block .acf-actions .button {
+	min-height: 0;
+	padding: 10px;
+	line-height: 1;
+	font-weight: 600;
+}
+
+.acf-field .acf-input > p.description {
+	margin-top: 8px;
+}
+
+.acf-field .acf-input > p.description,
+.acf-field .acf-label p.description {
+	font-style: italic;
+}

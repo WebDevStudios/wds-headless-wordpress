@@ -24,6 +24,7 @@ plugins/
 !plugins/wordpress-seo/vendor/
 
 # theme
-themes/THEME/dist
-!themes/THEME/src/scss/plugins
-!themes/THEME/src/scss/vendor
+twentytwentyone
+themes/wds_headless/dist
+!themes/wds_headless/src/scss/plugins
+!themes/wds_headless/src/scss/vendor

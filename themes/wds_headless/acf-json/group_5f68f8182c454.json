@@ -1,0 +1,263 @@
+{
+    "key": "group_5f68f8182c454",
+    "title": "Block: Netflix Carousel",
+    "fields": [
+        {
+            "key": "field_5f68fa856509a",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>Netflix Carousel<\/h2>\r\n<p>A Netflix style slider for selecting related content.<\/p>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f68f9dc1b10e",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f68fa031b10f",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Enter a title for carousel. Will be displayed as an H2 element.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f68fa341b110",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "Enter an optional short description for the carousel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5f6cfc517034d",
+            "label": "Link Button",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "The link button is displayed to the right of the carousel header and above the carousel.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f68fb2cb66ac",
+            "label": "Button URL",
+            "name": "button_url",
+            "type": "url",
+            "instructions": "The URL to link the button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f6cfc847034e",
+            "label": "Button Label",
+            "name": "button_label",
+            "type": "text",
+            "instructions": "The label for the link button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "Learn More",
+            "placeholder": "Learn More",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f6cfdf03cbc7",
+            "label": "Cards",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f74f9270899c",
+            "label": "Cards Per Page",
+            "name": "cards_per_page",
+            "type": "button_group",
+            "instructions": "Select the amount of cards to be displayed per page\/slide of the carousel.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "3",
+                "4": "4"
+            },
+            "allow_null": 0,
+            "default_value": 4,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5f68fb9efe658",
+            "label": "Cards",
+            "name": "cards",
+            "type": "relationship",
+            "instructions": "Note: Select up to a maximum of 8 content pieces to be added to the Netflix Carousel.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "post_type": [
+                "page",
+                "events",
+                "testimonial",
+                "team",
+                "service",
+                "portfolio",
+                "careers",
+                "post"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5f6e44b78819d",
+            "label": "Design Reference",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f6e44a5ad745",
+            "label": "Screenshots",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<img src=\"\/wp-content\/themes\/wds_headless\/images\/netflix.png\" \/>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/netflix"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_graphql": 1,
+    "graphql_field_name": "block_netflix_carousel",
+    "modified": 1608735105
+}
