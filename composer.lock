@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73fa13331f31573f4b65ec7b090e73e7",
+    "content-hash": "8f5cc00cbbc1f07b61bd3680ff2e3316",
     "packages": [
         {
             "name": "composer/installers",
@@ -130,16 +130,6 @@
                 "yawik",
                 "zend",
                 "zikula"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-04-07T06:57:05+00:00"
         },
@@ -425,24 +415,6 @@
                 "rest",
                 "web service"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/Nyholm",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/alexeyshockov",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/gmponos",
-                    "type": "github"
-                }
-            ],
             "time": "2020-10-10T11:47:56+00:00"
         },
         {
@@ -569,16 +541,16 @@
         },
         {
             "name": "harness-software/wp-graphql-gravity-forms",
-            "version": "0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git",
-                "reference": "e93948d6807a59721024434fbebe189c513de2f6"
+                "reference": "85b0e8cfb95e8e2cfc048c8ac4d426c60395483c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/e93948d6807a59721024434fbebe189c513de2f6",
-                "reference": "e93948d6807a59721024434fbebe189c513de2f6",
+                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/85b0e8cfb95e8e2cfc048c8ac4d426c60395483c",
+                "reference": "85b0e8cfb95e8e2cfc048c8ac4d426c60395483c",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
@@ -598,10 +570,10 @@
             ],
             "description": "WPGraphQL for Gravity Forms",
             "support": {
-                "source": "https://github.com/harness-software/wp-graphql-gravity-forms/tree/0.1.0",
+                "source": "https://github.com/harness-software/wp-graphql-gravity-forms/tree/master",
                 "issues": "https://github.com/harness-software/wp-graphql-gravity-forms/issues"
             },
-            "time": "2019-08-19T16:12:25+00:00"
+            "time": "2020-10-08T18:07:16+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -672,16 +644,6 @@
                 "log",
                 "logging",
                 "psr-3"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/Seldaek",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-12-14T12:56:38+00:00"
         },
@@ -836,20 +798,6 @@
                 "twofish",
                 "x.509",
                 "x509"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/terrafrost",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/phpseclib",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-12-17T05:42:04+00:00"
         },
@@ -1217,20 +1165,6 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-12-08T17:02:38+00:00"
         },
         {
@@ -1289,24 +1223,6 @@
                 "HTML Parser",
                 "dom",
                 "php dom"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/moelleken",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/voku",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/voku",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/voku/simple_html_dom",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-04-09T21:20:43+00:00"
         },
@@ -1863,10 +1779,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "harness-software/wp-graphql-gravity-forms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }

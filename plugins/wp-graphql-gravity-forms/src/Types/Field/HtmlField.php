@@ -29,11 +29,12 @@ class HtmlField extends Field {
             'description' => __( 'Gravity Forms HTML field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
+                $this->get_custom_properties(),
                 FieldProperty\InputNameProperty::get(),
                 [
                     'content' => [
                         'type'        => 'String',
-                        'description' => __('Content of an HTML block field to be displayed on the form.', 'wp-graphql-gravity-forms'),
+                        'description' => __( 'Content of an HTML block field to be displayed on the form.', 'wp-graphql-gravity-forms' ),
                     ],
                 ]
             ),

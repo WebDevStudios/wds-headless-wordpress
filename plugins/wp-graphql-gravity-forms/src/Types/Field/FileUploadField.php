@@ -3,7 +3,6 @@
 namespace WPGraphQLGravityForms\Types\Field;
 
 use WPGraphQLGravityForms\Types\Field\FieldProperty;
-use WPGraphQLGravityForms\Types\Field\FieldValue\FileUploadFieldValue;
 
 /**
  * File upload field.
@@ -21,11 +20,6 @@ class FileUploadField extends Field {
      */
     const GF_TYPE = 'fileupload';
 
-    /**
-     * Field value type.
-     */
-    const VALUE_TYPE = FileUploadFieldValue::TYPE;
-
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
     }
@@ -35,6 +29,8 @@ class FileUploadField extends Field {
             'description' => __( 'Gravity Forms File Upload field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
+                $this->get_custom_properties(),
+                FieldProperty\DescriptionProperty::get(),
                 FieldProperty\ErrorMessageProperty::get(),
                 FieldProperty\InputNameProperty::get(),
                 FieldProperty\IsRequiredProperty::get(),
