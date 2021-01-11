@@ -14,6 +14,7 @@ require_once 'inc/acf.php';
 require_once 'inc/blocks.php';
 require_once 'inc/algolia.php';
 require_once 'inc/admin.php';
+require_once 'inc/menus.php';
 
 /**
  * Sets up theme defaults .
