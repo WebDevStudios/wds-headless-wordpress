@@ -120,7 +120,7 @@ function wds_register_custom_post_types() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => [ "slug" => "service", "with_front" => false ],
+		"rewrite" => [ "slug" => "portfolio", "with_front" => false ],
 		"query_var" => true,
 		"menu_icon" => 'dashicons-buddicons-activity',
 		"supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields", "author" ],
