@@ -51,7 +51,7 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'Unique global ID for the object.', 'wp-graphql-gravity-forms' ),
                 ],
                 'formId' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Form ID.', 'wp-graphql-gravity-forms' ),
                 ],
                 'title' => [
@@ -109,11 +109,11 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'CSS class for the first page.', 'wp-graphql-gravity-forms' ),
                 ],
                 'postAuthor'   => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'When useCurrentUserAsAuthor is set to 0, this property contains the user Id that will be used as the Post author.', 'wp-graphql-gravity-forms' ),
                 ],
                 'postCategory'   => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Form forms with Post fields, but without a Post Category field, this property determines the default category that the post will be associated with when created.', 'wp-graphql-gravity-forms' ),
                 ],
                 'postFormat'   => [
@@ -129,10 +129,13 @@ class Form implements Hookable, Type, Field {
                     'type'        => 'String',
                     'description' => __( 'How sub-labels are aligned.', 'wp-graphql-gravity-forms' ),
                 ],
-                // @TODO: Add a field to get the CSS classes as an array of strings
                 'cssClass'   => [
                     'type'        => 'String',
-                    'description' => __( 'Custom CSS class. This class will be added to the <form> tag.', 'wp-graphql-gravity-forms' ),
+                    'description' => __( 'String containing the custom CSS classes to be added to the <form> tag.', 'wp-graphql-gravity-forms' ),
+                ],
+                'cssClassList'   => [
+                    'type'        => [ 'list_of' => 'String' ],
+                    'description' => __( 'Array of the custom CSS classes to be added to the <form> tag.', 'wp-graphql-gravity-forms' ),
                 ],
                 'enableHoneypot'   => [
                     'type'        => 'Boolean',
@@ -151,7 +154,7 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'Specifies if this form has a limit on the number of submissions. 1 if the form limits submissions, 0 otherwise.', 'wp-graphql-gravity-forms' ),
                 ],
                 'limitEntriesCount'   => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'When limitEntries is set to 1, this property specifies the number of submissions allowed.', 'wp-graphql-gravity-forms' ),
                 ],
                 // @TODO: Convert to an enum.
@@ -172,11 +175,11 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'Date in the format (mm/dd/yyyy) that the form will become active/visible.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleStartHour' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Hour (1 to 12) that the form will become active/visible.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleStartMinute' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Minute that the form will become active/visible.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleStartAmpm' => [
@@ -188,11 +191,11 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'Date in the format (mm/dd/yyyy) that the form will become inactive/hidden.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleEndHour' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Hour (1 to 12) that the form will become inactive/hidden.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleEndMinute' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'Minute that the form will become inactive/hidden.', 'wp-graphql-gravity-forms' ),
                 ],
                 'scheduleEndAmpm' => [
@@ -224,7 +227,7 @@ class Form implements Hookable, Type, Field {
                     'description' => __( 'Contains the form confirmation settings such as confirmation text or redirect URL', 'wp-graphql-gravity-forms' ),
                 ],
                 'nextFieldId' => [
-                    'type'        => 'Integer',
+                    'type'        => 'Int',
                     'description' => __( 'The ID to assign to the next field that is added to the form.', 'wp-graphql-gravity-forms' ),
                 ],
                 'isActive' => [
@@ -253,20 +256,31 @@ class Form implements Hookable, Type, Field {
                     'description' => __( "Unique global ID for the object. Base-64 encode a string like this, where '123' is the form ID: '{self::TYPE}:123'.", 'wp-graphql-gravity-forms' ),
                 ],
             ],
-            'resolve' => function( $root, array $args ) {
+            'resolve' => function( $root, array $args ) : array {
                 $id_parts = Relay::fromGlobalId( $args['id'] );
 
                 if ( ! is_array( $id_parts ) || empty( $id_parts['id'] ) || empty( $id_parts['type'] ) ) {
                     throw new UserError( __( 'A valid global ID must be provided.', 'wp-graphql-gravity-forms' ) );
                 }
 
-                $form = GFAPI::get_form( $id_parts['id'] );
+                $form_raw = GFAPI::get_form( $id_parts['id'] );
 
-                if ( ! $form ) {
+                if ( ! $form_raw ) {
                     throw new UserError( __( 'A valid form ID must be provided.', 'wp-graphql-gravity-forms' ) );
                 }
 
-                return $this->form_data_manipulator->manipulate( $form, $args );
+                $form = $this->form_data_manipulator->manipulate( $form_raw, $args );
+
+                /**
+                 * "wp_graphql_gf_form_object" filter
+                 *
+                 * Provides the ability to manipulate the form data before it is sent to the
+                 * client. This hook is somewhat similar to Gravity Forms' gform_pre_render hook
+                 * and can be used for dynamic field input population, among other things.
+                 *
+                 * @param array $form Form meta array.
+                 */
+                return apply_filters( 'wp_graphql_gf_form_object', $form );
             }
         ] );
     }

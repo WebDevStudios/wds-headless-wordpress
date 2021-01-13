@@ -6,15 +6,16 @@ use GF_Field;
 use WPGraphQLGravityForms\Interfaces\Hookable;
 use WPGraphQLGravityForms\Interfaces\Type;
 use WPGraphQLGravityForms\Interfaces\FieldValue;
+use WPGraphQLGravityForms\Types\Field\RadioField;
 
 /**
- * Values for an individual Chained Select field.
+ * Value for a radio field.
  */
-class ChainedSelectFieldValues implements Hookable, Type, FieldValue {
+class RadioFieldValue implements Hookable, Type, FieldValue {
     /**
      * Type registered in WPGraphQL.
      */
-    const TYPE = 'ChainedSelectFieldValues';
+    const TYPE = RadioField::TYPE . 'Value';
 
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
@@ -22,29 +23,27 @@ class ChainedSelectFieldValues implements Hookable, Type, FieldValue {
 
     public function register_type() {
         register_graphql_object_type( self::TYPE, [
-            'description' => __('Gravity Forms name field values.', 'wp-graphql-gravity-forms'),
+            'description' => __( 'Radio field value.', 'wp-graphql-gravity-forms' ),
             'fields'      => [
-                'values' => [
-                    'type'        => ['list_of' => 'String' ],
-                    'description' => __('Field values.', 'wp-graphql-gravity-forms'),
+                'value' => [
+                    'type'        => 'String',
+                    'description' => __( 'The value.', 'wp-graphql-gravity-forms' ),
                 ],
             ],
         ] );
     }
 
     /**
-     * Get the field values.
+     * Get the field value.
      *
      * @param array    $entry Gravity Forms entry.
      * @param GF_Field $field Gravity Forms field.
      *
-     * @return array Entry field values.
+     * @return array Entry field value.
      */
     public static function get( array $entry, GF_Field $field ) : array {
-        $values = array_map( function( $input ) use ( $entry ) {
-            return $entry[ $input['id'] ] ?? '';
-        }, $field->inputs );
+        $value = isset( $entry[ $field['id'] ] ) ? (string) $entry[ $field['id'] ] : null;
 
-        return compact( 'values' );
+        return [ 'value' => $value ];
     }
 }

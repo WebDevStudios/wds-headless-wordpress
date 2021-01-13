@@ -4,9 +4,10 @@ namespace WPGraphQLGravityForms\Types\Union;
 
 use GraphQL\Type\Definition\ResolveInfo;
 use WPGraphQL\AppContext;
-use WPGraphQL\TypeRegistry;
+use WPGraphQL\Registry\TypeRegistry;
 use WPGraphQLGravityForms\Interfaces\Hookable;
 use WPGraphQLGravityForms\Interfaces\Type;
+use WPGraphQLGravityForms\Interfaces\FieldValue;
 use WPGraphQLGravityForms\Types\Field\Field;
 
 /**
@@ -36,36 +37,33 @@ class ObjectFieldValueUnion implements Hookable, Type {
         add_action( 'graphql_register_types', [ $this, 'register_type' ], 11 );
     }
 
-    public function register_type() {
-        $field_value_types = $this->get_field_value_types();
-
+    public function register_type( TypeRegistry $type_registry ) {
         register_graphql_union_type( self::TYPE, [
-            'typeNames'   => array_unique( array_values( $field_value_types ) ),
-            'resolveType' => function( $object, AppContext $context, ResolveInfo $info ) use ( $field_value_types ) {
-                if ( isset( $field_value_types[ $object['type'] ] ) ) {
-                    return TypeRegistry::get_type( $field_value_types[ $object['type'] ] );
-                }
-
-                return null;
+            'typeNames'   => $this->get_field_value_type_names(),
+            'resolveType' => function( $object ) use ( $type_registry ) {
+                return $type_registry->get_type( $object['value_class']::TYPE );
             },
         ] );
     }
 
-    /**
-     * Get field types and their related field value types.
-     * Example: [ 'AddressField' => 'AddressFieldValues' ]
-     *
-     * @return array Field value types.
-     */
-    private function get_field_value_types() : array {
-        $fields_with_value_types = array_filter( $this->instances, function( $instance ) {
-            return $instance instanceof Field && defined( get_class( $instance ) . '::VALUE_TYPE' );
-        } );
+    private function get_field_value_type_names() : array {
+        return array_values( array_map( fn( $class ) => $class::TYPE, $this->get_field_value_classes() ) );
+    }
 
-        return array_reduce( $fields_with_value_types, function( $value_types, $field ) {
-            $value_types[ $field::TYPE ] = $field::VALUE_TYPE;
+    private function get_field_value_classes() : array {
+        $is_field_value_instance = fn( $instance ) => $instance instanceof FieldValue;
+        $field_values            = array_filter( $this->instances, $is_field_value_instance );
 
-            return $value_types;
-        }, [] );
+        /**
+         * Filter for adding custom field value class instances.
+         * Classes must implement the WPGraphQLGravityForms\Interfaces\FieldValue interface
+         * and define a "TYPE" class constant string in this format: "<field_name>Value".
+         *
+         * @param array $field_values Field value class instances.
+         */
+        $field_values = apply_filters( 'wp_graphql_gf_field_value_instances', $field_values );
+
+        // Filter the array a second time to guarantee that any classes added are instances of FieldValue.
+        return array_filter( $field_values, $is_field_value_instance );
     }
 }

@@ -29,9 +29,12 @@ class PasswordField extends Field {
             'description' => __( 'Gravity Forms Password field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
+                $this->get_custom_properties(),
                 FieldProperty\DescriptionPlacementProperty::get(),
+                FieldProperty\DescriptionProperty::get(),
                 FieldProperty\ErrorMessageProperty::get(),
                 FieldProperty\IsRequiredProperty::get(),
+                FieldProperty\PlaceholderProperty::get(),
                 [
                     'inputs' => [
                         'type'        => [ 'list_of' => FieldProperty\PasswordInputProperty::TYPE ],

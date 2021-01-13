@@ -6,15 +6,16 @@ use GF_Field;
 use WPGraphQLGravityForms\Interfaces\Hookable;
 use WPGraphQLGravityForms\Interfaces\Type;
 use WPGraphQLGravityForms\Interfaces\FieldValue;
+use WPGraphQLGravityForms\Types\Field\MultiSelectField;
 
 /**
  * Values for an individual MultiSelect field.
  */
-class MultiSelectFieldValues implements Hookable, Type, FieldValue {
+class MultiSelectFieldValue implements Hookable, Type, FieldValue {
     /**
      * Type registered in WPGraphQL.
      */
-    const TYPE = 'MultiSelectFieldValues';
+    const TYPE = MultiSelectField::TYPE . 'Value';
 
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
@@ -22,11 +23,11 @@ class MultiSelectFieldValues implements Hookable, Type, FieldValue {
 
     public function register_type() {
         register_graphql_object_type( self::TYPE, [
-            'description' => __('Gravity Forms multiselect field values.', 'wp-graphql-gravity-forms'),
+            'description' => __( 'Multiselect field values.', 'wp-graphql-gravity-forms' ),
             'fields'      => [
                 'values' => [
-                    'type'        => ['list_of' => 'String' ],
-                    'description' => __('Field values.', 'wp-graphql-gravity-forms'),
+                    'type'        => [ 'list_of' => 'String' ],
+                    'description' => __( 'Field values.', 'wp-graphql-gravity-forms' ),
                 ],
             ],
         ] );

@@ -3,7 +3,6 @@
 namespace WPGraphQLGravityForms\Types\Field;
 
 use WPGraphQLGravityForms\Types\Field\FieldProperty;
-use WPGraphQLGravityForms\Types\Field\FieldValue\StringFieldValue;
 
 /**
  * Checkbox field.
@@ -21,11 +20,6 @@ class CheckboxField extends Field {
      */
     const GF_TYPE = 'checkbox';
 
-    /**
-     * Field value type.
-     */
-    const VALUE_TYPE = StringFieldValue::TYPE;
-
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
     }
@@ -35,7 +29,9 @@ class CheckboxField extends Field {
             'description' => __( 'Gravity Forms Checkbox field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
+                $this->get_custom_properties(),
                 FieldProperty\ChoicesProperty::get(),
+                FieldProperty\DescriptionProperty::get(),
                 FieldProperty\EnableChoiceValueProperty::get(),
                 FieldProperty\ErrorMessageProperty::get(),
                 FieldProperty\InputNameProperty::get(),
@@ -44,9 +40,13 @@ class CheckboxField extends Field {
                 [
                     'inputs' => [
                         'type'        => [ 'list_of' => FieldProperty\CheckboxInputProperty::TYPE ],
-                        'description' => __('List of inputs. Checkboxes are treated as multi-input fields, since each checkbox item is stored separately.', 'wp-graphql-gravity-forms'),
+                        'description' => __( 'List of inputs. Checkboxes are treated as multi-input fields, since each checkbox item is stored separately.', 'wp-graphql-gravity-forms' ),
                     ],
-                ]
+                    'enableSelectAll' => [
+                        'type'        => 'Boolean',
+                        'description' => __( 'Whether the "select all" choice should be displayed.', 'wp-graphql-gravity-forms' ),
+                    ]
+                ],
             ),
         ] );
     }

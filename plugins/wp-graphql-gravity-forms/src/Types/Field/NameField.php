@@ -3,7 +3,6 @@
 namespace WPGraphQLGravityForms\Types\Field;
 
 use WPGraphQLGravityForms\Types\Field\FieldProperty;
-use WPGraphQLGravityForms\Types\Field\FieldValue\NameFieldValues;
 
 /**
  * Name field.
@@ -21,11 +20,6 @@ class NameField extends Field {
      */
     const GF_TYPE = 'name';
 
-    /**
-     * Field value type.
-     */
-    const VALUE_TYPE = NameFieldValues::TYPE;
-
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
     }
@@ -35,11 +29,13 @@ class NameField extends Field {
             'description' => __( 'Gravity Forms Name field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
+                $this->get_custom_properties(),
+                FieldProperty\DescriptionProperty::get(),
                 FieldProperty\ErrorMessageProperty::get(),
                 FieldProperty\InputNameProperty::get(),
+                FieldProperty\InputsProperty::get(),
                 FieldProperty\IsRequiredProperty::get(),
                 FieldProperty\SizeProperty::get(),
-                FieldProperty\InputsProperty::get(),
                 [
                     /**
                      * Possible values: normal, extended, simple
@@ -48,6 +44,7 @@ class NameField extends Field {
                         'type'        => 'String',
                         'description' => __('Determines the format of the name field.', 'wp-graphql-gravity-forms'),
                     ],
+                    // @TODO: Add placeholders.
                 ]
             ),
         ] );

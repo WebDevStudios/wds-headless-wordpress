@@ -1,18 +1,18 @@
 <?php
 
-namespace WPGraphQLGravityForms\Mutations;
+namespace WPGraphQLGravityForms\Types\Input;
 
 use WPGraphQLGravityForms\Interfaces\Hookable;
 use WPGraphQLGravityForms\Interfaces\InputType;
 
 /**
- * Sorting input type for Entries queries.
+ * Input fields for a single checkbox.
  */
-class EntryTextValueInput implements Hookable, InputType {
+class CheckboxInput implements Hookable, InputType {
     /**
      * Type registered in WPGraphQL.
      */
-    const TYPE = 'EntryTextValueInput';
+    const TYPE = 'CheckboxInput';
 
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_input_type' ] );
@@ -20,15 +20,15 @@ class EntryTextValueInput implements Hookable, InputType {
 
     public function register_input_type() {
         register_graphql_input_type( self::TYPE, [
-            'description' => __('Entry text value.', 'wp-graphql-gravity-forms'),
+            'description' => __( 'Input fields for a single checkbox.', 'wp-graphql-gravity-forms' ),
             'fields'      => [
-                'id' => [
-                    'type'        => 'Integer',
-                    'description' => __( 'The ID of the field.', 'wp-graphql-gravity-forms' ),
+                'inputId' => [
+                    'type'        => 'Float',
+                    'description' => __( 'Input ID.', 'wp-graphql-gravity-forms' ),
                 ],
                 'value' => [
                     'type'        => 'String',
-                    'description' => __( 'The field value.', 'wp-graphql-gravity-forms' ),
+                    'description' => __( 'Input value', 'wp-graphql-gravity-forms' ),
                 ],
             ],
         ] );

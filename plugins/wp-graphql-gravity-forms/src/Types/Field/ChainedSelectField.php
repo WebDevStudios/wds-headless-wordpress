@@ -3,7 +3,6 @@
 namespace WPGraphQLGravityForms\Types\Field;
 
 use WPGraphQLGravityForms\Types\Field\FieldProperty;
-use WPGraphQLGravityForms\Types\Field\FieldValue\ChainedSelectFieldValues;
 
 /**
  * Chained Select field.
@@ -22,11 +21,6 @@ class ChainedSelectField extends Field {
      */
     const GF_TYPE = 'chainedselect';
 
-    /**
-     * Field value type.
-     */
-    const VALUE_TYPE = ChainedSelectFieldValues::TYPE;
-
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
     }
@@ -36,10 +30,12 @@ class ChainedSelectField extends Field {
             'description' => __( 'Gravity Forms Chained Select field.', 'wp-graphql-gravity-forms' ),
             'fields'      => array_merge(
                 $this->get_global_properties(),
-                FieldProperty\IsRequiredProperty::get(),
-                FieldProperty\SizeProperty::get(),
+                $this->get_custom_properties(),
+                FieldProperty\DescriptionProperty::get(),
                 FieldProperty\ErrorMessageProperty::get(),
                 FieldProperty\InputsProperty::get(),
+                FieldProperty\IsRequiredProperty::get(),
+                FieldProperty\SizeProperty::get(),
                 [
                     'choices' => [
                         'type'        => [ 'list_of' => FieldProperty\ChainedSelectChoiceProperty::TYPE ],
@@ -54,7 +50,7 @@ class ChainedSelectField extends Field {
                         'type'        => 'Boolean',
                         'description' => __('Whether inactive dropdowns should be hidden.', 'wp-graphql-gravity-forms'),
                     ],
-                ]
+                ],
             ),
         ] );
     }
