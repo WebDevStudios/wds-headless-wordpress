@@ -134,6 +134,9 @@ if ( ! function_exists( 'wds_set_headless_rest_preview_link' ) ) {
 				$response->data['link'] = "{$base_url}/404";
 			} else {
 
+				// Remove excess slash from end of base URL.
+				$base_url = rtrim( $base_url, '/' );
+
 				// Return URL based on post name.
 				$response->data['link'] = "{$base_url}/{$post->post_name}";
 			}
