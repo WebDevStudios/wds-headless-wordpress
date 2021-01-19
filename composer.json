@@ -56,7 +56,8 @@
     "wpackagist-plugin/resmushit-image-optimizer": "^0.3",
     "wpackagist-plugin/stream": "^3.4",
     "wpackagist-plugin/wp-search-with-algolia": "^1.6",
-    "harness-software/wp-graphql-gravity-forms": "dev-master"
+    "harness-software/wp-graphql-gravity-forms": "dev-master",
+    "wpackagist-plugin/gutenberg": "^9.7.4"
   },
   "scripts": {
     "lint": "composer run compat && composer run lint:php",
