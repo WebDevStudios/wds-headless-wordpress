@@ -1688,6 +1688,68 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/is-buffer/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/is-buffer/index.js ***!
@@ -38122,9 +38184,9 @@ var _Switch = __webpack_require__(/*! ./Switch */ "./src/js/components/Switch.js
 
 var _Switch2 = _interopRequireDefault(_Switch);
 
-var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+var _classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _server = __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js");
 
@@ -38135,40 +38197,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Block(_ref) {
 	var data = _ref.data,
 	    toggleBlock = _ref.toggleBlock,
-	    disabledBlocks = _ref.disabledBlocks;
+	    disabledBlocks = _ref.disabledBlocks,
+	    filteredBlocks = _ref.filteredBlocks;
 
-
-	var icon = '';
-	var type = 'dashicon';
+	var icon = "";
+	var type = "dashicon";
 	var id = data.name;
+	var disabledClass = disabledBlocks.indexOf(id) !== -1 ? "disabled" : "";
+	var isFiltered = filteredBlocks.indexOf(id) !== -1 ? true : false;
+	var filteredClass = isFiltered ? "filtered" : "";
 
 	if (data.icon && data.icon.src) {
 		if (data.icon.src.type) {
-			type = 'react';
+			type = "react";
 			icon = _server2.default.renderToStaticMarkup(data.icon.src);
 		} else {
 			icon = data.icon.src;
 		}
 	}
 
-	var disabledClass = '';
-	Object.keys(disabledBlocks).forEach(function (key) {
-		if (disabledBlocks[key] === id) {
-			disabledClass = ' disabled';
-		}
-	});
-
 	var clickHandler = function clickHandler(e) {
 		var target = e.currentTarget;
 		if (target) {
 			var _id = target.dataset.id;
-			toggleBlock(target, _id);
+			if (!target.classList.contains("filtered")) {
+				toggleBlock(target, _id);
+			} else {
+				alert(gbm_localize.filtered_alert);
+				target.blur();
+			}
 		}
 	};
 
 	return _react2.default.createElement(
 		"button",
-		{ "data-title": data.title, "data-description": data.description, role: "button", className: 'item' + disabledClass, "data-id": id, "data-category": data.category, onClick: clickHandler, "aria-label": gbm_localize.toggle },
+		{
+			"data-title": data.title,
+			"data-description": data.description,
+			role: "button",
+			className: (0, _classnames2.default)("item", disabledClass, filteredClass),
+			"data-id": id,
+			"data-category": data.category,
+			onClick: clickHandler,
+			"aria-label": gbm_localize.toggle,
+			title: id,
+			tabIndex: isFiltered ? "-1" : ""
+		},
 		_react2.default.createElement(
 			"div",
 			{ className: "item--wrap" },
@@ -38183,12 +38257,20 @@ function Block(_ref) {
 				),
 				_react2.default.createElement(
 					"span",
-					{ className: "block-info block-info--desc" },
+					{
+						className: "block-info block-info--desc",
+						title: data.description
+					},
 					data.description
+				),
+				_react2.default.createElement(
+					"span",
+					{ className: "block-info block-info--id" },
+					id
 				)
 			)
 		),
-		_react2.default.createElement(_Switch2.default, null)
+		!isFiltered && _react2.default.createElement(_Switch2.default, null)
 	);
 }
 exports.default = Block;
@@ -38234,6 +38316,8 @@ function Category(_ref) {
 	var blocks = data.blocks;
 
 	var disabledBlocks = gbm_localize.disabledBlocks;
+	var filteredBlocks = gbm_localize.filteredBlocks;
+
 	if ((typeof disabledBlocks === "undefined" ? "undefined" : _typeof(disabledBlocks)) === "object") {
 		// Convert `disabledBlocks` to array if required.
 		disabledBlocks = Object.keys(disabledBlocks).map(function (i) {
@@ -38315,7 +38399,7 @@ function Category(_ref) {
 
 				return _react2.default.createElement(_Block2.default, (_React$createElement = {
 					key: block.name
-				}, _defineProperty(_React$createElement, "key", index + block.name), _defineProperty(_React$createElement, "data", block), _defineProperty(_React$createElement, "toggleBlock", toggleBlock), _defineProperty(_React$createElement, "disabledBlocks", disabledBlocks), _React$createElement));
+				}, _defineProperty(_React$createElement, "key", index + block.name), _defineProperty(_React$createElement, "data", block), _defineProperty(_React$createElement, "toggleBlock", toggleBlock), _defineProperty(_React$createElement, "disabledBlocks", disabledBlocks), _defineProperty(_React$createElement, "filteredBlocks", filteredBlocks), _React$createElement));
 			}),
 			_react2.default.createElement("div", { className: "loader" })
 		)
@@ -38349,15 +38433,14 @@ function Icon(_ref) {
 	var src = _ref.src,
 	    type = _ref.type;
 
-
-	var iconSrc = type === 'dashicon' ? '<span class="dashicons dashicons-' + src + '"></span>' : src;
+	var iconSrc = type === "dashicon" ? '<span class="dashicons dashicons-' + src + '"></span>' : src;
 
 	// Custom Heading Icon
-	if (src === 'heading') {
+	if (src === "heading") {
 		iconSrc = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M5 4v3h5.5v12h3V7H19V4z"></path><path fill="none" d="M0 0h24v24H0V0z"></path></svg>';
 	}
 
-	return _react2.default.createElement('div', { className: 'icon', dangerouslySetInnerHTML: { __html: iconSrc } });
+	return _react2.default.createElement("div", { className: "icon", dangerouslySetInnerHTML: { __html: iconSrc } });
 }
 exports.default = Icon;
 
@@ -38379,6 +38462,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
+var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
@@ -38391,16 +38482,15 @@ var _Nav = __webpack_require__(/*! ./Nav */ "./src/js/components/Nav.js");
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
-var _axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-
-var _axios2 = _interopRequireDefault(_axios);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-function List(_ref) {
-	var props = _ref.props;
+function List() {
+	var exportDivRef = (0, _react.useRef)();
+	var exportRef = (0, _react.useRef)();
+	var exportBtnRef = (0, _react.useRef)();
+	var copyRef = (0, _react.useRef)();
 
 	var _useState = (0, _react.useState)({}),
 	    _useState2 = _slicedToArray(_useState, 2),
@@ -38411,6 +38501,13 @@ function List(_ref) {
 	    _useState4 = _slicedToArray(_useState3, 2),
 	    totalBlocks = _useState4[0],
 	    setTotalBlocks = _useState4[1];
+
+	var initialView = localStorage && localStorage.getItem("gbm-view") ? localStorage.getItem("gbm-view") : "grid";
+
+	var _useState5 = (0, _react.useState)(initialView),
+	    _useState6 = _slicedToArray(_useState5, 2),
+	    view = _useState6[0],
+	    setView = _useState6[1];
 
 	/**
   * categoryClickHandler
@@ -38425,7 +38522,6 @@ function List(_ref) {
 		if (!target) {
 			return false;
 		}
-
 		if (target.dataset.state === "active") {
 			bulkProcess(target, "disable");
 			target.classList.add("disabled");
@@ -38558,8 +38654,7 @@ function List(_ref) {
 	};
 
 	/**
-  * setCategoryStatus
-  * Set the status indicator and button states for each category
+  * Set the status indicator and button states for each category.
   *
   * @since 1.0
   */
@@ -38593,12 +38688,11 @@ function List(_ref) {
 	};
 
 	/**
-  * Window onLoad
-  * Get all WP Blocks
+  * Get all WP Blocks on load.
   *
   * @since 1.0
   */
-	var onLoad = function onLoad(e) {
+	var onLoad = function onLoad() {
 		wp.blockLibrary.registerCoreBlocks();
 		var wpBlocks = wp.blocks.getBlockTypes();
 		if (wpBlocks) {
@@ -38665,12 +38759,82 @@ function List(_ref) {
 					blockArray.push(obj);
 				}
 			});
-			console.log(blockArray);
+			blockArray;
 			setBlocks(blockArray); // Set state
 		}
 	};
 
-	// Close plugins display
+	// Change block view
+	var changeView = function changeView(value) {
+		if (!value) {
+			return false;
+		}
+		if (localStorage) {
+			localStorage.setItem("gbm-view", value);
+		}
+		setView(value);
+	};
+
+	// Export blocks
+	var exportBlocks = function exportBlocks() {
+		var url = gbm_localize.root + "gbm/export/";
+		exportDivRef.current.classList.add("active");
+		// API Request
+		(0, _axios2.default)({
+			method: "GET",
+			url: url,
+			headers: {
+				"X-WP-Nonce": gbm_localize.nonce,
+				"Content-Type": "application/json"
+			}
+		}).then(function (res) {
+			if (res.status === 200 && res.data && res.data.success) {
+				var blockReturn = res.data.blocks;
+				blockReturn = blockReturn.replace(/\\/g, ""); // Replace `\`.
+				blockReturn = blockReturn.replace(/"/g, "'"); // Replace `"`.
+				blockReturn = blockReturn.replace(/,'/g, ", '"); // Replace `,'`.
+				var results = "// functions.php<br/>add_filter( 'gbm_disabled_blocks', function() {<br/>&nbsp;&nbsp;&nbsp;return " + blockReturn + "<br/>});";
+				exportRef.current.innerHTML = results;
+				setTimeout(function () {
+					exportDivRef.current.focus();
+				}, 100);
+			} else {
+				console.warn("There was an error exporting disabled blocks.");
+				exportDivRef.current.classList.remove("active");
+			}
+		}).catch(function (error) {
+			// Error
+			console.log(error);
+			exportDivRef.current.classList.remove("active");
+		});
+	};
+
+	// Copy to clipboard
+	var copyExport = function copyExport() {
+		// Create range
+		var range = document.createRange();
+		range.selectNodeContents(exportRef.current);
+		var sel = window.getSelection();
+		sel.removeAllRanges();
+		sel.addRange(range);
+		// Copy to clipboard
+		document.execCommand("copy");
+		copyRef.current.innerHTML = gbm_localize.copied;
+		setTimeout(function () {
+			copyRef.current.disabled = true;
+		}, 500);
+	};
+
+	// Close Export modal.
+	var closeExport = function closeExport() {
+		exportDivRef.current.classList.remove("active");
+		setTimeout(function () {
+			exportBtnRef.current.focus();
+			exportRef.current.innerHTML = gbm_localize.loading_export;
+		}, 350);
+	};
+
+	// Toggle Other Plugins display
 	var otherPluginsClick = function otherPluginsClick(e) {
 		var otherPluginsDiv = document.getElementById("gbm-other-plugins");
 		if (!otherPluginsDiv) {
@@ -38698,13 +38862,18 @@ function List(_ref) {
 	// On Load
 	(0, _react.useEffect)(function () {
 		onLoad();
-
 		var otherPluginsBtn = document.getElementById("otherPlugins");
 		var otherPluginsClose = document.getElementById("otherPluginsClose");
 		if (otherPluginsBtn) {
 			otherPluginsBtn.addEventListener("click", otherPluginsClick);
 			otherPluginsClose.addEventListener("click", otherPluginsClick);
 		}
+		document.addEventListener("keyup", function (e) {
+			if (e.key === "Escape") {
+				closeExport();
+			}
+		}, false);
+		return function () {};
 	}, []);
 
 	return _react2.default.createElement(
@@ -38713,13 +38882,111 @@ function List(_ref) {
 		_react2.default.createElement(_Nav2.default, { blocks: blocks }),
 		_react2.default.createElement(
 			"div",
-			{ className: "gbm-blocks" },
+			{ className: (0, _classnames2.default)("gbm-blocks", "gbm-view-" + view) },
 			_react2.default.createElement(
 				"span",
 				{ className: "global-loader loading" },
-				gbm_localize.loading
+				gbm_localize.loading,
+				"..."
 			),
-			blocks && blocks.length && blocks.map(function (category, index) {
+			_react2.default.createElement(
+				"div",
+				{ className: "gbm-options" },
+				_react2.default.createElement(
+					"div",
+					{ className: "gbm-options--view" },
+					_react2.default.createElement(
+						"button",
+						{
+							type: "button",
+							className: view === "grid" ? "active" : "",
+							disabled: view === "grid",
+							onClick: function onClick() {
+								return changeView("grid");
+							}
+						},
+						_react2.default.createElement("span", { className: "dashicons dashicons-grid-view" }),
+						gbm_localize.grid
+					),
+					_react2.default.createElement(
+						"button",
+						{
+							type: "button",
+							className: view === "list" ? "active" : "",
+							disabled: view === "list",
+							onClick: function onClick() {
+								return changeView("list");
+							}
+						},
+						_react2.default.createElement("span", { className: "dashicons dashicons-list-view" }),
+						gbm_localize.list
+					)
+				),
+				_react2.default.createElement(
+					"button",
+					{
+						type: "button",
+						className: "export",
+						ref: exportBtnRef,
+						onClick: function onClick() {
+							return exportBlocks();
+						}
+					},
+					_react2.default.createElement("span", { className: "dashicons dashicons-database-export" }),
+					gbm_localize.export
+				)
+			),
+			_react2.default.createElement(
+				"div",
+				{ className: "gbm-code-export", ref: exportDivRef, tabIndex: "0" },
+				_react2.default.createElement(
+					"div",
+					{ className: "gbm-code-export--inner" },
+					_react2.default.createElement(
+						"div",
+						null,
+						_react2.default.createElement(
+							"p",
+							null,
+							gbm_localize.export_intro
+						),
+						_react2.default.createElement(
+							"div",
+							null,
+							_react2.default.createElement(
+								"button",
+								{
+									type: "button",
+									className: "button button-primary",
+									onClick: copyExport,
+									ref: copyRef
+								},
+								gbm_localize.copy
+							),
+							_react2.default.createElement(
+								"button",
+								{
+									type: "button",
+									className: "button",
+									onClick: closeExport
+								},
+								gbm_localize.close
+							)
+						)
+					),
+					_react2.default.createElement(
+						"code",
+						{
+							id: "gbm-export",
+							ref: exportRef,
+							contentEditable: "true",
+							suppressContentEditableWarning: true
+						},
+						gbm_localize.loading_export
+					)
+				)
+			),
+			blocks && blocks.length && blocks.map(function (category) {
 				return _react2.default.createElement(_Category2.default, {
 					key: category.info.slug,
 					data: category,
@@ -38757,28 +39024,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Nav(_ref) {
 	var blocks = _ref.blocks;
 
-
 	// Search blocks
 	var search = function search() {
-
-		var searchInput = document.querySelector('#gbm-search');
-		var blocks = document.querySelectorAll('.gbm-blocks .gbm-block-list button');
+		var searchInput = document.querySelector("#gbm-search");
+		var blocks = document.querySelectorAll(".gbm-blocks .gbm-block-list button");
 		var blockArray = Array.prototype.slice.call(blocks);
 		var term = searchInput.value.toLowerCase();
 
-		if (term !== '') {
+		if (term !== "") {
 			blockArray.map(function (block) {
 				var str = block.dataset.title.toLowerCase();
 				var found = str.search(term);
 				if (found !== -1) {
-					block.style.display = 'flex';
+					block.style.display = "flex";
 				} else {
-					block.style.display = 'none';
+					block.style.display = "none";
 				}
 			});
 		} else {
 			blockArray.map(function (block) {
-				block.style.display = 'flex';
+				block.style.display = "flex";
 			});
 		}
 	};
@@ -38787,54 +39052,64 @@ function Nav(_ref) {
 	var moveTo = function moveTo(e) {
 		var el = e.currentTarget;
 		var to = el.dataset.to;
-		var target = document.querySelector('#' + to);
+		var target = document.querySelector("#" + to);
 		if (target) {
 			var top = target.getBoundingClientRect().top + window.pageYOffset - 50;
 			window.scrollTo({
 				top: top, // scroll so that the element is at the top of the view
-				behavior: 'smooth' // smooth scroll
+				behavior: "smooth" // smooth scroll
 			});
 		}
 	};
 
 	return _react2.default.createElement(
-		'div',
-		{ className: 'gbm-nav' },
+		"div",
+		{ className: "gbm-nav" },
 		_react2.default.createElement(
-			'div',
-			{ id: 'gbm-sticky-wrapper' },
+			"div",
+			{ id: "gbm-sticky-wrapper" },
 			_react2.default.createElement(
-				'div',
-				{ id: 'gbm-sticky' },
+				"div",
+				{ id: "gbm-sticky" },
 				_react2.default.createElement(
-					'div',
-					{ className: 'gbm-nav-wrap' },
+					"div",
+					{ className: "gbm-nav-wrap" },
 					blocks && blocks.length && blocks.map(function (category) {
 						return _react2.default.createElement(
-							'button',
-							{ key: category.info.slug, type: 'button', 'data-to': 'block-' + category.info.slug, onClick: moveTo },
+							"button",
+							{
+								key: category.info.slug,
+								type: "button",
+								"data-to": "block-" + category.info.slug,
+								onClick: moveTo
+							},
 							category.info.title
 						);
 					})
 				),
 				_react2.default.createElement(
-					'div',
-					{ className: 'gbm-search' },
+					"div",
+					{ className: "gbm-search" },
 					_react2.default.createElement(
-						'label',
-						{ className: 'offscreen', htmlFor: 'gbm-search' },
+						"label",
+						{ className: "offscreen", htmlFor: "gbm-search" },
 						gbm_localize.search_label
 					),
-					_react2.default.createElement('input', { type: 'text', id: 'gbm-search', placeholder: gbm_localize.search_label, onKeyUp: search }),
+					_react2.default.createElement("input", {
+						type: "text",
+						id: "gbm-search",
+						placeholder: gbm_localize.search_label,
+						onKeyUp: search
+					}),
 					_react2.default.createElement(
-						'button',
-						{ type: 'button', onClick: search },
+						"button",
+						{ type: "button", onClick: search },
 						_react2.default.createElement(
-							'span',
-							{ className: 'offscreen' },
+							"span",
+							{ className: "offscreen" },
 							gbm_localize.submit
 						),
-						_react2.default.createElement('span', { className: 'dashicons dashicons-search' })
+						_react2.default.createElement("span", { className: "dashicons dashicons-search" })
 					)
 				)
 			)
@@ -38866,7 +39141,6 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Switch() {
-
 	return _react2.default.createElement(
 		"div",
 		{ className: "gbm-block-switch" },

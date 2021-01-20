@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gutenberg Block Manager\n"
-"POT-Creation-Date: 2020-01-02 15:45-0500\n"
+"POT-Creation-Date: 2021-01-19 21:01-0500\n"
 "PO-Revision-Date: 2019-12-30 12:00-0500\n"
 "Last-Translator: Darren Cooney <darren@connekthq.com>\n"
 "Language-Team: \n"
@@ -10,100 +10,129 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: core/src\n"
 "X-Poedit-SearchPathExcluded-1: admin/src\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#: api/bulk_process.php:66
+#: api/bulk_process.php:65
 msgid "All Blocks Disabled"
 msgstr ""
 
-#: api/bulk_process.php:88
+#: api/bulk_process.php:87
 msgid "All Blocks Enabled"
 msgstr ""
 
-#: api/bulk_process.php:96 api/toggle.php:79
+#: api/bulk_process.php:94 api/toggle.php:76
 msgid "Error accessing API data."
 msgstr ""
 
-#: api/toggle.php:57
+#: api/export.php:46
+msgid "Unatuhorized."
+msgstr ""
+
+#: api/toggle.php:54
 msgid "Block Disabled"
 msgstr ""
 
-#: api/toggle.php:71
+#: api/toggle.php:68
 msgid "Block enabled"
 msgstr ""
 
-#: class-admin.php:73
+#: block-manager.php:132
+msgid "Manage Blocks"
+msgstr ""
+
+#: class-admin.php:84
 msgid "Enable"
 msgstr ""
 
-#: class-admin.php:74
+#: class-admin.php:85
 msgid "Disable"
 msgstr ""
 
-#: class-admin.php:75
+#: class-admin.php:86
 msgid "Enable All"
 msgstr ""
 
-#: class-admin.php:76
+#: class-admin.php:87
 msgid "Disable All"
 msgstr ""
 
-#: class-admin.php:77
+#: class-admin.php:88
 msgid "Toggle All Blocks"
 msgstr ""
 
-#: class-admin.php:78
+#: class-admin.php:89
 msgid "Toggle Block Activation"
 msgstr ""
 
-#: class-admin.php:79
+#: class-admin.php:90
 msgid "Filter Blocks"
 msgstr ""
 
-#: class-admin.php:80
+#: class-admin.php:91
 msgid "Submit"
 msgstr ""
 
-#: class-admin.php:81
+#: class-admin.php:92
 msgid "Loading Blocks"
 msgstr ""
 
-#: class-admin.php:113
-msgid "Gutenberg Block Manager"
+#: class-admin.php:93
+msgid "Getting export data..."
 msgstr ""
 
-#: class-admin.php:113
-msgid "by Connekt"
+#: class-admin.php:94
+msgid "Copy Code"
 msgstr ""
 
-#: class-admin.php:114
+#: class-admin.php:95
+msgid "Copied"
+msgstr ""
+
+#: class-admin.php:96
+msgid "Close"
+msgstr ""
+
+#: class-admin.php:97
+msgid "Grid"
+msgstr ""
+
+#: class-admin.php:98
+msgid "List"
+msgstr ""
+
+#: class-admin.php:99
+msgid "Export"
+msgstr ""
+
+#: class-admin.php:100
+msgid ""
+"Add the the following code to your functions.php to remove blocks at the "
+"theme level."
+msgstr ""
+
+#: class-admin.php:101
+msgid ""
+"This block has been globally disabled via the `gbm_disabled_blocks` "
+"filter and cannot be activated."
+msgstr ""
+
+#: class-admin.php:137
 #, php-format
 msgid ""
 "Manage the activation status of your %s blocks - disabled blocks will be "
 "removed from the block inserter."
 msgstr ""
 
-#: class-admin.php:116
-msgid "Other Plugins"
-msgstr ""
-
-#: class-admin.php:137
+#: class-admin.php:159
 #, php-format
 msgid "Other Plugins from %s Connekt %s"
-msgstr ""
-
-#: class-admin.php:138
-msgid "Close"
-msgstr ""
-
-#: gutenberg-block-manager.php:92
-msgid "Manage Blocks"
 msgstr ""
 
 #: vendor/connekt-plugin-installer/class-connekt-plugin-installer.php:52

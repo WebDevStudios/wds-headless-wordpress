@@ -1,41 +1,35 @@
 <?php
-
-/*
-*  rest_api_init
-*  Custom /resize route
-*
-*  @since 1.0
-*/
-
+/**
+ * Custom API route.
+ *
+ * @since 1.0
+ */
 add_action( 'rest_api_init', function () {
-   $my_namespace = 'gbm';
-   $my_endpoint = '/toggle';
-   register_rest_route( $my_namespace, $my_endpoint,
-      array(
-         'methods' => 'POST',
-			'callback' => 'block_manager_toggle',
+	$my_namespace = 'gbm';
+	$my_endpoint  = '/toggle';
+	register_rest_route(
+		$my_namespace,
+		$my_endpoint,
+		array(
+			'methods'             => 'POST',
+			'callback'            => 'block_manager_toggle',
 			'permission_callback' => function () {
 				return Gutenberg_Block_Manager::has_access();
 			},
-      )
-   );
+		)
+	);
 });
 
-
-
-
-/*
-*  block_manager_toggle
-*  Enable/Disable gutenberg blocks
-*
-*  @param $request      $_POST
-*  @return $response    json
-*  @since 1.0
-*/
-
+/**
+ * Enable/Disable individual gutenberg blocks.
+ *
+ * @param $request      $_POST
+ * @return $response    json
+ * @since 1.0
+ */
 function block_manager_toggle( WP_REST_Request $request ) {
 
-	if (is_user_logged_in() && current_user_can( apply_filters( 'block_manager_user_role', 'activate_plugins' ) )){
+	if ( is_user_logged_in() && current_user_can( apply_filters( 'block_manager_user_role', 'activate_plugins' ) ) ) {
 
 		error_reporting(E_ALL|E_STRICT);
 
