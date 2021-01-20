@@ -8,7 +8,7 @@
  * Author URI:      https://www.ashleyhitchcock.com
  * Text Domain:     wp-graphql-yoast-seo
  * Domain Path:     /languages
- * Version:         4.10.2
+ * Version:         4.11.0
  *
  * @package         WP_Graphql_YOAST_SEO
  */
@@ -18,7 +18,6 @@ if (!defined('ABSPATH')) {
 }
 
 use WPGraphQL\AppContext;
-use WPGraphQL\Data\DataSource;
 
 add_action('admin_init', function () {
     $core_dependencies = [
@@ -612,20 +611,19 @@ add_action('graphql_init', function () {
                         'personName' => wp_gql_seo_format_string(
                             $user->user_nicename
                         ),
-                        'companyLogo' => DataSource::resolve_post_object(
-                            $all['company_logo_id'],
-                            $context
-                        ),
-                        'personLogo' => DataSource::resolve_post_object(
-                            $all['person_logo_id'],
-                            $context
-                        ),
-                        'logo' => DataSource::resolve_post_object(
-                            $all['company_or_person'] === 'company'
-                                ? $all['company_logo_id']
-                                : $all['person_logo_id'],
-                            $context
-                        ),
+                        'companyLogo' => $context
+                            ->get_loader('post')
+                            ->load_deferred(absint($all['company_logo_id'])),
+                        'personLogo' => $context
+                            ->get_loader('post')
+                            ->load_deferred(absint($all['person_logo_id'])),
+                        'logo' => $context
+                            ->get_loader('post')
+                            ->load_deferred(
+                                $all['company_or_person'] === 'company'
+                                    ? absint($all['company_logo_id'])
+                                    : absint($all['person_logo_id'])
+                            ),
                         'companyOrPerson' => wp_gql_seo_format_string(
                             $all['company_or_person']
                         ),
@@ -642,10 +640,9 @@ add_action('graphql_init', function () {
                     ],
                     'redirects' => array_map($mappedRedirects, $redirects),
                     'openGraph' => [
-                        'defaultImage' => DataSource::resolve_post_object(
-                            $all['og_default_image_id'],
-                            $context
-                        ),
+                        'defaultImage' => $context
+                            ->get_loader('post')
+                            ->load_deferred(absint($all['og_default_image_id'])),
                         'frontPage' => [
                             'title' => wp_gql_seo_format_string(
                                 $all['og_frontpage_title']
@@ -653,10 +650,11 @@ add_action('graphql_init', function () {
                             'description' => wp_gql_seo_format_string(
                                 $all['og_frontpage_desc']
                             ),
-                            'image' => DataSource::resolve_post_object(
-                                $all['og_frontpage_image_id'],
-                                $context
-                            ),
+                            'image' => $context
+                                ->get_loader('post')
+                                ->load_deferred(
+                                    absint($all['og_frontpage_image_id'])
+                                ),
                         ],
                     ],
                 ];
@@ -761,13 +759,19 @@ add_action('graphql_init', function () {
                                         YoastSEO()->meta->for_post($post->ID)
                                             ->open_graph_description
                                     ),
-                                    'opengraphImage' => DataSource::resolve_post_object(
-                                        wp_gql_seo_get_og_image(
+                                    'opengraphImage' => function () use (
+                                        $post,
+                                        $context
+                                    ) {
+                                        $id = wp_gql_seo_get_og_image(
                                             YoastSEO()->meta->for_post($post->ID)
                                                 ->open_graph_images
-                                        ),
-                                        $context
-                                    ),
+                                        );
+
+                                        return $context
+                                            ->get_loader('post')
+                                            ->load_deferred(absint($id));
+                                    },
                                     'twitterCardType' => wp_gql_seo_format_string(
                                         YoastSEO()->meta->for_post($post->ID)
                                             ->twitter_card
@@ -780,13 +784,19 @@ add_action('graphql_init', function () {
                                         YoastSEO()->meta->for_post($post->ID)
                                             ->twitter_description
                                     ),
-                                    'twitterImage' => DataSource::resolve_post_object(
-                                        wpcom_vip_attachment_url_to_postid(
+                                    'twitterImage' => function () use (
+                                        $post,
+                                        $context
+                                    ) {
+                                        $id = wpcom_vip_attachment_url_to_postid(
                                             YoastSEO()->meta->for_post($post->ID)
                                                 ->twitter_image
-                                        ),
-                                        $context
-                                    ),
+                                        );
+
+                                        return $context
+                                            ->get_loader('post')
+                                            ->load_deferred(absint($id));
+                                    },
                                     'canonical' => wp_gql_seo_format_string(
                                         YoastSEO()->meta->for_post($post->ID)
                                             ->canonical
@@ -1051,10 +1061,11 @@ add_action('graphql_init', function () {
                                 YoastSEO()->meta->for_term($term->term_id)
                                     ->open_graph_description
                             ),
-                            'opengraphImage' => DataSource::resolve_post_object(
-                                $meta['wpseo_opengraph-image-id'],
-                                $context
-                            ),
+                            'opengraphImage' => $context
+                                ->get_loader('post')
+                                ->load_deferred(
+                                    absint($meta['wpseo_opengraph-image-id'])
+                                ),
                             'twitterCardType' => wp_gql_seo_format_string(
                                 YoastSEO()->meta->for_term($term->term_id)
                                     ->twitter_card
@@ -1067,10 +1078,11 @@ add_action('graphql_init', function () {
                                 YoastSEO()->meta->for_term($term->term_id)
                                     ->twitter_description
                             ),
-                            'twitterImage' => DataSource::resolve_post_object(
-                                $meta['wpseo_twitter-image-id'],
-                                $context
-                            ),
+                            'twitterImage' => $context
+                                ->get_loader('post')
+                                ->load_deferred(
+                                    absint($meta['wpseo_twitter-image-id'])
+                                ),
                             'canonical' => wp_gql_seo_format_string(
                                 $meta['canonical']
                             ),

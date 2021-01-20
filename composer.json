@@ -37,7 +37,7 @@
     }
   },
   "require": {
-    "pristas-peter/wp-graphql-gutenberg": "^0.3.6",
+    "pristas-peter/wp-graphql-gutenberg": "^0.3.7",
     "webdevstudios/advanced-custom-fields-pro": "^5.9",
     "webdevstudios/gravityforms": "^2.4",
     "webdevstudios/mu-autoload": "^1.0",

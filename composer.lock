@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12e2df30f54c43e3a3859d7f246362d4",
+    "content-hash": "32fae3fb4543c19a197a6eb9fb5b8987",
     "packages": [
         {
             "name": "composer/installers",
@@ -573,12 +573,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git",
-                "reference": "85b0e8cfb95e8e2cfc048c8ac4d426c60395483c"
+                "reference": "fb815ad8f6e7741ae5d25da7eb7dcb222f6e3c13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/85b0e8cfb95e8e2cfc048c8ac4d426c60395483c",
-                "reference": "85b0e8cfb95e8e2cfc048c8ac4d426c60395483c",
+                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/fb815ad8f6e7741ae5d25da7eb7dcb222f6e3c13",
+                "reference": "fb815ad8f6e7741ae5d25da7eb7dcb222f6e3c13",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
@@ -601,7 +601,7 @@
                 "source": "https://github.com/harness-software/wp-graphql-gravity-forms/tree/master",
                 "issues": "https://github.com/harness-software/wp-graphql-gravity-forms/issues"
             },
-            "time": "2020-10-08T18:07:16+00:00"
+            "time": "2021-01-19T15:51:56+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -855,16 +855,16 @@
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.6",
+            "version": "v0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "119deebe5c63a22f039fcb724af5d3310924faa5"
+                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/119deebe5c63a22f039fcb724af5d3310924faa5",
-                "reference": "119deebe5c63a22f039fcb724af5d3310924faa5",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/bf0e9290ffab5b6189172fc9721bc644a51d651e",
+                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e",
                 "shasum": ""
             },
             "require": {
@@ -888,7 +888,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Query gutenberg blocks with wp-graphql",
-            "time": "2020-12-10T14:44:27+00:00"
+            "time": "2021-01-18T05:47:03+00:00"
         },
         {
             "name": "psr/cache",
@@ -1786,24 +1786,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
-        },
-        {
-            "name": "wpackagist-plugin/gutenberg",
-            "version": "9.7.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.7.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.7.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/gutenberg/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",
