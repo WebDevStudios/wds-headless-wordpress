@@ -26,11 +26,14 @@ if ( ! function_exists( 'wds_set_headless_preview_link' ) ) {
 		$base_url = HEADLESS_FRONTEND_URL;
 		$slug     = strlen( $post->post_name ) > 0 ? $post->post_name : sanitize_title( $post->post_title );
 
-		// Preview link will have format: <domain>/api/preview?name=<slug>&id=<post-id>&post_type=<post-type>&token=<preview-token>.
+		// Get GraphQL single name.
+		$post_type = get_post_type_object( $post->post_type )->graphql_single_name ?? $post->post_type;
+
+		// Preview link will have format: <domain>/api/preview?name=<slug>&id=<post-id>&post_type=<postType>&token=<preview-token>.
 		return add_query_arg( [
 			'name'      => $slug,
 			'id'        => $post->ID,
-			'post_type' => $post->post_type,
+			'post_type' => $post_type,
 			'token'     => defined( 'PREVIEW_SECRET_TOKEN' ) ? PREVIEW_SECRET_TOKEN : '',
 		], "{$base_url}api/preview" );
 	}
