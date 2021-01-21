@@ -5,7 +5,7 @@
  * Description: Printing since 1440. This is the development plugin for the new block editor in core.
  * Requires at least: 5.3
  * Requires PHP: 5.6
- * Version: 9.7.4
+ * Version: 9.8.0
  * Author: Gutenberg Team
  * Text Domain: gutenberg
  *
@@ -13,8 +13,8 @@
  */
 
 ### BEGIN AUTO-GENERATED DEFINES
-define( 'GUTENBERG_VERSION', '9.7.4' );
-define( 'GUTENBERG_GIT_COMMIT', '5d9eea33a2df2b11c7e963e6043300df883f0d96' );
+define( 'GUTENBERG_VERSION', '9.8.0' );
+define( 'GUTENBERG_GIT_COMMIT', 'd1cd03958a707b0a7d003f8f8e9e589f7db51d28' );
 ### END AUTO-GENERATED DEFINES
 
 gutenberg_pre_init();
@@ -136,6 +136,31 @@ function modify_admin_bar( $wp_admin_bar ) {
 	}
 }
 add_action( 'admin_bar_menu', 'modify_admin_bar', 40 );
+
+
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
+/**
+ * Modify Dashboard welcome panel.
+ *
+ * When widgets are merged in core this should go into `wp-admin/includes/dashboard.php`
+ * and replace the widgets link in the `wp_welcome_panel` checking for the same condition,
+ * because then `gutenberg_use_widgets_block_editor` will exist in core.
+ */
+function modify_welcome_panel() {
+	ob_start();
+	wp_welcome_panel();
+	$welcome_panel = ob_get_clean();
+	if ( gutenberg_use_widgets_block_editor() ) {
+		echo str_replace(
+			admin_url( 'widgets.php' ),
+			admin_url( 'themes.php?page=gutenberg-widgets' ),
+			$welcome_panel
+		);
+	} else {
+		echo $welcome_panel;
+	}
+}
+add_action( 'welcome_panel', 'modify_welcome_panel', 40 );
 
 /**
  * Display a version notice and deactivate the Gutenberg plugin.

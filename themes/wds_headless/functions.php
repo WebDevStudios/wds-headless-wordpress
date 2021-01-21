@@ -17,7 +17,7 @@ require_once 'inc/admin.php';
 require_once 'inc/menus.php';
 
 /**
- * Sets up theme defaults .
+ * Sets up theme defaults.
  *
  * @author WebDevStudios
  * @since 1.0
@@ -50,3 +50,17 @@ function wds_theme_setup() {
 	}
 }
 add_action( 'after_setup_theme', 'wds_theme_setup' );
+
+/**
+ * Sets up default disabled bocks.
+ *
+ * @see https://wordpress.org/plugins/block-manager/
+ * @author WebDevStudios
+ * @since 1.0
+ * @return array
+ */
+function wds_disabled_block() {
+	return [ 'core/text-columns', 'core/nextpage', 'core/more', 'variation;core/embed;facebook', 'variation;core/embed;instagram', 'variation;core/embed;wordpress', 'variation;core/embed;soundcloud', 'variation;core/embed;spotify', 'variation;core/embed;flickr', 'variation;core/embed;animoto', 'variation;core/embed;cloudup', 'variation;core/embed;collegehumor', 'variation;core/embed;crowdsignal', 'variation;core/embed;dailymotion', 'variation;core/embed;imgur', 'variation;core/embed;issuu', 'variation;core/embed;kickstarter', 'variation;core/embed;meetup-com', 'variation;core/embed;mixcloud', 'variation;core/embed;reddit', 'variation;core/embed;reverbnation', 'variation;core/embed;screencast', 'variation;core/embed;scribd', 'variation;core/embed;slideshare', 'variation;core/embed;smugmug', 'variation;core/embed;speaker-deck', 'variation;core/embed;tiktok', 'variation;core/embed;ted', 'variation;core/embed;tumblr', 'variation;core/embed;videopress', 'variation;core/embed;wordpress-tv', 'variation;core/embed;amazon-kindle', 'core/audio', 'core/cover', 'core/file', 'core/gallery', 'core/video', 'core/freeform', 'core/subhead', 'core/preformatted', 'core/verse', 'core/archives', 'core/calendar', 'core/categories', 'core/html', 'core/latest-comments', 'core/latest-posts', 'core/rss', 'core/search', 'core/social-link', 'core/social-links', 'core/tag-cloud', 'core/shortcode' ];
+};
+
+add_filter( 'gbm_disabled_blocks', 'wds_disabled_block' );
