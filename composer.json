@@ -17,10 +17,6 @@
     "wds-satis": {
       "type": "composer",
       "url": "https://packages.wdslab.com/"
-    },
-    "github": {
-      "type": "vcs",
-      "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git"
     }
   },
   "extra": {

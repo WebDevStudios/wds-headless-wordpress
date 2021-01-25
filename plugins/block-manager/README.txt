@@ -26,11 +26,10 @@ The Gutenberg Block Manager is an intuitive tool for WordPress site admins to _g
 
 Use the `gbm_disabled_blocks` filter to control blocks via backend code. This makes it easier to control the status of blocks across multiple WordPress environments.
 
-```
-add_filter('gbm_disabled_blocks', function(){
-	return ['core/buttons', 'core/columns', 'core/freeform', 'core/table'];
-});
-```
+	add_filter('gbm_disabled_blocks', function(){
+		return ['core/buttons', 'core/columns', 'core/freeform', 'core/table'];
+	});
+
 
 == Installation ==
 
