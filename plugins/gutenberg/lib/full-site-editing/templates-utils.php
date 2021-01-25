@@ -57,11 +57,19 @@ function gutenberg_render_templates_lists_custom_column( $column_name, $post_id 
 		if ( empty( $terms ) || is_wp_error( $terms ) ) {
 			return;
 		}
-		$themes = array();
+		$themes        = array();
+		$is_file_based = false;
 		foreach ( $terms as $term ) {
-			$themes[] = esc_html( wp_get_theme( $term->slug ) );
+			if ( '_wp_file_based' === $term->slug ) {
+				$is_file_based = true;
+			} else {
+				$themes[] = esc_html( wp_get_theme( $term->slug ) );
+			}
 		}
 		echo implode( '<br />', $themes );
+		if ( $is_file_based ) {
+			echo '<br />' . __( '(Created from a template file)', 'gutenberg' );
+		}
 		return;
 	}
 }

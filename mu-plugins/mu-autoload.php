@@ -3,7 +3,7 @@
  * Autoload classes required by the project.
  *
  * @author Justin Foell <justin.foell@webdevstudios.com>
- * @since  2021-01-20
+ * @since  2021-01-25
  * @package WebDevStudios\MUAutoload
  */
 

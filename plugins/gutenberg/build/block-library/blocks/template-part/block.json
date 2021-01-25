@@ -3,6 +3,9 @@
 	"name": "core/template-part",
 	"category": "design",
 	"attributes": {
+		"postId": {
+			"type": "number"
+		},
 		"slug": {
 			"type": "string"
 		},

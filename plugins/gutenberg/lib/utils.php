@@ -78,6 +78,7 @@ function gutenberg_experimental_set( &$array, $path, $value = null ) {
 		}
 	}
 
+	$i;
 	for ( $i = 0; $i < $path_length - 1; ++$i ) {
 		$path_element = $path[ $i ];
 		if (
