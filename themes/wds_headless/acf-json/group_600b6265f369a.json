@@ -22,7 +22,7 @@
         {
             "key": "field_600b627f00c57",
             "label": "404 Error Page",
-            "name": "404_error_page",
+            "name": "error_404_page",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -62,5 +62,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "additionalSettings",
-    "modified": 1611358911
+    "modified": 1611705318
 }
