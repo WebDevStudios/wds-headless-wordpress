@@ -8,7 +8,6 @@
  */
 
 require_once 'inc/custom-post-types.php';
-require_once 'inc/custom-taxonomies.php';
 require_once 'inc/wpgraphql.php';
 require_once 'inc/acf.php';
 require_once 'inc/blocks.php';

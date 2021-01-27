@@ -45,62 +45,6 @@ function wds_get_relational_posts( array $post_ids ) {
 }
 
 /**
- * Add query to GraphQL to retrieve upcoming featured events.
- */
-function wds_add_upcoming_featured_events_query() {
-
-	register_graphql_connection( [
-		'fromType'           => 'RootQuery',
-		'toType'             => 'Event',
-		'fromFieldName'      => 'featuredEvents',
-		'connectionTypeName' => 'RootQueryToFeaturedEventsConnection',
-		'resolve'            => function( $root, $args, \WPGraphQL\AppContext $context, $info ) {
-
-			global $wpdb;
-
-			$resolver = new \WPGraphQL\Data\Connection\PostObjectConnectionResolver( $root, $args, $context, $info );
-			$per_page = $resolver->get_query_amount();
-
-			// Get current ET datetime.
-			$datetime = new DateTime();
-			$datetime->setTimezone( new DateTimeZone( 'America/New_York' ) );
-			$datetime = $datetime->format( 'Ymd' );
-
-			// Get upcoming events sorted by date (ASC).
-			$event_ids = $wpdb->get_col( $wpdb->prepare(
-				"
-				SELECT p.ID, p.post_title, m2.*
-				FROM wp_posts AS p
-				INNER JOIN wp_postmeta AS m1 ON p.ID = m1.post_id
-				INNER JOIN wp_postmeta AS m2 ON p.ID = m2.post_id
-				WHERE p.post_type = 'events' AND p.post_status = 'publish'
-				AND m1.meta_key = 'featured_event' AND m1.meta_value = '1'
-				AND (
-					(m2.meta_key = 'start_date' AND m2.meta_value >= %s)
-					OR (m2.meta_key = 'end_date' AND m2.meta_value >= %s)
-				)
-				GROUP BY ID
-				ORDER BY m2.meta_value ASC LIMIT %d
-				",
-				$datetime,
-				$datetime,
-				$per_page
-			) );
-
-			// Return 0 if no posts found.
-			$event_ids = count( $event_ids ) ? $event_ids : [0];
-
-			// Update query to only include upcoming event IDs.
-			$resolver->set_query_arg( 'post__in', $event_ids );
-
-			return $resolver->get_connection();
-		},
-	] );
-}
-// add_action( 'graphql_register_types', 'wds_add_upcoming_featured_events_query' );
-
-
-/**
  * Add query to GraphQL to retrieve homepage settings.
  */
 function wds_add_homepage_settings_query() {
