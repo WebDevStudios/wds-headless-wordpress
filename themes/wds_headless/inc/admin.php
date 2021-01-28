@@ -77,20 +77,20 @@ if ( ! function_exists( 'wds_set_headless_home_url' ) ) {
 		$path = ltrim( $path, '/' );
 
 		// Handle special-case pages.
-		$homepage_id    = intval( get_field( 'homepage', 'option' ) );
-		$homepage_uri   = $homepage_id ? get_post( $homepage_id )->post_name : '';
-		$error_page_id  = intval( get_field( 'error_404_page', 'option' ) );
-		$error_page_uri = $error_page_id ? get_post( $error_page_id )->post_name : '';
+		// $homepage_id    = intval( get_field( 'homepage', 'option' ) );
+		// $homepage_uri   = $homepage_id ? get_post( $homepage_id )->post_name : '';
+		// $error_page_id  = intval( get_field( 'error_404_page', 'option' ) );
+		// $error_page_uri = $error_page_id ? get_post( $error_page_id )->post_name : '';
 
-		if ( $path === $homepage_uri ) {
+		// if ( $path === $homepage_uri ) {
 
-			// Return root FE URL for homepage.
-			return $base_url;
-		} elseif ( $path === $error_page_uri ) {
+		// 	// Return root FE URL for homepage.
+		// 	return $base_url;
+		// } elseif ( $path === $error_page_uri ) {
 
-			// Return 404 URL for error page.
-			return "{$base_url}404";
-		}
+		// 	// Return 404 URL for error page.
+		// 	return "{$base_url}404";
+		// }
 
 		return "{$base_url}{$path}";
 	}
