@@ -205,3 +205,26 @@ function wds_block_category( $categories, $post ) {
 	);
 }
 add_filter( 'block_categories', 'wds_block_category', 10, 2 );
+
+/**
+ * Replace Site URL with FE URL as needed.
+ *
+ * @author WebDevStudios
+ * @since  1.0
+ * @param  array $breadcrumbs Yoast SEO breadcrumbs.
+ * @return array              Filtered breadcrumbs.
+ */
+function wds_breadcrumb_links( array $breadcrumbs ) {
+	if ( ! defined( 'HEADLESS_FRONTEND_URL' ) ) {
+		return $breadcrumbs;
+	}
+
+	$base_url = rtrim( HEADLESS_FRONTEND_URL, '/' );
+	$site_url = get_option( 'siteurl' );
+
+	// Replace site URL as it appears.
+	return array_map( function( $breadcrumb ) use ( $base_url, $site_url ) {
+		return str_ireplace( $site_url, $base_url, $breadcrumb );
+	}, $breadcrumbs );
+}
+add_filter( 'wpseo_breadcrumb_links', 'wds_breadcrumb_links' );
