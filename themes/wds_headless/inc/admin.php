@@ -220,11 +220,14 @@ function wds_breadcrumb_links( array $breadcrumbs ) {
 	}
 
 	$base_url = rtrim( HEADLESS_FRONTEND_URL, '/' );
-	$site_url = get_option( 'siteurl' );
 
-	// Replace site URL as it appears.
-	return array_map( function( $breadcrumb ) use ( $base_url, $site_url ) {
-		return str_ireplace( $site_url, $base_url, $breadcrumb );
+	// Override domain in breadcrumbs.
+	return array_map( function( $breadcrumb ) use ( $base_url ) {
+		$parsed_url        = parse_url( $breadcrumb['url'] );
+		$path              = $parsed_url['path'] ?? '';
+		$breadcrumb['url'] = "{$base_url}{$path}";
+
+		return $breadcrumb;
 	}, $breadcrumbs );
 }
 add_filter( 'wpseo_breadcrumb_links', 'wds_breadcrumb_links' );
