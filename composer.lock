@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d907043ddd443820a6d656f2981d6b0d",
+    "content-hash": "a12bdd613c7ce24520426ee74a2a597d",
     "packages": [
         {
             "name": "composer/installers",
@@ -1538,10 +1538,10 @@
                 "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WebDevStudios/wds-blocks/zipball/6b4a81dfa060e578f9d59d850edd1b3eb07a0d92",
+                "type": "tar",
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wds-blocks/webdevstudios-wds-blocks-2.0.0-126a50.tar",
                 "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92",
-                "shasum": ""
+                "shasum": "49c4a0cd2b16d14a2e737782d967732eaf1f832b"
             },
             "require-dev": {
                 "phpcompatibility/php-compatibility": "^9.3",
@@ -1572,10 +1572,6 @@
                 }
             ],
             "description": "WebDevStudios library of Gutenberg blocks.",
-            "support": {
-                "source": "https://github.com/WebDevStudios/wds-blocks/tree/2.0.0",
-                "issues": "https://github.com/WebDevStudios/wds-blocks/issues"
-            },
             "time": "2020-09-08T16:15:34+00:00"
         },
         {
@@ -1706,6 +1702,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/gutenberg/"
+        },
+        {
+            "name": "wpackagist-plugin/lazy-blocks",
+            "version": "2.3.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/lazy-blocks/",
+                "reference": "tags/2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/lazy-blocks.2.3.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/lazy-blocks/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",

@@ -48,6 +48,7 @@
     "wpackagist-plugin/stream": "^3.4",
     "wpackagist-plugin/wp-graphql": "^1.1",
     "wpackagist-plugin/wp-search-with-algolia": "^1.6",
+    "wpackagist-plugin/lazy-blocks": "^2.3",
     "webdevstudios/advanced-custom-fields-pro": "^5.9",
     "webdevstudios/gravityforms": "^2.4",
     "webdevstudios/mu-autoload": "^1.0",
