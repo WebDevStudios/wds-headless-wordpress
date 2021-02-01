@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "925188424df07c4cfaaa6c9b6366950e",
+    "content-hash": "d907043ddd443820a6d656f2981d6b0d",
     "packages": [
         {
             "name": "composer/installers",
@@ -1629,6 +1629,48 @@
             },
             "type": "wordpress-plugin",
             "time": "2020-02-26T18:56:09+00:00"
+        },
+        {
+            "name": "wp-graphql/wp-graphql-acf",
+            "version": "v0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-graphql/wp-graphql-acf.git",
+                "reference": "2545c2f32ac2d21db271eb5ab5334bc233b42cf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql-acf/zipball/2545c2f32ac2d21db271eb5ab5334bc233b42cf1",
+                "reference": "2545c2f32ac2d21db271eb5ab5334bc233b42cf1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "lucatume/wp-browser": "^2.2.",
+                "phpcompatibility/phpcompatibility-wp": "^2.0",
+                "wp-coding-standards/wpcs": "^2.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\ACF\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jasonbahl",
+                    "email": "jasonbahl@mac.com"
+                }
+            ],
+            "description": "Advanced Custom Fields bindings for wp-graphql",
+            "time": "2021-01-19T21:23:00+00:00"
         },
         {
             "name": "wp-graphql/wp-graphql-tax-query",
