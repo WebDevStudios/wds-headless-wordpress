@@ -1,6 +1,0 @@
-{
-    "name": "webdevstudios/wp-migrate-db-pro",
-    "description": "WDS-licensed purchase of the WP Migrate DB Pro plugin.",
-    "type": "wordpress-plugin",
-    "require": {}
-}

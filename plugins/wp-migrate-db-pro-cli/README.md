@@ -1,1 +1,0 @@
-# plugin-migrate-db-pro-cli

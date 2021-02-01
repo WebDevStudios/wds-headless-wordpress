@@ -17,15 +17,18 @@ node_modules/
 
 # composer
 vendor/
-!plugins/wp-graphql-gravity-forms/vendor
-!plugins/wp-graphql-tax-query/vendor
-!plugins/lazy-blocks/vendor
 
 # wordpress
-uploads/
+/uploads/
+
+# plugins
+/plugins/*
+
+# mu-plugins
+/mu-plugins/*
 
 # theme
-twentytwentyone
-themes/wds_headless/dist
-!themes/wds_headless/src/scss/plugins
-!themes/wds_headless/src/scss/vendor
+/themes/twentytwentyone
+/themes/wds_headless/dist
+!/themes/wds_headless/src/scss/plugins
+!/themes/wds_headless/src/scss/vendor
