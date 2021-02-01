@@ -19,6 +19,7 @@ node_modules/
 vendor/
 !plugins/wp-graphql-gravity-forms/vendor
 !plugins/wp-graphql-tax-query/vendor
+!plugins/lazy-blocks/vendor
 
 # wordpress
 uploads/
