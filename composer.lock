@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35f16315fc0f1d40e5b468cd2a90f7db",
+    "content-hash": "3506f3f39cb434a175f3c6d156726c76",
     "packages": [
         {
             "name": "composer/installers",
@@ -1530,51 +1530,6 @@
             "time": "2019-11-08T17:18:33+00:00"
         },
         {
-            "name": "webdevstudios/wds-blocks",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WebDevStudios/wds-blocks/",
-                "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wds-blocks/webdevstudios-wds-blocks-2.0.0-126a50.tar",
-                "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92",
-                "shasum": "49c4a0cd2b16d14a2e737782d967732eaf1f832b"
-            },
-            "require-dev": {
-                "phpcompatibility/php-compatibility": "^9.3",
-                "webdevstudios/php-coding-standards": "^1.0"
-            },
-            "type": "wordpress-plugin",
-            "scripts": {
-                "lint": [
-                    "composer run compat && composer run lint:php"
-                ],
-                "format": [
-                    "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
-                ],
-                "lint:php": [
-                    "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
-                ],
-                "compat": [
-                    "./vendor/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit"
-                ]
-            },
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "WebDevStudios",
-                    "email": "contact@webdevstudios.com"
-                }
-            ],
-            "description": "WebDevStudios library of Gutenberg blocks.",
-            "time": "2020-09-08T16:15:34+00:00"
-        },
-        {
             "name": "webdevstudios/wp-migrate-db-pro",
             "version": "1.9.13",
             "source": {
@@ -1684,6 +1639,42 @@
             },
             "description": "Adds Tax_Query support to the WP GraphQL Plugin for postObject query args (WP_Query)",
             "time": "2019-10-28T21:52:38+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/add-wpgraphql-seo",
+            "version": "4.11.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
+                "reference": "tags/4.11.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.11.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/add-wpgraphql-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/block-manager",
+            "version": "1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/block-manager/",
+                "reference": "tags/1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/block-manager.1.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/block-manager/"
         },
         {
             "name": "wpackagist-plugin/gutenberg",
