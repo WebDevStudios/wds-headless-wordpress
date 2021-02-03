@@ -55,3 +55,30 @@ function wds_register_custom_post_types() {
 	register_post_type( "team", $args );
 }
 add_action( 'init', 'wds_register_custom_post_types' );
+
+add_action( 'graphql_register_types', function() {
+	register_graphql_field( 'Team', 'profileData', [
+		'type'        => 'String',
+		'description' => __( 'Extra metadata for team members', 'wds' ),
+		'resolve'     => function( $post ) {
+			$team_meta_keys = [
+				'title',
+				'location',
+				'linkedin_url',
+				'twitter_url',
+				'facebook_url',
+				'instagram_url',
+				'wordpressorg_profile_url',
+				'github_url',
+				'website_url',
+				'easter_egg_url',
+			];
+			$profile_data   = [];
+
+			foreach ( $team_meta_keys as $key ) {
+				$profile_data[ $key ] = get_post_meta( $post->ID, $key, true );
+			}
+			return wp_json_encode( $profile_data );
+		},
+	] );
+} );
