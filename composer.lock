@@ -1240,7 +1240,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.2",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -1531,21 +1531,21 @@
         },
         {
             "name": "webdevstudios/wp-migrate-db-pro",
-            "version": "1.9.13",
+            "version": "1.9.14",
             "source": {
                 "type": "git",
                 "url": "git@github.com:WebDevStudios/wp-migrate-db-pro.git",
-                "reference": "6b7098123cfb05b79d8505e125a0b159da737c24"
+                "reference": "b7d9b188ff638a112589dcadbe6e168a28dbc803"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro/webdevstudios-wp-migrate-db-pro-1.9.13-b9f104.tar",
-                "reference": "6b7098123cfb05b79d8505e125a0b159da737c24",
-                "shasum": "f164164f61c3d7d9a94f4924f98bd6ef0ed75e69"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro/webdevstudios-wp-migrate-db-pro-1.9.14-6fe1ae.tar",
+                "reference": "b7d9b188ff638a112589dcadbe6e168a28dbc803",
+                "shasum": "aaf5f60d45892c8c25c3ea7a4667fec198f7aa04"
             },
             "type": "wordpress-plugin",
             "description": "WDS-licensed purchase of the WP Migrate DB Pro plugin.",
-            "time": "2020-09-14T17:08:50+00:00"
+            "time": "2021-02-03T17:52:43+00:00"
         },
         {
             "name": "webdevstudios/wp-migrate-db-pro-cli",
@@ -1566,20 +1566,20 @@
         },
         {
             "name": "webdevstudios/wp-migrate-db-pro-media-files",
-            "version": "1.4.15",
+            "version": "1.4.16",
             "source": {
                 "type": "git",
                 "url": "git@github.com:WebDevStudios/wp-migrate-db-pro-media-files.git",
-                "reference": "4877d2590d68b65eefa83c7bebfca11c81e5ee3b"
+                "reference": "3625a7d88c31627c14d9ccc30d382b677603d517"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-media-files/webdevstudios-wp-migrate-db-pro-media-files-1.4.15-8ce2e9.tar",
-                "reference": "4877d2590d68b65eefa83c7bebfca11c81e5ee3b",
-                "shasum": "f63e7a9c5958d1bee956fe2d3ff6fa21c2c88306"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-media-files/webdevstudios-wp-migrate-db-pro-media-files-1.4.16-598556.tar",
+                "reference": "3625a7d88c31627c14d9ccc30d382b677603d517",
+                "shasum": "8ae7ad7ed35a264c4d926f68fd4988b8d2f8fd45"
             },
             "type": "wordpress-plugin",
-            "time": "2020-02-26T18:56:09+00:00"
+            "time": "2021-02-03T17:55:24+00:00"
         },
         {
             "name": "wp-graphql/wp-graphql-acf",
