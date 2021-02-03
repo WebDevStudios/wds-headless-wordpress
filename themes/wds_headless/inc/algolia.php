@@ -76,19 +76,13 @@ function wds_algolia_custom_fields( array $attributes, WP_Post $post ) {
 
 	// List all post types with custom post meta.
 	$post_types = [
-		'careers',
-		'events',
-		'portfolio',
-		'service',
-		'page',
-		'post',
 		'team',
-		'testimonial'
 	];
 
 	// List all eligible meta fields.
 	$fields = [
-		'role'
+		'title',
+		'location'
 	];
 
 	// Check if post type is eligible.
@@ -106,9 +100,6 @@ function wds_algolia_custom_fields( array $attributes, WP_Post $post ) {
 			 * content.
 			 */
 			if ( is_bool( $data ) || ! empty( $data )  ) {
-
-				// Convert `Duration` to a number.
-				$data = ( 'duration' === $field ) ? (int) $data : $data;
 
 				// Append _meta to each field.
 				$attributes[ $field . '_meta' ] = $data;
