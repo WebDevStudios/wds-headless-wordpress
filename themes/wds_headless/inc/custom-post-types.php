@@ -56,7 +56,7 @@ function wds_register_custom_post_types() {
 }
 add_action( 'init', 'wds_register_custom_post_types' );
 
-add_action( 'graphql_register_types', function() {
+function wds_register_team_profile_data() {
 	register_graphql_field( 'Team', 'profileData', [
 		'type'        => 'String',
 		'description' => __( 'Extra metadata for team members', 'wds' ),
@@ -81,4 +81,5 @@ add_action( 'graphql_register_types', function() {
 			return wp_json_encode( $profile_data );
 		},
 	] );
-} );
+}
+add_action( 'graphql_register_types', 'wds_register_team_profile_data' );
