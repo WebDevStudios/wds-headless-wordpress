@@ -71,5 +71,22 @@ function wds_acf_blocks_init() {
 			'supports'        => $supports,
 		]
 	);
+
+	// Media Text.
+	acf_register_block_type(
+		[
+			'name'            => 'acf-media-text',
+			'title'           => esc_html__( 'ACF Media Text', 'wds' ),
+			'description'     => esc_html__( 'A block to display media and text in a 50/50 layout.', 'wds' ),
+			'render_callback' => '',
+			'category'        => 'wds-content',
+			'icon'            => 'images-alt2',
+			'keywords'        => [ 'media', 'text', 'button', 'wds' ],
+			'mode'            => 'edit',
+			'enqueue_assets'  => '',
+			'align'           => 'wide',
+			'supports'        => $supports,
+		]
+	);
 }
 add_action( 'acf/init', 'wds_acf_blocks_init' );
