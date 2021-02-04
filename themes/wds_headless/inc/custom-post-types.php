@@ -56,10 +56,18 @@ function wds_register_custom_post_types() {
 }
 add_action( 'init', 'wds_register_custom_post_types' );
 
+/**
+ * Register a field on the Team GraphQL object and populate it with post meta.
+ *
+ * Provided as an example; not currently needed.
+ *
+ * @author WebDevStudios
+ * @since 1.0
+ */
 function wds_register_team_profile_data() {
 	register_graphql_field( 'Team', 'profileData', [
 		'type'        => 'String',
-		'description' => __( 'Extra metadata for team members', 'wds' ),
+		'description' => esc_html__( 'Extra metadata for team members', 'wds' ),
 		'resolve'     => function( $post ) {
 			$team_meta_keys = [
 				'title',
@@ -82,4 +90,4 @@ function wds_register_team_profile_data() {
 		},
 	] );
 }
-add_action( 'graphql_register_types', 'wds_register_team_profile_data' );
+//add_action( 'graphql_register_types', 'wds_register_team_profile_data' );
