@@ -580,7 +580,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/harness-software/wp-graphql-gravity-forms/",
-                "reference": "9daa785b10a79570e789788e563a51691ae84746"
+                "reference": "58772aa7359542025ba9b89651329c5ebfcdfe4c"
             },
             "type": "wordpress-plugin",
             "autoload": {
@@ -598,7 +598,7 @@
                 }
             ],
             "description": "WPGraphQL for Gravity Forms",
-            "time": "2021-01-22T14:09:39+00:00"
+            "time": "2021-02-05T01:06:12+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1678,15 +1678,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "9.8.3",
+            "version": "9.9.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.8.3"
+                "reference": "tags/9.9.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.8.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
