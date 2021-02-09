@@ -125,7 +125,7 @@ if ( ! function_exists( 'wds_set_headless_rest_preview_link' ) ) {
 
 			// Handle special-case pages.
 			$homepage_id   = intval( get_field( 'homepage', 'option' ) );
-			$error_page_id = intval( get_field( 'error_404_page', 'option' ) );
+			$error_page_id = get_field( 'error_404_page', 'option' );
 
 			if ( $post->ID === $homepage_id ) {
 
