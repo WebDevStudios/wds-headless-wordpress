@@ -1,0 +1,70 @@
+{
+  "name": "webdevstudios/nextjs",
+  "description": "A WordPress backend to power a Next.js frontend.",
+  "type": "project",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "WebDevStudios",
+      "email": "contact@webdevstudios.com"
+    }
+  ],
+  "repositories": {
+    "wppackagist": {
+      "type": "composer",
+      "url": "https://wpackagist.org/"
+    },
+    "wds-blocks": {
+      "type": "git",
+      "url": "https://github.com/WebDevStudios/wds-blocks.git"
+    },
+    "wds-php-coding-standards": {
+      "type": "git",
+      "url": "https://github.com/WebDevStudios/php-coding-standards.git"
+    },
+    "wp-graphql-tax-query": {
+      "type": "git",
+      "url": "https://github.com/wp-graphql/wp-graphql-tax-query/"
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  },
+  "require": {
+    "pristas-peter/wp-graphql-gutenberg": "^0.3.7",
+    "wpackagist-plugin/gutenberg": "^9.8",
+    "wpackagist-plugin/query-monitor": "^3.5",
+    "wpackagist-plugin/resmushit-image-optimizer": "^0.3",
+    "wpackagist-plugin/stream": "^3.4",
+    "wpackagist-plugin/wp-graphql": "^1.1",
+    "wpackagist-plugin/wp-search-with-algolia": "^1.7",
+    "wpackagist-plugin/lazy-blocks": "^2.3",
+    "wpackagist-plugin/advanced-custom-fields": "^5.9",
+    "webdevstudios/wds-blocks": "^2.0",
+    "wp-graphql/wp-graphql-acf": "^0.4.0",
+    "wpackagist-plugin/wordpress-seo": "^15.0",
+    "wp-graphql/wp-graphql-tax-query": "^0.1.0",
+    "wpackagist-plugin/add-wpgraphql-seo": "^4.11",
+    "wpackagist-plugin/block-manager": "^1.1"
+  },
+  "require-dev": {
+    "webdevstudios/php-coding-standards": "^1.0",
+    "phpcompatibility/php-compatibility": "^9.3"
+  },
+  "scripts": {
+    "lint": "composer run compat && composer run lint:php",
+    "format": "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/dist/*'",
+    "lint:php": "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/dist/*'",
+    "compat": "./vendor/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit"
+  }
+}
