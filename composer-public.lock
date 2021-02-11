@@ -507,15 +507,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.9.4",
+            "version": "5.9.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.9.4"
+                "reference": "tags/5.9.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -543,15 +543,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "9.9.1",
+            "version": "9.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.9.1"
+                "reference": "tags/9.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -615,15 +615,15 @@
         },
         {
             "name": "wpackagist-plugin/stream",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "tags/3.6.0"
+                "reference": "tags/3.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.6.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/stream.3.6.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -870,6 +870,12 @@
                 "url": "https://github.com/WebDevStudios/php-coding-standards.git",
                 "reference": "0896147c2e12ffaebf67fb5a9d49b1514e2ccec3"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WebDevStudios/php-coding-standards/zipball/0896147c2e12ffaebf67fb5a9d49b1514e2ccec3",
+                "reference": "0896147c2e12ffaebf67fb5a9d49b1514e2ccec3",
+                "shasum": ""
+            },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
                 "wp-coding-standards/wpcs": "~2.3.0"
@@ -878,6 +884,7 @@
             "extra": {
                 "phpcodesniffer-search-depth": 5
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -897,10 +904,6 @@
             ],
             "description": "In-house PHP linting and coding standards for WebDevStudios",
             "homepage": "https://github.com/WebDevStudios/php-coding-standards",
-            "support": {
-                "issues": "https://github.com/WebDevStudios/php-coding-standards/issues",
-                "source": "https://github.com/WebDevStudios/php-coding-standards"
-            },
             "time": "2020-11-16T21:56:03+00:00"
         },
         {
