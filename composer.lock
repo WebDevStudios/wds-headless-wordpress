@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3506f3f39cb434a175f3c6d156726c76",
+    "content-hash": "70705c8a65928344833e30a1088c54c5",
     "packages": [
         {
             "name": "composer/installers",
@@ -151,17 +151,56 @@
             "time": "2021-01-14T11:07:16+00:00"
         },
         {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro",
+            "version": "1.9.14",
+            "dist": {
+                "type": "tar",
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar",
+                "shasum": "933a66f29103d565ece62636f3bd08e39d01bd42"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro-cli",
+            "version": "1.3.5",
+            "dist": {
+                "type": "tar",
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-cli/deliciousbrains-plugin-wp-migrate-db-pro-cli-1.3.5.tar",
+                "shasum": "7ec81ae132f8f5ae2562eaf0ec1e52e4940ceb3c"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro-media-files",
+            "version": "1.4.16",
+            "dist": {
+                "type": "tar",
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar",
+                "shasum": "b2e706ad5038a6dde861c1bbaaae1bf6e2f77788"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "firebase/php-jwt",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +237,7 @@
                 "jwt",
                 "php"
             ],
-            "time": "2020-03-25T18:49:23+00:00"
+            "time": "2021-02-12T00:02:00+00:00"
         },
         {
             "name": "google/apiclient",
@@ -267,16 +306,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.159.0",
+            "version": "v0.160.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "d5334e9853afe16e7d8215006a475061d8023216"
+                "reference": "b8a448056ced89d1bc2d68ca10c22e7b2ed06512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/d5334e9853afe16e7d8215006a475061d8023216",
-                "reference": "d5334e9853afe16e7d8215006a475061d8023216",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/b8a448056ced89d1bc2d68ca10c22e7b2ed06512",
+                "reference": "b8a448056ced89d1bc2d68ca10c22e7b2ed06512",
                 "shasum": ""
             },
             "require": {
@@ -300,7 +339,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-02-05T12:20:02+00:00"
+            "time": "2021-02-13T12:20:02+00:00"
         },
         {
             "name": "google/auth",
@@ -864,16 +903,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9"
+                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/845a2275e886ba9fb386c8f59cb383dd9c8963e9",
-                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
+                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
                 "shasum": ""
             },
             "require": {
@@ -967,7 +1006,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-25T19:02:05+00:00"
+            "time": "2021-02-12T16:18:16+00:00"
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
@@ -1379,37 +1418,41 @@
         },
         {
             "name": "webdevstudios/advanced-custom-fields-pro",
-            "version": "5.9.4",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/advanced-custom-fields-pro.git",
-                "reference": "e3985d31e2fbc65dcd7f078bf5849fef386de7bc"
-            },
+            "version": "5.9.5",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.4-5fc9bc.tar",
-                "reference": "e3985d31e2fbc65dcd7f078bf5849fef386de7bc",
-                "shasum": "ca8ae770b5e5c67f32a03e509b5b1f79aff7df0b"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar",
+                "shasum": "1eff76c921d1665d98a8391203494d089c7d578b"
+            },
+            "require": {
+                "composer/installers": "^1.0"
             },
             "type": "wordpress-plugin",
-            "time": "2021-01-14T17:18:49+00:00"
+            "authors": {
+                "name": "Elliot Condon",
+                "homepage": "https://www.advancedcustomfields.com"
+            },
+            "description": "Customize WordPress with powerful, professional and intuitive fields.",
+            "homepage": "https://www.advancedcustomfields.com"
         },
         {
             "name": "webdevstudios/gravityforms",
-            "version": "2.4.22",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/gravityforms.git",
-                "reference": "b2ddd1484f375cadde628acbf775f8b3f74235d2"
-            },
+            "version": "2.4.22.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.22-8189d3.tar",
-                "reference": "b2ddd1484f375cadde628acbf775f8b3f74235d2",
-                "shasum": "3757f3395e7ecc4405cfc7b909f2093c77d86c70"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.22.2.tar",
+                "shasum": "75cd5e718bf9bbc78f9023ccbcc43d77f377ec6e"
+            },
+            "require": {
+                "composer/installers": "^1.0"
             },
             "type": "wordpress-plugin",
-            "time": "2020-12-23T00:25:06+00:00"
+            "authors": {
+                "name": "Gravity Forms",
+                "homepage": "https://gravityforms.com"
+            },
+            "description": "Easily create web forms and manage form entries within the WordPress admin.",
+            "homepage": "https://gravityforms.com"
         },
         {
             "name": "webdevstudios/mu-autoload",
@@ -1530,56 +1573,23 @@
             "time": "2019-11-08T17:18:33+00:00"
         },
         {
-            "name": "webdevstudios/wp-migrate-db-pro",
-            "version": "1.9.14",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/wp-migrate-db-pro.git",
-                "reference": "b7d9b188ff638a112589dcadbe6e168a28dbc803"
-            },
+            "name": "webdevstudios/wordpress-seo-premium",
+            "version": "15.7",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro/webdevstudios-wp-migrate-db-pro-1.9.14-6fe1ae.tar",
-                "reference": "b7d9b188ff638a112589dcadbe6e168a28dbc803",
-                "shasum": "aaf5f60d45892c8c25c3ea7a4667fec198f7aa04"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.7.tar",
+                "shasum": "0f191cd6415ff7d3e66a8663d1f0395a77ddff06"
+            },
+            "require": {
+                "composer/installers": "^1.0"
             },
             "type": "wordpress-plugin",
-            "description": "WDS-licensed purchase of the WP Migrate DB Pro plugin.",
-            "time": "2021-02-03T17:52:43+00:00"
-        },
-        {
-            "name": "webdevstudios/wp-migrate-db-pro-cli",
-            "version": "1.3.5",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/wp-migrate-db-pro-cli.git",
-                "reference": "00abe6f5a25ecb787dc75c54ac45b87d9b593a9e"
+            "authors": {
+                "name": "Team Yoast",
+                "homepage": "https://yoa.st/2jc"
             },
-            "dist": {
-                "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-cli/webdevstudios-wp-migrate-db-pro-cli-1.3.5-48a27b.tar",
-                "reference": "00abe6f5a25ecb787dc75c54ac45b87d9b593a9e",
-                "shasum": "a86a71aa6eb50731a7697295bd30e59c9ebb57e4"
-            },
-            "type": "wordpress-plugin",
-            "time": "2019-02-07T18:20:46+00:00"
-        },
-        {
-            "name": "webdevstudios/wp-migrate-db-pro-media-files",
-            "version": "1.4.16",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/wp-migrate-db-pro-media-files.git",
-                "reference": "3625a7d88c31627c14d9ccc30d382b677603d517"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wp-migrate-db-pro-media-files/webdevstudios-wp-migrate-db-pro-media-files-1.4.16-598556.tar",
-                "reference": "3625a7d88c31627c14d9ccc30d382b677603d517",
-                "shasum": "8ae7ad7ed35a264c4d926f68fd4988b8d2f8fd45"
-            },
-            "type": "wordpress-plugin",
-            "time": "2021-02-03T17:55:24+00:00"
+            "description": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
+            "homepage": "https://yoa.st/2jc"
         },
         {
             "name": "wp-graphql/wp-graphql-acf",
@@ -1678,15 +1688,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "9.9.2",
+            "version": "9.9.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.9.2"
+                "reference": "tags/9.9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1711,60 +1721,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/lazy-blocks/"
-        },
-        {
-            "name": "wpackagist-plugin/query-monitor",
-            "version": "3.6.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.6.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.7.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/query-monitor/"
-        },
-        {
-            "name": "wpackagist-plugin/resmushit-image-optimizer",
-            "version": "0.3.11",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/resmushit-image-optimizer/",
-                "reference": "tags/0.3.11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/resmushit-image-optimizer.0.3.11.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/resmushit-image-optimizer/"
-        },
-        {
-            "name": "wpackagist-plugin/stream",
-            "version": "3.6.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "tags/3.6.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.6.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/stream/"
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
@@ -1801,27 +1757,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-search-with-algolia/"
-        },
-        {
-            "name": "yoast/wordpress-seo-premium",
-            "version": "15.7",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:WebDevStudios/wordpress-seo-premium.git",
-                "reference": "522ef1b47f49e2a3ede7d5a23c6673371459b8f5"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "https://packages.wdslab.com/dist/yoast/wordpress-seo-premium/yoast-wordpress-seo-premium-15.7-326794.tar",
-                "reference": "522ef1b47f49e2a3ede7d5a23c6673371459b8f5",
-                "shasum": "5d5499cb02c8af48bed8d68abd0fc5f1df231e02"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "description": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
-            "time": "2021-01-26T17:09:18+00:00"
         }
     ],
     "packages-dev": [
