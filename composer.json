@@ -55,7 +55,7 @@
     "wp-graphql/wp-graphql-tax-query": "^0.1.0",
     "wpackagist-plugin/add-wpgraphql-seo": "^4.11.0",
     "wpackagist-plugin/block-manager": "^1.1",
-    "wpackagist-plugin/gutenberg": "^9.8",
+    "wpackagist-plugin/gutenberg": "^10.0",
     "wpackagist-plugin/lazy-blocks": "^2.3",
     "wpackagist-plugin/wp-graphql": "^1.1",
     "wpackagist-plugin/wp-search-with-algolia": "^1.7"
