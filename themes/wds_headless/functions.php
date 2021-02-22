@@ -13,6 +13,7 @@ require_once 'inc/block-manager.php';
 require_once 'inc/custom-post-types.php';
 require_once 'inc/wordpress.php';
 require_once 'inc/wpgraphql.php';
+require_once 'inc/yoast-seo.php';
 
 /**
  * Sets up theme defaults.
