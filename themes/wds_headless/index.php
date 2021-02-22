@@ -3,7 +3,7 @@
  * Redirect theme requests to frontend.
  *
  * @author WebDevStudios
- * @package wds
+ * @package wds-headless-theme
  * @since 1.0
  */
 

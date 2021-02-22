@@ -5,7 +5,7 @@
  * Note: exported from CPTUI.
  *
  * @author WebDevStudios
- * @package wds
+ * @package wds-headless-theme
  * @since 1.0
  */
 
@@ -55,39 +55,3 @@ function wds_register_custom_post_types() {
 	register_post_type( "team", $args );
 }
 add_action( 'init', 'wds_register_custom_post_types' );
-
-/**
- * Register a field on the Team GraphQL object and populate it with post meta.
- *
- * Provided as an example; not currently needed.
- *
- * @author WebDevStudios
- * @since 1.0
- */
-function wds_register_team_profile_data() {
-	register_graphql_field( 'Team', 'profileData', [
-		'type'        => 'String',
-		'description' => esc_html__( 'Extra metadata for team members', 'wds' ),
-		'resolve'     => function( $post ) {
-			$team_meta_keys = [
-				'title',
-				'location',
-				'linkedin_url',
-				'twitter_url',
-				'facebook_url',
-				'instagram_url',
-				'wordpressorg_profile_url',
-				'github_url',
-				'website_url',
-				'easter_egg_url',
-			];
-			$profile_data   = [];
-
-			foreach ( $team_meta_keys as $key ) {
-				$profile_data[ $key ] = get_post_meta( $post->ID, $key, true );
-			}
-			return wp_json_encode( $profile_data );
-		},
-	] );
-}
-//add_action( 'graphql_register_types', 'wds_register_team_profile_data' );
