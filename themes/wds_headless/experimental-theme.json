@@ -1,25 +1,25 @@
 {
-	"global":{
-		"settings":{
-			"typography":{
-				"customFontSize":false,
-				"customLineHeight":false,
-				"dropCap":false,
-				"fontSizes":[]
+	"global": {
+		"settings": {
+			"typography": {
+				"customFontSize": false,
+				"customLineHeight": false,
+				"dropCap": false,
+				"fontSizes": []
 			},
-			"color":{
-				"custom":false,
-				"customGradient":false,
-				"gradients":[],
-				"palette":[]
+			"color": {
+				"custom": false,
+				"customGradient": false,
+				"gradients": [],
+				"palette": []
 			}
 		}
 	},
-	"core/paragraph":{
-		"settings":{
-			"color":{
-				"custom":false,
-				"customGradient":false
+	"core/paragraph": {
+		"settings": {
+			"color": {
+				"custom": false,
+				"customGradient": false
 			}
 		}
 	}
