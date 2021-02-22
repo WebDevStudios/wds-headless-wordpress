@@ -34,7 +34,7 @@ if ( ! function_exists( 'wds_set_headless_preview_link' ) ) {
 			'name'      => $slug,
 			'id'        => $post->ID,
 			'post_type' => $post_type,
-			'token'     => defined( 'PREVIEW_SECRET_TOKEN' ) ? PREVIEW_SECRET_TOKEN : '',
+			'token'     => defined( 'WORDPRESS_PREVIEW_SECRET' ) ? WORDPRESS_PREVIEW_SECRET : '',
 		], "{$base_url}api/preview" );
 	}
 }
