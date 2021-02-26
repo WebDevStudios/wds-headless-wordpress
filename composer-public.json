@@ -55,7 +55,8 @@
     "wpackagist-plugin/wordpress-seo": "^15.0",
     "wp-graphql/wp-graphql-tax-query": "^0.1.0",
     "wpackagist-plugin/add-wpgraphql-seo": "^4.11",
-    "wpackagist-plugin/block-manager": "^1.1"
+    "wpackagist-plugin/block-manager": "^1.1",
+    "wp-graphql/wp-graphql-jwt-authentication": "^0.4"
   },
   "require-dev": {
     "webdevstudios/php-coding-standards": "^1.0",

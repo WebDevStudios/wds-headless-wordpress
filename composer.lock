@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b78a9bfb08a9653329121a4ab5237f8",
+    "content-hash": "f843b0593a80936db0c265a1ec95f5b9",
     "packages": [
         {
             "name": "composer/installers",
@@ -1466,7 +1466,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
                 "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
+                "shasum": "11a2757d8ea27a0444557381052eca40a8827958"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1497,7 +1497,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-2.0.1-c7f0f6.tar",
                 "reference": "86259b5e6f788189cab1760d257416f6e76ff226",
-                "shasum": "d32c0c90a6804d306f7180d8ca047da5c7162361"
+                "shasum": "d3a9b28480bbb5bd531aef536897ef0d15d66ce2"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1544,7 +1544,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-1.0.1-d9b41f.tar",
                 "reference": "05c879f9bf605050930473842fb3313b21b48588",
-                "shasum": "88e98d204460db969207d7f7be8e8914cdcb1fcf"
+                "shasum": "541e6ccd07fe9960b9e0128f20eaf45cc821c4a2"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1632,6 +1632,48 @@
             ],
             "description": "Advanced Custom Fields bindings for wp-graphql",
             "time": "2021-01-19T21:23:00+00:00"
+        },
+        {
+            "name": "wp-graphql/wp-graphql-jwt-authentication",
+            "version": "v0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-graphql/wp-graphql-jwt-authentication.git",
+                "reference": "7905ab9e3658e6e79be510070b9e7aaf26d47009"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql-jwt-authentication/zipball/7905ab9e3658e6e79be510070b9e7aaf26d47009",
+                "reference": "7905ab9e3658e6e79be510070b9e7aaf26d47009",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "^5.0"
+            },
+            "require-dev": {
+                "lucatume/wp-browser": ">=2.2.1 <2.2.8"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\JWT_Authentication\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jasonbahl",
+                    "email": "jasonbahl@mac.com"
+                }
+            ],
+            "description": "JWT Authentication for WPGraphQL",
+            "time": "2020-05-04T21:48:10+00:00"
         },
         {
             "name": "wp-graphql/wp-graphql-tax-query",
