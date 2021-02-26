@@ -58,7 +58,8 @@
     "wpackagist-plugin/gutenberg": "^10.0",
     "wpackagist-plugin/lazy-blocks": "^2.3",
     "wpackagist-plugin/wp-graphql": "^1.1",
-    "wpackagist-plugin/wp-search-with-algolia": "^1.7"
+    "wpackagist-plugin/wp-search-with-algolia": "^1.7",
+    "wp-graphql/wp-graphql-jwt-authentication": "^0.4"
   },
   "require-dev": {
     "webdevstudios/php-coding-standards": "^1.0",
