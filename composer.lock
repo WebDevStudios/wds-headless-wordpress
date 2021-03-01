@@ -306,16 +306,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.161.0",
+            "version": "v0.162.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "776dcac9250497024c778c71c70bb39de5427223"
+                "reference": "9085ff13f32f5baf8b3d2917ea63e2e029ecedb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/776dcac9250497024c778c71c70bb39de5427223",
-                "reference": "776dcac9250497024c778c71c70bb39de5427223",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/9085ff13f32f5baf8b3d2917ea63e2e029ecedb6",
+                "reference": "9085ff13f32f5baf8b3d2917ea63e2e029ecedb6",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +339,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-02-20T12:20:06+00:00"
+            "time": "2021-02-28T12:20:02+00:00"
         },
         {
             "name": "google/auth",
@@ -1466,7 +1466,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
                 "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "11a2757d8ea27a0444557381052eca40a8827958"
+                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1497,7 +1497,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-2.0.1-c7f0f6.tar",
                 "reference": "86259b5e6f788189cab1760d257416f6e76ff226",
-                "shasum": "d3a9b28480bbb5bd531aef536897ef0d15d66ce2"
+                "shasum": "d32c0c90a6804d306f7180d8ca047da5c7162361"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1544,7 +1544,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-1.0.1-d9b41f.tar",
                 "reference": "05c879f9bf605050930473842fb3313b21b48588",
-                "shasum": "541e6ccd07fe9960b9e0128f20eaf45cc821c4a2"
+                "shasum": "88e98d204460db969207d7f7be8e8914cdcb1fcf"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1574,11 +1574,11 @@
         },
         {
             "name": "webdevstudios/wordpress-seo-premium",
-            "version": "15.7",
+            "version": "15.9",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.7.tar",
-                "shasum": "0f191cd6415ff7d3e66a8663d1f0395a77ddff06"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.tar",
+                "shasum": "11fa63e9b7d0b755df543f94e05754337b66a698"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1712,15 +1712,15 @@
         },
         {
             "name": "wpackagist-plugin/block-manager",
-            "version": "1.1",
+            "version": "1.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/block-manager/",
-                "reference": "tags/1.1"
+                "reference": "tags/1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/block-manager.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/block-manager.1.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1766,15 +1766,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.1.8",
+            "version": "1.2.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.1.8"
+                "reference": "tags/1.2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.1.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.2.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
