@@ -1437,11 +1437,11 @@
         },
         {
             "name": "webdevstudios/gravityforms",
-            "version": "2.4.22.2",
+            "version": "2.4.23",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.22.2.tar",
-                "shasum": "75cd5e718bf9bbc78f9023ccbcc43d77f377ec6e"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.23.tar",
+                "shasum": "e296cad45cbb71dd0158e71fe7dcf81d476a1580"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1730,15 +1730,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.0.2",
+            "version": "10.1.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.0.2"
+                "reference": "tags/10.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.0.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.1.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1766,15 +1766,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.2.4"
+                "reference": "tags/1.2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.2.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.2.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
