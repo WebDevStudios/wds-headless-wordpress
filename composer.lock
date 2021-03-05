@@ -1010,16 +1010,16 @@
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.7",
+            "version": "v0.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e"
+                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/bf0e9290ffab5b6189172fc9721bc644a51d651e",
-                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/2f35359fd306fff98dcb25063735e9b584a625f7",
+                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7",
                 "shasum": ""
             },
             "require": {
@@ -1043,7 +1043,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Query gutenberg blocks with wp-graphql",
-            "time": "2021-01-18T05:47:03+00:00"
+            "time": "2021-03-05T09:39:59+00:00"
         },
         {
             "name": "psr/cache",
@@ -1279,7 +1279,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -1730,15 +1730,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.1.0",
+            "version": "10.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.1.0"
+                "reference": "tags/10.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.1.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
