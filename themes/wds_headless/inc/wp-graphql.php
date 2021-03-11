@@ -120,4 +120,38 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	}
 	add_filter( 'graphql_allowed_fields_on_restricted_type', 'wds_graphql_allowed_fields', 10, 6 );
 
+	/**
+	 * Include users without published posts in SQL query
+	 *
+	 * @param array                      $query_args          The query args to be used with the executable query to get data.
+	 * @param AbstractConnectionResolver $connection_resolver Instance of the connection resolver
+	 * @return void
+	 */
+	function wds_public_unpublished_users( array $query_args, \WPGraphQL\Data\Connection\AbstractConnectionResolver $connection_resolver ) {
+		if ( $connection_resolver instanceof \WPGraphQL\Data\Connection\UserConnectionResolver ) {
+			unset( $query_args['has_published_posts'] );
+		}
+
+		return $query_args;
+	}
+	add_filter( 'graphql_connection_query_args', 'wds_public_unpublished_users', 10, 2 );
+
+	/**
+	 * Make all Users public including in non-authenticated WPGraphQL requests.
+	 *
+	 * @param string  $visibility
+	 * @param string  $model_name
+	 * @param mixed   $data
+	 * @param integer $owner
+	 * @param WP_User $current_user
+	 * @return void
+	 */
+	function wds_public_users( string $visibility, string $model_name ) {
+		if ( 'UserObject' === $model_name ) {
+			$visibility = 'public';
+		}
+
+		return $visibility;
+	}
+	add_filter( 'graphql_object_visibility', 'wds_public_users', 10, 2 );
 }
