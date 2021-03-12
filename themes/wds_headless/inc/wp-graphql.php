@@ -103,8 +103,6 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	/**
 	 * Allow access to additional fields via non-authed GraphQL request.
 	 *
-	 * @author WebDevStudios
-	 * @since 1.0
 	 * @param  array  $fields     The fields to allow when the data is designated as restricted to the current user.
 	 * @param  string $model_name Name of the model the filter is currently being executed in.
 	 * @return array                   Allowed fields.
@@ -143,6 +141,8 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	/**
 	 * Make all Users public including in non-authenticated WPGraphQL requests.
 	 *
+	 * @author WebDevStudios
+	 * @since 1.0
 	 * @param string  $visibility
 	 * @param string  $model_name
 	 * @param mixed   $data
