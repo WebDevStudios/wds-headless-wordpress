@@ -32,7 +32,7 @@ require_once 'partials/admin-notice.php';
 
 		<p>
 			<label for="wds-headless-frontend-url">
-				<?php esc_html_e( 'Headless Frontend URL', 'wds' ); ?>
+				<?php esc_html_e( 'Frontend URL', 'wds' ); ?>
 				<input
 					name="wds-headless-frontend-url" id="wds-headless-frontend-url"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-frontend-url' ) ); // phpcs:ignore ?>"
@@ -42,7 +42,7 @@ require_once 'partials/admin-notice.php';
 
 		<p>
 			<label for="wds-headless-preview-secret">
-				<?php esc_html_e( 'Headless Preview Secret', 'wds' ); ?>
+				<?php esc_html_e( 'Preview Secret', 'wds' ); ?>
 				<input
 					name="wds-headless-preview-secret" id="wds-headless-preview-secret"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-preview-secret' ) ); // phpcs:ignore ?>"
@@ -52,7 +52,7 @@ require_once 'partials/admin-notice.php';
 
 		<p>
 			<label for="wds-headless-jwt-auth-key">
-				<?php esc_html_e( 'Headless JWT Auth Key', 'wds' ); ?>
+				<?php esc_html_e( 'JWT Auth Key', 'wds' ); ?>
 				<input
 					name="wds-headless-jwt-auth-key" id="wds-headless-jwt-auth-key"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-jwt-auth-key' ) ); // phpcs:ignore ?>"
