@@ -12,6 +12,11 @@ require_once 'partials/admin-notice.php';
 
 <div class="wrap">
 	<h1><?php esc_html_e( get_admin_page_title() ); // phpcs:ignore ?></h1>
+	<?php if ( _wds_headless_has_defined_all_constants() ) : ?>
+		<p>
+			<?php esc_html_e( 'You have defined at least one constant in your wp-config.php file. If you wish to use the rest of the fields in this file, delete the constants from your wp-config.php file.', 'wds' ); ?>
+		</p>
+	<?php endif; ?>
 
 	<form method="post" action="<?php echo esc_html( admin_url( 'admin-post.php' ) ); ?>">
 		<p>
@@ -36,6 +41,7 @@ require_once 'partials/admin-notice.php';
 				<input
 					name="wds-headless-frontend-url" id="wds-headless-frontend-url"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-frontend-url' ) ); // phpcs:ignore ?>"
+					<?php wds_headless_is_disabled_field( 'wds-headless-front-url' ); ?>
 				/>
 			</label>
 		</p>
@@ -46,6 +52,7 @@ require_once 'partials/admin-notice.php';
 				<input
 					name="wds-headless-preview-secret" id="wds-headless-preview-secret"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-preview-secret' ) ); // phpcs:ignore ?>"
+					<?php wds_headless_is_disabled_field( 'wds-headless-preview-secret' ); ?>
 				/>
 			</label>
 		</p>
@@ -56,6 +63,7 @@ require_once 'partials/admin-notice.php';
 				<input
 					name="wds-headless-jwt-auth-key" id="wds-headless-jwt-auth-key"
 					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-jwt-auth-key' ) ); // phpcs:ignore ?>"
+					<?php wds_headless_is_disabled_field( 'wds-headless-jwt-auth-key' ); ?>
 				/>
 			</label>
 		</p>
