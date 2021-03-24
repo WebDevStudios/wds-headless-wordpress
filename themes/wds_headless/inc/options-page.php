@@ -174,9 +174,10 @@ function wds_headless_save_options() {
 	}
 
 	wds_headless_save_404_page();
-	wds_headless_save_frontend_url();
-	wds_headless_save_preview_secret();
-	wds_headless_save_jwt_auth();
+
+	array_map( function ( $input_name ) {
+		wds_headless_save_input( $input_name );
+	}, [ 'wds-headless-frontend-url', 'wds-headless-preview-secret', 'wds-headless-jwt-auth-key' ] );
 
 	wds_headless_render_options_redirect( $result );
 }
@@ -188,83 +189,46 @@ function wds_headless_save_options() {
  * @since  1.0.0
  */
 function wds_headless_save_404_page() {
-	if ( null === wp_unslash( filter_input( INPUT_POST, 'wds-headless-404-page' ) ) ) {
+	$key = 'wds-headless-404-page';
+
+	if ( null === wp_unslash( filter_input( INPUT_POST, $key ) ) ) {
 		return;
 	}
 
 	update_option(
-		'wds-headless-404-page',
+		$key,
 		sanitize_text_field(
-			filter_input( INPUT_POST, 'wds-headless-404-page' )
+			filter_input( INPUT_POST, $key )
 		)
 	);
 }
 
 /**
- * Saves the value of the frontend URL as defined by the user.
+ * Saves the value of the specified key as defined by the user.
+ *
+ * @param string $key The key located in the $_POST array specified by the user.
+ *
  *
  * @author WebDevStudios
  * @since  1.0.0
  */
-function wds_headless_save_frontend_url() {
-	if ( null === wp_unslash( filter_input( INPUT_POST, 'wds-headless-frontend-url' ) ) ) {
+function wds_headless_save_input( string $key ) {
+	if ( null === wp_unslash( filter_input( INPUT_POST, $key ) ) ) {
 		return;
 	}
 
-	update_option(
-		'wds-headless-frontend-url',
-		sanitize_text_field(
-			filter_var(
-				filter_input( INPUT_POST, 'wds-headless-frontend-url' ),
-				FILTER_SANITIZE_URL
-			)
-		)
-	);
-}
-
-/**
- * Saves the value of the preview secret as defined by the user.
- *
- * @return void
- *
- * @author WebDevStudios
- * @since  1.0.0
- */
-function wds_headless_save_preview_secret() {
-	if ( null === wp_unslash( filter_input( INPUT_POST, 'wds-headless-preview-secret' ) ) ) {
-		return;
+	if ( empty( wp_unslash( filter_input( INPUT_POST, $key ) ) ) ) {
+		delete_option( $key );
 	}
 
-	update_option(
-		'wds-headless-preview-secret',
-		sanitize_text_field(
-			filter_var(
-				filter_input( INPUT_POST, 'wds-headless-preview-secret' ),
-				FILTER_SANITIZE_STRING
-			)
-		)
-	);
-}
-
-/**
- * Saves the value of the JWT auth key secret as defined by the user.
- *
- * @return void
- *
- * @author WebDevStudios
- * @since  1.0.0
- */
-function wds_headless_save_jwt_auth() {
-	if ( null === wp_unslash( filter_input( INPUT_POST, 'wds-headless-jwt-auth-key' ) ) ) {
-		return;
-	}
 
 	update_option(
-		'wds-headless-jwt-auth-key',
+		$key,
 		sanitize_text_field(
 			filter_var(
-				filter_input( INPUT_POST, 'wds-headless-jwt-auth-key' ),
-				FILTER_SANITIZE_STRING
+				filter_input( INPUT_POST, $key ),
+				filter_var( filter_input( INPUT_POST, $key ), FILTER_VALIDATE_URL ) ?
+					FILTER_SANITIZE_URL : FILTER_SANITIZE_STRING
 			)
 		)
 	);
@@ -304,11 +268,6 @@ function wds_headless_render_options_redirect( string $result ) {
  * @since  1.0.0
  */
 function wds_headless_options_has_valid_nonce() {
-	// If the current user doens't have permission to save, then don't.
-	if ( ! current_user_can( 'manage_options' ) ) {
-		return false;
-	}
-
 	// If the nonce isn't even in the $_POST array, then it's invalid.
 	if ( null === filter_input( INPUT_POST, 'wds-headless-settings-save-nonce' ) ) {
 		return false;
