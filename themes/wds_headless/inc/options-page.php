@@ -174,7 +174,6 @@ function wds_headless_save_options() {
 	}
 
 	wds_headless_save_404_page();
-
 	array_map( function ( $input_name ) {
 		wds_headless_save_input( $input_name );
 	}, [ 'wds-headless-frontend-url', 'wds-headless-preview-secret', 'wds-headless-jwt-auth-key' ] );
