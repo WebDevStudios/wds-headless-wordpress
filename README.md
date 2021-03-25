@@ -7,6 +7,7 @@ The headless WordPress installation for our [Next.js WordPress Starter](https://
 ---
 
 - [Contributing](#contributing)
+- [Install](#install)
 - [Development](#development)
   - [Git Workflow](#git-workflow)
   - [Code Linting](#code-linting)
@@ -19,6 +20,22 @@ Before submitting an issue or making a feature request, please search for existi
 If you do file an issue, be sure to fill out the report completely!
 
 ---
+
+## Install
+
+Clone the repo into a WordPress installation. This repo will replace `/wp-content`
+
+```bash
+git clone git@github.com:WebDevStudios/nextjs-starter-wordpress.git wp-content
+```
+
+Install the dependencies:
+
+```bash
+composer install
+```
+
+For more information, see the [Backend Setup wiki](https://github.com/WebDevStudios/nextjs-wordpress-starter/wiki/Backend-Setup).
 
 ## Development
 
