@@ -7,6 +7,7 @@
  * @package wds-headless-theme
  * @since 1.0
  */
+
 if ( defined( 'WPSEO_VERSION' ) ) {
 
 	/**
@@ -26,7 +27,7 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 
 		// Override domain in breadcrumbs.
 		return array_map( function( $breadcrumb ) use ( $base_url ) {
-			$parsed_url        = parse_url( $breadcrumb['url'] );
+			$parsed_url        = wp_parse_url( $breadcrumb['url'] );
 			$path              = $parsed_url['path'] ?? '';
 			$breadcrumb['url'] = "{$base_url}{$path}";
 

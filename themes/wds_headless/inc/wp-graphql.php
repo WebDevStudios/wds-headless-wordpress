@@ -49,6 +49,9 @@ if ( class_exists( 'WPGraphQL' ) ) {
 
 	/**
 	 * Add query to GraphQL to retrieve homepage settings.
+	 *
+	 * @author WebDevStudios
+	 * @since 1.0
 	 */
 	function wds_add_homepage_settings_query() {
 
@@ -103,6 +106,8 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	/**
 	 * Allow access to additional fields via non-authed GraphQL request.
 	 *
+	 * @author WebDevStudios
+	 * @since 1.0
 	 * @param  array  $fields     The fields to allow when the data is designated as restricted to the current user.
 	 * @param  string $model_name Name of the model the filter is currently being executed in.
 	 * @return array                   Allowed fields.
@@ -121,13 +126,15 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	add_filter( 'graphql_allowed_fields_on_restricted_type', 'wds_graphql_allowed_fields', 10, 6 );
 
 	/**
-	 * Include users without published posts in SQL query
+	 * Include users without published posts in SQL query.
 	 *
+	 * @author WebDevStudios
+	 * @since 1.0
 	 * @param array                      $query_args          The query args to be used with the executable query to get data.
-	 * @param AbstractConnectionResolver $connection_resolver Instance of the connection resolver
-	 * @return void
+	 * @param AbstractConnectionResolver $connection_resolver Instance of the connection resolver.
+	 * @return array
 	 */
-	function wds_public_unpublished_users( array $query_args, \WPGraphQL\Data\Connection\AbstractConnectionResolver $connection_resolver ) {
+	function wds_public_unpublished_users( array $query_args, \WPGraphQL\Data\Connection\AbstractConnectionResolver $connection_resolver ) {// phpcs:ignore
 		if ( $connection_resolver instanceof \WPGraphQL\Data\Connection\UserConnectionResolver ) {
 			unset( $query_args['has_published_posts'] );
 		}
@@ -139,12 +146,11 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	/**
 	 * Make all Users public including in non-authenticated WPGraphQL requests.
 	 *
-	 * @param string  $visibility
-	 * @param string  $model_name
-	 * @param mixed   $data
-	 * @param integer $owner
-	 * @param WP_User $current_user
-	 * @return void
+	 * @author WebDevStudios
+	 * @since 1.0
+	 * @param string $visibility The current visibility of a user.
+	 * @param string $model_name The model name of the user model.
+	 * @return string
 	 */
 	function wds_public_users( string $visibility, string $model_name ) {
 		if ( 'UserObject' === $model_name ) {
