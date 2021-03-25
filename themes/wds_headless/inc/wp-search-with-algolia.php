@@ -53,7 +53,7 @@
 		// List all eligible meta fields.
 		$fields = [
 			'title',
-			'location'
+			'location',
 		];
 
 		// Check if post type is eligible.
@@ -70,7 +70,7 @@
 				 * every field. Only index if a field is a boolean or has
 				 * content.
 				 */
-				if ( is_bool( $data ) || ! empty( $data )  ) {
+				if ( is_bool( $data ) || ! empty( $data ) ) {
 
 					// Append _meta to each field.
 					$attributes[ $field . '_meta' ] = $data;
