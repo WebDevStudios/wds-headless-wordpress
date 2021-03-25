@@ -53,14 +53,12 @@ For more information, see the [Backend Setup wiki](https://github.com/WebDevStud
 
 ### Deployments
 
-There are two environments on WP Engine:
+There are two primary branches:
 
-1. [Develop](https://nextjsdevstart.wpengine.com/wp-admin/)
-2. [Production](https://nextjs.wpengine.com/wp-admin/)
+1. `develop` auto-deploys to [WPE Develop](https://nextjsdevstart.wpengine.com/wp-admin/).
+2. `main` manual deploys to [WPE Production](https://nextjs.wpengine.com/wp-admin/).
 
-The `develop` branch auto-deploys to WPE Develop.
-
-Production does _not_ have a deployment. Releases to production are done through WP Engine's "copy environment" feature.
+Releases to production are only handled through WP Engine's "copy environment" feature at the end of a sprint.
 
 ### Code Linting
 
