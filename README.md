@@ -10,6 +10,7 @@ The headless WordPress installation for our [Next.js WordPress Starter](https://
 - [Install](#install)
 - [Development](#development)
   - [Git Workflow](#git-workflow)
+  - [Deployments](#deployments)
   - [Code Linting](#code-linting)
   - [Tips to help your PR get approved](#tips-to-help-your-pr-get-approved)
 
@@ -44,10 +45,22 @@ For more information, see the [Backend Setup wiki](https://github.com/WebDevStud
 1. Create a `feature` branch off `main`
 2. Work locally adhering to coding standards
 3. When ready, open a draft Pull Request on Github
-4. When finished, fill out the PR template and publish your PR
-5. Your PR must pass assertions and deploy successfully
-6. After peer review, the PR will be merged back into `main`
-7. Repeat ♻️
+4. Merge your code into `develop` and test on WP Engine
+5. When finished, fill out the PR template and publish your PR
+6. Your PR must pass assertions and deploy successfully
+7. After peer review, the PR will be merged back into `main`
+8. Repeat ♻️
+
+### Deployments
+
+There are two environments on WP Engine:
+
+1. [Develop](https://nextjsdevstart.wpengine.com/wp-admin/)
+2. [Production](https://nextjs.wpengine.com/wp-admin/)
+
+The `develop` branch auto-deploys to WPE Develop.
+
+Production does _not_ have a deployment. Releases to production are done through WP Engine's "copy environment" feature.
 
 ### Code Linting
 
