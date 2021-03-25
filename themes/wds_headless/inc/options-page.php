@@ -208,7 +208,6 @@ function wds_headless_save_404_page() {
  *
  * @param string $key The key located in the $_POST array specified by the user.
  *
- *
  * @author WebDevStudios
  * @since  1.0.0
  */
@@ -220,7 +219,6 @@ function wds_headless_save_input( string $key ) {
 	if ( empty( wp_unslash( filter_input( INPUT_POST, $key ) ) ) ) {
 		delete_option( $key );
 	}
-
 
 	update_option(
 		$key,

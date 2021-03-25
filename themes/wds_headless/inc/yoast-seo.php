@@ -7,6 +7,7 @@
  * @package wds-headless-theme
  * @since 1.0
  */
+
 if ( defined( 'WPSEO_VERSION' ) ) {
 
 	/**
