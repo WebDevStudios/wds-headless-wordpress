@@ -116,7 +116,7 @@ function wds_headless_read_wp_config() {
 		return;
 	}
 
-	// The consetants and corresponding options names supported by wp-config.php.
+	// The constants and corresponding options names supported by wp-config.php.
 	$config_values = [
 		'HEADLESS_FRONTEND_URL'       => 'wds-headless-frontend-url',
 		'WORDPRESS_PREVIEW_SECRET'    => 'wds-headless-preview-secret',
