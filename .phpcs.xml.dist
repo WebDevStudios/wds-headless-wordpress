@@ -1,1 +1,16 @@
-<?xml version="1.0"?><ruleset name="Project"><rule ref="WebDevStudios"/></ruleset>
+<?xml version="1.0"?>
+<ruleset name="Project"><rule ref="WebDevStudios"/>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/dist/*</exclude-pattern>
+	<exclude-pattern>*/index.php</exclude-pattern>
+	<exclude-pattern>*/plugins/*</exclude-pattern>
+	<exclude-pattern>*/mu-plugins/*</exclude-pattern>
+	<exclude-pattern>*/uploads/*</exclude-pattern>
+	<exclude-pattern>*/themes/index.php</exclude-pattern>
+	<exclude-pattern>*/themes/twenty*/</exclude-pattern>
+	<exclude-pattern>*/themes/wds_headless/acf-json/</exclude-pattern>
+	<exclude-pattern>*/themes/wds_headless/inc/tgm/</exclude-pattern>
+	<exclude-pattern>*/themes/wds_headless/inc/yoast-seo.php</exclude-pattern>
+	<exclude-pattern>*/themes/wds_headless/inc/wordpress.php</exclude-pattern>
+</ruleset>
