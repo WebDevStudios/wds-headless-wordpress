@@ -138,7 +138,7 @@ add_action( 'admin_menu', 'wds_headless_options_page' );
 function wds_headless_options_page() {
 	add_options_page(
 		esc_html__( 'WDS Headless Theme Settings', 'wds' ),
-		__( 'Theme Settings', 'wds' ),
+		esc_html__( 'Theme Settings', 'wds' ),
 		'manage_options',
 		'wds-headless-options-page',
 		'_wds_headless_render_options_page'
