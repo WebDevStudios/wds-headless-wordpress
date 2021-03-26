@@ -117,12 +117,12 @@ function wds_set_headless_home_url( string $url, string $path, $scheme = null ) 
 
 	// if ( $path === $homepage_uri ) {
 
-	// 	// Return root FE URL for homepage.
-	// 	return $base_url;
+	// Return root FE URL for homepage.
+	// return $base_url;
 	// } elseif ( $path === $error_page_uri ) {
 
-	// 	// Return 404 URL for error page.
-	// 	return "{$base_url}404";
+	// Return 404 URL for error page.
+	// return "{$base_url}404";
 	// }
 
 	return "{$base_url}{$path}";
