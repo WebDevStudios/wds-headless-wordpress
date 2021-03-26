@@ -51,7 +51,7 @@ require_once 'partials/admin-notice.php';
 				<?php esc_html_e( 'Preview Secret', 'wds' ); ?>
 				<input
 					name="wds-headless-preview-secret" id="wds-headless-preview-secret"
-					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-preview-secret' ) ); // phpcs:ignore ?>"
+					type="password" value="<?php esc_attr_e( get_option( 'wds-headless-preview-secret' ) ); // phpcs:ignore ?>"
 					<?php wds_headless_is_disabled_field( 'wds-headless-preview-secret' ); ?>
 				/>
 			</label>
@@ -62,7 +62,7 @@ require_once 'partials/admin-notice.php';
 				<?php esc_html_e( 'JWT Auth Key', 'wds' ); ?>
 				<input
 					name="wds-headless-jwt-auth-key" id="wds-headless-jwt-auth-key"
-					type="text" value="<?php esc_attr_e( get_option( 'wds-headless-jwt-auth-key' ) ); // phpcs:ignore ?>"
+					type="password" value="<?php esc_attr_e( get_option( 'wds-headless-jwt-auth-key' ) ); // phpcs:ignore ?>"
 					<?php wds_headless_is_disabled_field( 'wds-headless-jwt-auth-key' ); ?>
 				/>
 			</label>
