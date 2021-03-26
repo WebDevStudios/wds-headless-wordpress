@@ -7,15 +7,16 @@
  * @since 1.0
  */
 
+// Require primary TGM class.
 require_once 'class-tgm-plugin-activation.php';
 
- /**
-  * List of required plugins.
-  *
-  * @see http://tgmpluginactivation.com/configuration/
-  * @author WebDevStudios
-  * @since 1.0
-  */
+/**
+ * List of required plugins.
+ *
+ * @see http://tgmpluginactivation.com/configuration/
+ * @author WebDevStudios
+ * @since 1.0
+ */
 function wds_register_required_plugins() {
 
 	$plugins = [
@@ -28,9 +29,9 @@ function wds_register_required_plugins() {
 			'required' => true,
 		],
 		[
-			'name'     => 'WPGraphQL for Custom Post Type UI',
-			'slug'     => 'wp-graphql-custom-post-type-ui',
-			'source'   => 'https://github.com/wp-graphql/wp-graphql-custom-post-type-ui/archive/master.zip',
+			'name'   => 'WPGraphQL for Custom Post Type UI',
+			'slug'   => 'wp-graphql-custom-post-type-ui',
+			'source' => 'https://github.com/wp-graphql/wp-graphql-custom-post-type-ui/archive/master.zip',
 		],
 		[
 			'name'     => 'WPGraphQL Gutenberg',
@@ -53,17 +54,17 @@ function wds_register_required_plugins() {
 			'required'    => true,
 		],
 		[
-			'name'      => 'Custom Post Type UI',
-			'slug'      => 'custom-post-type-ui',
+			'name' => 'Custom Post Type UI',
+			'slug' => 'custom-post-type-ui',
 		],
 		[
-			'name'      => 'Gutenberg',
-			'slug'      => 'gutenberg',
+			'name' => 'Gutenberg',
+			'slug' => 'gutenberg',
 		],
 		[
-			'name'      => 'Gutenberg Block Manager',
-			'slug'      => 'block-manager',
-			'required'  => true,
+			'name'     => 'Gutenberg Block Manager',
+			'slug'     => 'block-manager',
+			'required' => true,
 		],
 		[
 			'name'        => 'WordPress SEO by Yoast',
@@ -72,19 +73,19 @@ function wds_register_required_plugins() {
 			'required'    => true,
 		],
 		[
-			'name'      => 'WPGraphQL',
-			'slug'      => 'wp-graphql',
-			'required'  => true,
+			'name'     => 'WPGraphQL',
+			'slug'     => 'wp-graphql',
+			'required' => true,
 		],
 		[
-			'name'      => 'WPGraphQL Yoast SEO Addon',
-			'slug'      => 'add-wpgraphql-seo',
-			'required'  => true,
+			'name'     => 'WPGraphQL Yoast SEO Addon',
+			'slug'     => 'add-wpgraphql-seo',
+			'required' => true,
 		],
 		[
-			'name'      => 'WP Search with Algolia',
-			'slug'      => 'wp-search-with-algolia',
-			'required'  => true,
+			'name'     => 'WP Search with Algolia',
+			'slug'     => 'wp-search-with-algolia',
+			'required' => true,
 		],
 	];
 
