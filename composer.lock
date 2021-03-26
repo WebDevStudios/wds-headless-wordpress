@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdbc3c8888a99a1acd2a4f3d3bfd33c8",
+    "content-hash": "fce647bf1ba33f0298854d88e07271cd",
     "packages": [
         {
             "name": "composer/installers",
@@ -395,22 +395,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.2.0",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7008573787b430c1c1f650e3722d9bba59967628",
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7",
+                "guzzlehttp/psr7": "^1.7 || ^2.0",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0"
             },
@@ -418,6 +418,7 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
                 "phpunit/phpunit": "^8.5.5 || ^9.3.5",
@@ -431,7 +432,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.1-dev"
+                    "dev-master": "7.3-dev"
                 }
             },
             "autoload": {
@@ -489,7 +490,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-10T11:47:56+00:00"
+            "time": "2021-03-23T11:33:13+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1496,7 +1497,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
                 "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
+                "shasum": "11a2757d8ea27a0444557381052eca40a8827958"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1527,7 +1528,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-2.0.1-c7f0f6.tar",
                 "reference": "86259b5e6f788189cab1760d257416f6e76ff226",
-                "shasum": "d32c0c90a6804d306f7180d8ca047da5c7162361"
+                "shasum": "d3a9b28480bbb5bd531aef536897ef0d15d66ce2"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1574,7 +1575,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-1.0.1-d9b41f.tar",
                 "reference": "05c879f9bf605050930473842fb3313b21b48588",
-                "shasum": "88e98d204460db969207d7f7be8e8914cdcb1fcf"
+                "shasum": "541e6ccd07fe9960b9e0128f20eaf45cc821c4a2"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -1796,15 +1797,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.2"
+                "reference": "tags/1.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2105,5 +2106,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.4"
+    },
     "plugin-api-version": "1.1.0"
 }
