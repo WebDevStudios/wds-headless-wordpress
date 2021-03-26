@@ -33,10 +33,12 @@ function wds_headless_is_disabled_field() {
  * @param string $wds_headless_constant The PHP constant to check before saving data from the form.
  * @param string $option_name           The name of the option to serialize the value of the constant.
  *
+ * @return bool Returns true if there are user defined constants; false, if not.
+ *
  * @author WebDevStudios
  * @since  1.0.0
  */
-function _wds_headless_check_wp_config( string $wds_headless_constant, string $option_name ) {
+function _wds_headless_check_wp_config( string $wds_headless_constant, string $option_name ) : bool {
 	$wds_headless_constant = strtoupper( $wds_headless_constant );
 	$constants             = _wds_headless_get_defined_constants();
 
@@ -185,10 +187,12 @@ function wds_headless_save_options() {
 /**
  * Saves the value of the 404 page as defined by the user.
  *
+ * @return void Reterns if there is no input.
+ *
  * @author WebDevStudios
  * @since  1.0.0
  */
-function wds_headless_save_404_page() {
+function wds_headless_save_404_page() : void {
 	$key = 'wds-headless-404-page';
 
 	if ( null === wp_unslash( filter_input( INPUT_POST, $key ) ) ) {
@@ -208,11 +212,12 @@ function wds_headless_save_404_page() {
  *
  * @param string $key The key located in the $_POST array specified by the user.
  *
+ * @return void Returns early if there is not input.
  *
  * @author WebDevStudios
  * @since  1.0.0
  */
-function wds_headless_save_input( string $key ) {
+function wds_headless_save_input( string $key ) : void {
 	if ( null === wp_unslash( filter_input( INPUT_POST, $key ) ) ) {
 		return;
 	}
@@ -220,7 +225,6 @@ function wds_headless_save_input( string $key ) {
 	if ( empty( wp_unslash( filter_input( INPUT_POST, $key ) ) ) ) {
 		delete_option( $key );
 	}
-
 
 	update_option(
 		$key,
@@ -238,8 +242,6 @@ function wds_headless_save_input( string $key ) {
  * Redirects the user back to the administration page will a success or failure message.
  *
  * @param string $result The result of the evaluation of the settings being saved.
- *
- * @return void
  *
  * @author WebDevStudios
  * @since  1.0.0

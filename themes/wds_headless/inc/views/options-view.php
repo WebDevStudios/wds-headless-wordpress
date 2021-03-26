@@ -7,6 +7,13 @@
  * @since   1.0
  */
 
+/**
+ * Renders the admin notices based on the success or failure to serialize options
+ * based on permissions and form input.
+ *
+ * @author WebDevStudios
+ * @since  1.0.0
+ */
 require_once 'partials/admin-notice.php';
 ?>
 
@@ -25,7 +32,7 @@ require_once 'partials/admin-notice.php';
 				<select name="wds-headless-404-page" id="wds-headless-404-page">
 					<option value="default"><?php esc_html_e( 'Default...', 'wds' ); ?></option>
 					<?php foreach ( get_pages() as $current_page ) : ?>
-						<option value="<?php esc_attr_e( $current_page->ID ); ?>"
+						<option value="<?php esc_attr_e( $current_page->ID ); // phpcs:ignore ?>"
 						<?php selected( $current_page->ID, get_option( 'wds-headless-404-page' ), true ); // phpcs:ignore ?>
 						>
 							<?php esc_html_e( $current_page->post_title ); //phpcs:ignore ?>
@@ -72,5 +79,5 @@ require_once 'partials/admin-notice.php';
 		wp_nonce_field( 'wds-headless-settings-save', 'wds-headless-settings-save-nonce' );
 		submit_button();
 		?>
-  </form>
+	</form>
 </div>
