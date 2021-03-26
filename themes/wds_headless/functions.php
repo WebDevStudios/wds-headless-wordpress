@@ -16,6 +16,7 @@ require_once 'inc/wordpress.php';
 require_once 'inc/acf-pro.php';
 require_once 'inc/block-manager.php';
 require_once 'inc/custom-post-types.php';
+require_once 'inc/options-page.php';
 require_once 'inc/wp-search-with-algolia.php';
 require_once 'inc/wp-graphql.php';
 require_once 'inc/yoast-seo.php';
