@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdbc3c8888a99a1acd2a4f3d3bfd33c8",
+    "content-hash": "fce647bf1ba33f0298854d88e07271cd",
     "packages": [
         {
             "name": "composer/installers",
@@ -306,16 +306,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.165.0",
+            "version": "v0.166.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd"
+                "reference": "46b71684a100f3d976e0321cf24f487b314add68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd",
-                "reference": "c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/46b71684a100f3d976e0321cf24f487b314add68",
+                "reference": "46b71684a100f3d976e0321cf24f487b314add68",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +339,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-03-21T11:20:02+00:00"
+            "time": "2021-03-22T11:26:04+00:00"
         },
         {
             "name": "google/auth",
@@ -395,22 +395,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.2.0",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
-                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7008573787b430c1c1f650e3722d9bba59967628",
+                "reference": "7008573787b430c1c1f650e3722d9bba59967628",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7",
+                "guzzlehttp/psr7": "^1.7 || ^2.0",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0"
             },
@@ -418,6 +418,7 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
                 "phpunit/phpunit": "^8.5.5 || ^9.3.5",
@@ -431,7 +432,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.1-dev"
+                    "dev-master": "7.3-dev"
                 }
             },
             "autoload": {
@@ -489,7 +490,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-10T11:47:56+00:00"
+            "time": "2021-03-23T11:33:13+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1796,15 +1797,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.2"
+                "reference": "tags/1.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2105,5 +2106,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.4"
+    },
     "plugin-api-version": "1.1.0"
 }
