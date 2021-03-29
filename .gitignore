@@ -28,7 +28,7 @@ vendor/
 /mu-plugins/*
 
 # theme
-/themes/twentytwentyone
+/themes/twenty*
 /themes/wds_headless/dist
 !/themes/wds_headless/src/scss/plugins
 !/themes/wds_headless/src/scss/vendor
