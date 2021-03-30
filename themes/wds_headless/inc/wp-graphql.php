@@ -166,6 +166,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	 *
 	 * @author WebDevStudios
 	 * @since 1.0
+	 * @return void
 	 */
 	function wds_register_archive_seo() {
 		register_graphql_object_type( 'ArchiveSeo', [
@@ -184,7 +185,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 		], 'objects' );
 
 		// Bail if we don't have an array of post types.
-		if ( empty( $post_types )  || ! is_array( $post_types ) ) {
+		if ( empty( $post_types ) || ! is_array( $post_types ) ) {
 			return;
 		}
 
@@ -201,9 +202,13 @@ if ( class_exists( 'WPGraphQL' ) ) {
 				'archiveSeo',
 				[
 					'type'        => 'ArchiveSeo',
-					'description' => __( "The Yoast SEO data of the {$post_type_object->label} post type archive", 'wds' ),
+					'description' => sprintf(
+						/* translators: the post type label. */
+						__( 'The Yoast SEO data of the %s post type archive', 'wds' ),
+						$post_type_object->label
+					),
 					'resolve'     => function () use ( $post_type, $post_type_object ) {
-						// https://developer.yoast.com/blog/yoast-seo-14-0-using-yoast-seo-surfaces/
+						// Surface info: https://developer.yoast.com/blog/yoast-seo-14-0-using-yoast-seo-surfaces/.
 						/* We would ideally use this surface to determine meta title and desc, but the surface is not pulling the correct meta for those fields (as of Yoast 15.9.2, it seems to be pulling some default archive meta title and a blank desc). */
 						$archive_seo = YoastSEO()->meta->for_post_type_archive( $post_type );
 
