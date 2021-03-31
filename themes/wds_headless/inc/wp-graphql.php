@@ -176,6 +176,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 				'metaDesc'           => [ 'type' => 'String' ],
 				'metaRobotsNoindex'  => [ 'type' => 'String' ],
 				'metaRobotsNofollow' => [ 'type' => 'String' ],
+				'canonical'          => [ 'type' => 'String' ],
 			],
 		] );
 
@@ -229,6 +230,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 							'metaDesc'           => wp_gql_seo_format_string( $description ),
 							'metaRobotsNoindex'  => $archive_seo->robots['index'],
 							'metaRobotsNofollow' => $archive_seo->robots['follow'],
+							'canonical'          => $archive_seo->canonical,
 						];
 					},
 				]
