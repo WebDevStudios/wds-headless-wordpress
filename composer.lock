@@ -306,7 +306,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.166.0",
+            "version": "v0.167.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -1725,15 +1725,15 @@
         },
         {
             "name": "wpackagist-plugin/add-wpgraphql-seo",
-            "version": "4.12.0",
+            "version": "4.12.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
-                "reference": "tags/4.12.0"
+                "reference": "tags/4.12.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.12.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.12.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1761,15 +1761,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.2.1",
+            "version": "10.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.2.1"
+                "reference": "tags/10.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1797,15 +1797,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.3"
+                "reference": "tags/1.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
