@@ -306,7 +306,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.167.0",
+            "version": "v0.168.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -934,16 +934,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837"
+                "reference": "d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/906a5fafabe5e6ba51ef3dc65b2722a677908837",
-                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d",
+                "reference": "d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d",
                 "shasum": ""
             },
             "require": {
@@ -1037,7 +1037,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-10T13:58:31+00:00"
+            "time": "2021-04-06T14:00:11+00:00"
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
@@ -1497,7 +1497,7 @@
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
                 "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "11a2757d8ea27a0444557381052eca40a8827958"
+                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1518,20 +1518,19 @@
         },
         {
             "name": "webdevstudios/sso",
-            "version": "2.0.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:WebDevStudios/sso.git",
-                "reference": "86259b5e6f788189cab1760d257416f6e76ff226"
+                "reference": "cb4354c1d96a512da5de310e0466f7073e9db982"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-2.0.1-c7f0f6.tar",
-                "reference": "86259b5e6f788189cab1760d257416f6e76ff226",
-                "shasum": "d3a9b28480bbb5bd531aef536897ef0d15d66ce2"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/sso/webdevstudios-sso-v2.0.3-c5a8bd.tar",
+                "reference": "cb4354c1d96a512da5de310e0466f7073e9db982"
             },
             "require": {
-                "composer/installers": "~1.0",
+                "composer/installers": "^1.5",
                 "firebase/php-jwt": "^5.0",
                 "google/apiclient": "^2.0"
             },
@@ -1561,25 +1560,24 @@
                 "issues": "https://github.com/WebDevStudios/sso/issues/",
                 "wiki": "https://github.com/WebDevStudios/sso/wiki"
             },
-            "time": "2019-10-29T21:24:09+00:00"
+            "time": "2021-04-09T18:43:16+00:00"
         },
         {
             "name": "webdevstudios/sso-addon",
-            "version": "1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:WebDevStudios/sso-addon.git",
-                "reference": "05c879f9bf605050930473842fb3313b21b48588"
+                "reference": "dc6f79fc66a0ab02e8930bf5bc2ae76724dffa8b"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-1.0.1-d9b41f.tar",
-                "reference": "05c879f9bf605050930473842fb3313b21b48588",
-                "shasum": "541e6ccd07fe9960b9e0128f20eaf45cc821c4a2"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/sso-addon/webdevstudios-sso-addon-v1.0.3-5e8893.tar",
+                "reference": "dc6f79fc66a0ab02e8930bf5bc2ae76724dffa8b"
             },
             "require": {
-                "composer/installers": "~1.0",
-                "webdevstudios/sso": "2.0.1"
+                "composer/installers": "^1.5",
+                "webdevstudios/sso": "2.0.3"
             },
             "require-dev": {
                 "webdevstudios/php-coding-standards": "1.0.0-beta2@dev"
@@ -1601,7 +1599,7 @@
                 "issues": "https://github.com/WebDevStudios/sso-addon/issues",
                 "source": "https://github.com/WebDevStudios/sso-addon"
             },
-            "time": "2019-11-08T17:18:33+00:00"
+            "time": "2021-04-09T18:50:19+00:00"
         },
         {
             "name": "webdevstudios/wordpress-seo-premium",
@@ -1725,15 +1723,15 @@
         },
         {
             "name": "wpackagist-plugin/add-wpgraphql-seo",
-            "version": "4.12.1",
+            "version": "4.13.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
-                "reference": "tags/4.12.1"
+                "reference": "tags/4.13.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.12.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.13.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1761,15 +1759,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.3.1",
+            "version": "10.3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.3.1"
+                "reference": "tags/10.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.3.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1797,15 +1795,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.4",
+            "version": "1.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.4"
+                "reference": "tags/1.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1959,16 +1957,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.8",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4"
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9d583721a7157ee997f235f327de038e7ea6dac4",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
                 "shasum": ""
             },
             "require": {
@@ -2006,7 +2004,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-10-23T02:01:07+00:00"
+            "time": "2021-04-09T00:54:41+00:00"
         },
         {
             "name": "webdevstudios/php-coding-standards",
