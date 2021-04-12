@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ff89d2ee1540812349df4060df9b846",
+    "content-hash": "372f1726a4a1c1f2fe75e8657b4c76ff",
     "packages": [
         {
             "name": "composer/installers",
@@ -1603,11 +1603,10 @@
         },
         {
             "name": "webdevstudios/wordpress-seo-premium",
-            "version": "15.9.2",
+            "version": "16.1",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar",
-                "shasum": "306d1b42da9194aacd1f2b9e8696122387cd6786"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-16.1.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
