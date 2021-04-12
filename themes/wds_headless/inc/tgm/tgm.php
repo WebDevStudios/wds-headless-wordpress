@@ -29,11 +29,6 @@ function wds_register_required_plugins() {
 			'required' => true,
 		],
 		[
-			'name'   => 'WPGraphQL for Custom Post Type UI',
-			'slug'   => 'wp-graphql-custom-post-type-ui',
-			'source' => 'https://github.com/wp-graphql/wp-graphql-custom-post-type-ui/archive/master.zip',
-		],
-		[
 			'name'     => 'WPGraphQL Gutenberg',
 			'slug'     => 'wp-graphql-gutenberg',
 			'source'   => 'https://github.com/pristas-peter/wp-graphql-gutenberg/archive/develop.zip',
