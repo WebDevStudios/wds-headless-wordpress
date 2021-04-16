@@ -1,4 +1,4 @@
-# Next.js Starter WordPress <!-- omit in toc -->
+# WebDevStudios Headless WordPress <!-- omit in toc -->
 
 The headless WordPress installation for our [Next.js WordPress Starter](https://github.com/webdevstudios/nextjs-wordpress-starter).
 
