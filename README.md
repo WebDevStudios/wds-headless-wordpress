@@ -1,6 +1,6 @@
 # WebDevStudios Headless WordPress <!-- omit in toc -->
 
-Turn WordPress into a headless CMS. Used as the "backen" for our [Next.js WordPress Starter](https://github.com/webdevstudios/nextjs-wordpress-starter).
+Turn WordPress into a headless CMS. Used as the "backend" for our [Next.js WordPress Starter](https://github.com/webdevstudios/nextjs-wordpress-starter).
 
 <a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
 
