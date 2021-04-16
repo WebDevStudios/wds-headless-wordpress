@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "daa2a7b4625c04ee3dff8f0c7ffb39b4",
+    "content-hash": "dabc95ee1a5d279e3c589e46002281eb",
     "packages": [
         {
             "name": "composer/installers",
@@ -202,16 +202,16 @@
         },
         {
             "name": "opis/json-schema",
-            "version": "1.0.19",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/json-schema.git",
-                "reference": "1bcb3582881d0692d002537a4472964280f71313"
+                "reference": "39d8072be8657a329a284339994401066406c43b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/json-schema/zipball/1bcb3582881d0692d002537a4472964280f71313",
-                "reference": "1bcb3582881d0692d002537a4472964280f71313",
+                "url": "https://api.github.com/repos/opis/json-schema/zipball/39d8072be8657a329a284339994401066406c43b",
+                "reference": "39d8072be8657a329a284339994401066406c43b",
                 "shasum": ""
             },
             "require": {
@@ -223,7 +223,7 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "opis/string": "^1.4",
-                "phpunit/phpunit": "^6.5 || ^7.0"
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^9.4"
             },
             "suggest": {
                 "opis/string": "A standalone library for manipulating multibyte strings"
@@ -261,20 +261,20 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-06-07T20:56:25+00:00"
+            "time": "2021-04-14T20:02:50+00:00"
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.7",
+            "version": "v0.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e"
+                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/bf0e9290ffab5b6189172fc9721bc644a51d651e",
-                "reference": "bf0e9290ffab5b6189172fc9721bc644a51d651e",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/2f35359fd306fff98dcb25063735e9b584a625f7",
+                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7",
                 "shasum": ""
             },
             "require": {
@@ -298,11 +298,11 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Query gutenberg blocks with wp-graphql",
-            "time": "2021-01-18T05:47:03+00:00"
+            "time": "2021-03-05T09:39:59+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -441,29 +441,35 @@
         },
         {
             "name": "webdevstudios/wds-blocks",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WebDevStudios/wds-blocks.git",
-                "reference": "6b4a81dfa060e578f9d59d850edd1b3eb07a0d92"
+                "reference": "2fa787df616e8d5a67e5fb47184ff6ae650a1f08"
+            },
+            "require": {
+                "composer/installers": "^1.5"
             },
             "require-dev": {
-                "phpcompatibility/php-compatibility": "^9.3",
-                "webdevstudios/php-coding-standards": "^1.0"
+                "phpcompatibility/php-compatibility": "~9.3",
+                "webdevstudios/php-coding-standards": "~1.3.0"
             },
             "type": "wordpress-plugin",
             "scripts": {
                 "lint": [
-                    "composer run compat && composer run lint:php"
-                ],
-                "format": [
-                    "./vendor/bin/phpcbf -p -v . --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
+                    "composer run lint:php"
                 ],
                 "lint:php": [
-                    "./vendor/bin/phpcs -p -s -n . --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/build/*'"
+                    "composer run lint:php-compat && composer run lint:phpcs"
                 ],
-                "compat": [
-                    "./vendor/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit"
+                "lint:php-compat": [
+                    "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=-1"
+                ],
+                "lint:phpcs": [
+                    "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --standard=./.phpcs.xml.dist --extensions=php -n --colors **/*.php"
+                ],
+                "debug:phpcs": [
+                    "which phpcs && phpcs -i"
                 ]
             },
             "license": [
@@ -476,7 +482,7 @@
                 }
             ],
             "description": "WebDevStudios library of Gutenberg blocks.",
-            "time": "2020-09-08T16:15:34+00:00"
+            "time": "2021-03-09T20:11:38+00:00"
         },
         {
             "name": "wp-graphql/wp-graphql-acf",
@@ -581,15 +587,15 @@
         },
         {
             "name": "wpackagist-plugin/add-wpgraphql-seo",
-            "version": "4.11.0",
+            "version": "4.13.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
-                "reference": "tags/4.11.0"
+                "reference": "tags/4.13.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.11.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.13.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -617,15 +623,15 @@
         },
         {
             "name": "wpackagist-plugin/block-manager",
-            "version": "1.1",
+            "version": "1.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/block-manager/",
-                "reference": "tags/1.1"
+                "reference": "tags/1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/block-manager.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/block-manager.1.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -634,16 +640,34 @@
             "homepage": "https://wordpress.org/plugins/block-manager/"
         },
         {
-            "name": "wpackagist-plugin/gutenberg",
-            "version": "9.9.2",
+            "name": "wpackagist-plugin/custom-post-type-ui",
+            "version": "1.9.0",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.9.2"
+                "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.9.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.9.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/gutenberg",
+            "version": "9.9.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gutenberg/",
+                "reference": "tags/9.9.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -653,15 +677,15 @@
         },
         {
             "name": "wpackagist-plugin/lazy-blocks",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/lazy-blocks/",
-                "reference": "tags/2.3.0"
+                "reference": "tags/2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/lazy-blocks.2.3.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/lazy-blocks.2.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -707,15 +731,15 @@
         },
         {
             "name": "wpackagist-plugin/stream",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "tags/3.6.1"
+                "reference": "tags/3.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.6.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/stream.3.6.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -725,15 +749,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "15.8",
+            "version": "15.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/15.8"
+                "reference": "tags/15.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.9.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -743,15 +767,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.1.3",
+            "version": "1.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.1.3"
+                "reference": "tags/1.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.1.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -905,16 +929,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.8",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4"
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9d583721a7157ee997f235f327de038e7ea6dac4",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
                 "shasum": ""
             },
             "require": {
@@ -952,7 +976,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-10-23T02:01:07+00:00"
+            "time": "2021-04-09T00:54:41+00:00"
         },
         {
             "name": "webdevstudios/php-coding-standards",
@@ -1052,5 +1076,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.4"
+    },
     "plugin-api-version": "1.1.0"
 }
