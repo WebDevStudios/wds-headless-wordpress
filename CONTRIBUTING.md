@@ -12,7 +12,6 @@ Thanks for contributing — you rock! 🤘
 - [Submitting Issues and Feature Requests](#submitting-issues-and-feature-requests)
 - [Development](#development)
   - [Environments and Primary Branches](#environments-and-primary-branches)
-    - [WordPress (Backend)](#wordpress-backend)
   - [Git Workflow](#git-workflow)
   - [Code Linting](#code-linting)
   - [Tips to help your PR get approved](#tips-to-help-your-pr-get-approved)
@@ -28,8 +27,6 @@ Before submitting an issue or making a feature request, please search for existi
 ## Development
 
 ### Environments and Primary Branches
-
-#### WordPress (Backend)
 
 - [WP Engine Prod](https://nextjs.wpengine.com/wp-admin/) - `main` branch - Manual releases only
 - [WP Engine Dev](https://nextjsdevstart.wpengine.com/wp-admin/) - `develop` branch - Auto deploy [via Buddy](https://app.buddy.works/webdevstudios/wds-headless-wordpress/pipelines)
