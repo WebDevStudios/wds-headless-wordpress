@@ -22,21 +22,15 @@ If you do file an issue, be sure to fill out the report completely!
 
 ---
 
-## Install
+## Setup
 
-Clone the repo into a WordPress installation. This repo will replace `/wp-content`
-
-```bash
-git clone git@github.com:WebDevStudios/nextjs-starter-wordpress.git wp-content
-```
-
-Install the dependencies:
+Clone the repo into a fresh WordPress installation. This repo will replace `/wp-content`
 
 ```bash
-composer install
+git clone https://github.com/WebDevStudios/wds-headless-wordpress.git wp-content
 ```
 
-For more information, see the [Backend Setup wiki](https://github.com/WebDevStudios/nextjs-wordpress-starter/wiki/Backend-Setup).
+See the [Backend Setup wiki](https://github.com/WebDevStudios/nextjs-wordpress-starter/wiki/Backend-Setup) for full setup instractions.
 
 ## Development
 
