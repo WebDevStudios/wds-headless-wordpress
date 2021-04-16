@@ -20,7 +20,7 @@ git clone https://github.com/WebDevStudios/wds-headless-wordpress.git wp-content
 
 See the [Backend Setup wiki](https://github.com/WebDevStudios/nextjs-wordpress-starter/wiki/Backend-Setup) for full instructions.
 
-## Contributing :octocat
+## Contributing :octocat:
 
 WebDevStudios is committed to open-source technologies and welcomes feedback and contributions. Learn how to [contribute](https://github.com/WebDevStudios/wds-headless-wordpress/blob/main/CONTRIBUTING.md) to this project.
 
