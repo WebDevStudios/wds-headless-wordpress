@@ -1,6 +1,6 @@
 # WebDevStudios Headless WordPress <!-- omit in toc -->
 
-The headless WordPress installation for our [Next.js WordPress Starter](https://github.com/webdevstudios/nextjs-wordpress-starter).
+Turn WordPress into a headless CMS. Used as the "backen" for our [Next.js WordPress Starter](https://github.com/webdevstudios/nextjs-wordpress-starter).
 
 <a href="https://webdevstudios.com/contact/"><img src="https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png" alt="WebDevStudios. Your Success is Our Mission."></a>
 
@@ -16,7 +16,7 @@ The headless WordPress installation for our [Next.js WordPress Starter](https://
 
 ## Contributing
 
-Before submitting an issue or making a feature request, please search for existing [issues](https://github.com/WebDevStudios/nextjs-starter-wordpress).
+Before submitting an issue or making a feature request, please search for existing [issues](https://github.com/WebDevStudios/wds-headless-wordpress/issues).
 
 If you do file an issue, be sure to fill out the report completely!
 
