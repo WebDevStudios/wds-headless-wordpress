@@ -49,6 +49,14 @@ function wds_theme_setup() {
 			'primary-menu' => esc_html__( 'Primary Menu' ),
 		]
 	);
+
+	// Disable color palette presets.
+	// This is disabled as there is seemingly no clean way to pass the palette color hex values to the FE instead of the arbitrary color names. In the future, we can re-enable the palette if we define a custom palette in the theme and again as a config object on the FE (e.g., under /lib/wordpress/_config/).
+	add_theme_support( 'editor-color-palette' );
+
+	// Disable background color gradient presets.
+	// See note above re: 'editor-color-palette'.
+	add_theme_support( 'editor-gradient-presets', [] );
 }
 add_action( 'after_setup_theme', 'wds_theme_setup' );
 
