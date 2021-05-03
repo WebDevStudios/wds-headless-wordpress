@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aac349bf39a825d22ce0b04d560973d7",
+    "content-hash": "5d01dc0e42707021340ef39d047a612f",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d"
+                "reference": "ae03311f45dfe194412081526be2e003960df74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
+                "url": "https://api.github.com/repos/composer/installers/zipball/ae03311f45dfe194412081526be2e003960df74b",
+                "reference": "ae03311f45dfe194412081526be2e003960df74b",
                 "shasum": ""
             },
             "require": {
@@ -111,6 +111,7 @@
                 "majima",
                 "mako",
                 "mediawiki",
+                "miaoxing",
                 "modulework",
                 "modx",
                 "moodle",
@@ -128,6 +129,7 @@
                 "sydes",
                 "sylius",
                 "symfony",
+                "tastyigniter",
                 "typo3",
                 "wordpress",
                 "yawik",
@@ -148,15 +150,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-14T11:07:16+00:00"
+            "time": "2021-04-28T06:42:17+00:00"
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
             "version": "1.9.14",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar",
-                "shasum": "933a66f29103d565ece62636f3bd08e39d01bd42"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -165,11 +166,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro-cli",
-            "version": "1.3.5",
+            "version": "1.4",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-cli/deliciousbrains-plugin-wp-migrate-db-pro-cli-1.3.5.tar",
-                "shasum": "7ec81ae132f8f5ae2562eaf0ec1e52e4940ceb3c"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-cli/deliciousbrains-plugin-wp-migrate-db-pro-cli-1.4.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -181,8 +181,7 @@
             "version": "1.4.16",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar",
-                "shasum": "b2e706ad5038a6dde861c1bbaaae1bf6e2f77788"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -306,16 +305,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.168.0",
+            "version": "v0.173.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "46b71684a100f3d976e0321cf24f487b314add68"
+                "reference": "9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/46b71684a100f3d976e0321cf24f487b314add68",
-                "reference": "46b71684a100f3d976e0321cf24f487b314add68",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847",
+                "reference": "9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847",
                 "shasum": ""
             },
             "require": {
@@ -339,20 +338,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-03-22T11:26:04+00:00"
+            "time": "2021-05-02T11:20:02+00:00"
         },
         {
             "name": "google/auth",
-            "version": "v1.15.0",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "b346c07de6613e26443d7b4830e5e1933b830dc4"
+                "reference": "4e0c9367719df9703e96f5ad613041b87742471c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/b346c07de6613e26443d7b4830e5e1933b830dc4",
-                "reference": "b346c07de6613e26443d7b4830e5e1933b830dc4",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/4e0c9367719df9703e96f5ad613041b87742471c",
+                "reference": "4e0c9367719df9703e96f5ad613041b87742471c",
                 "shasum": ""
             },
             "require": {
@@ -366,7 +365,7 @@
             "require-dev": {
                 "guzzlehttp/promises": "0.1.1|^1.3",
                 "kelvinmo/simplejwt": "^0.2.5|^0.5.1",
-                "phpseclib/phpseclib": "^2",
+                "phpseclib/phpseclib": "^2.0.31",
                 "phpunit/phpunit": "^4.8.36|^5.7",
                 "sebastian/comparator": ">=1.2.3",
                 "squizlabs/php_codesniffer": "^3.5"
@@ -391,7 +390,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2021-02-05T20:50:04+00:00"
+            "time": "2021-04-21T17:42:05+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -545,16 +544,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -612,28 +611,27 @@
                 "uri",
                 "url"
             ],
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "harness-software/wp-graphql-gravity-forms",
-            "version": "0.4.1",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git",
-                "reference": "df001611a97eab8f7acd7315ae90f0ce5c34f373"
+                "reference": "793bd15db3d2df397ae59a14a33d33da6787ffad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/df001611a97eab8f7acd7315ae90f0ce5c34f373",
-                "reference": "df001611a97eab8f7acd7315ae90f0ce5c34f373",
+                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/793bd15db3d2df397ae59a14a33d33da6787ffad",
+                "reference": "793bd15db3d2df397ae59a14a33d33da6787ffad",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
             "require-dev": {
-                "codeception/lib-innerbrowser": "^1.0",
-                "codeception/module-asserts": "^1.1",
+                "codeception/module-asserts": "^1.0",
                 "codeception/module-cli": "^1.0",
                 "codeception/module-db": "^1.0",
                 "codeception/module-filesystem": "^1.0",
@@ -643,13 +641,13 @@
                 "codeception/util-universalframework": "^1.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "lucatume/wp-browser": "^3.0",
-                "phpcompatibility/phpcompatibility-wp": "^2.1.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.0",
                 "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^0.12.64",
                 "phpunit/phpunit": "^9.5",
                 "simpod/php-coveralls-mirror": "^3.0",
                 "squizlabs/php_codesniffer": "^3.5.8",
-                "szepeviktor/phpstan-wordpress": "^0.7",
+                "szepeviktor/phpstan-wordpress": "^0.7.1",
                 "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "wordpress-plugin",
@@ -666,13 +664,10 @@
                 {
                     "name": "Kellen Mace",
                     "email": "kellen@harnessup.com"
-                },
-                {
-                    "name": "Dovid Levine"
                 }
             ],
             "description": "WPGraphQL for Gravity Forms",
-            "time": "2021-04-10T04:06:34+00:00"
+            "time": "2021-03-18T16:43:25+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -938,16 +933,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.7",
+            "version": "3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d"
+                "reference": "d9615a6fb970d9933866ca8b4036ec3407b020b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d",
-                "reference": "d369510df0ebd5e1a5d0fe3d4d23c55fa87a403d",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d9615a6fb970d9933866ca8b4036ec3407b020b6",
+                "reference": "d9615a6fb970d9933866ca8b4036ec3407b020b6",
                 "shasum": ""
             },
             "require": {
@@ -1041,7 +1036,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-06T14:00:11+00:00"
+            "time": "2021-04-19T03:20:48+00:00"
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
@@ -1227,16 +1222,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
@@ -1260,7 +1255,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -1270,7 +1265,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2020-03-23T09:12:05+00:00"
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -1314,16 +1309,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.4",
+            "version": "v5.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "f65f217b3314504a1ec99c2d6ef69016bb13490f"
+                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f65f217b3314504a1ec99c2d6ef69016bb13490f",
-                "reference": "f65f217b3314504a1ec99c2d6ef69016bb13490f",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/59a684f5ac454f066ecbe6daecce6719aed283fb",
+                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1367,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T10:01:46+00:00"
+            "time": "2021-04-07T16:07:52+00:00"
         },
         {
             "name": "voku/simple_html_dom",
@@ -1456,8 +1451,7 @@
             "version": "5.9.5",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar",
-                "shasum": "1eff76c921d1665d98a8391203494d089c7d578b"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1499,8 +1493,7 @@
             "dist": {
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
-                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
+                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1609,8 +1602,7 @@
             "version": "15.9.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar",
-                "shasum": "306d1b42da9194aacd1f2b9e8696122387cd6786"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1726,15 +1718,15 @@
         },
         {
             "name": "wpackagist-plugin/add-wpgraphql-seo",
-            "version": "4.13.1",
+            "version": "4.14.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
-                "reference": "tags/4.13.1"
+                "reference": "tags/4.14.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.13.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.14.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1762,15 +1754,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.9.0"
+                "reference": "tags/1.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.9.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.9.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1780,15 +1772,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.4.1",
+            "version": "10.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.4.1"
+                "reference": "tags/10.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.5.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1816,15 +1808,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.5",
+            "version": "1.3.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.5"
+                "reference": "tags/1.3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1834,15 +1826,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-search-with-algolia",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-search-with-algolia/",
-                "reference": "tags/1.7.0"
+                "reference": "tags/1.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-search-with-algolia.1.7.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-search-with-algolia.1.8.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
