@@ -238,4 +238,22 @@ if ( class_exists( 'WPGraphQL' ) ) {
 		}
 	}
 	add_action( 'graphql_register_types', 'wds_register_archive_seo' );
+
+	/**
+	 * Add file upload field to GF FieldValuesInput.
+	 *
+	 * @author WebDevStudios
+	 * @since 1.0
+	 * @param array $input_fields The array of fields for the FieldValuesInput object.
+	 * @return array              The filtered array of fields for the FieldValuesInput object.
+	 */
+	function wds_add_file_upload_field( $input_fields ) {
+		$input_fields['fileUploadValues'] = [
+			'type'        => 'Upload',
+			'description' => esc_html__( 'The form field values for FileUpload fields.', 'wds' ),
+		];
+
+		return $input_fields;
+	}
+	add_filter( 'graphql_fieldValuesInput_fields', 'wds_add_file_upload_field' );
 }
