@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc5faeb2bb15fa0bc698c116b892423d",
+    "content-hash": "c5f6527d90031fab2917242b1cb21743",
     "packages": [
         {
             "name": "composer/installers",
@@ -669,23 +669,24 @@
         },
         {
             "name": "harness-software/wp-graphql-gravity-forms",
-            "version": "0.3.1",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/harness-software/wp-graphql-gravity-forms.git",
-                "reference": "793bd15db3d2df397ae59a14a33d33da6787ffad"
+                "reference": "df001611a97eab8f7acd7315ae90f0ce5c34f373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/793bd15db3d2df397ae59a14a33d33da6787ffad",
-                "reference": "793bd15db3d2df397ae59a14a33d33da6787ffad",
+                "url": "https://api.github.com/repos/harness-software/wp-graphql-gravity-forms/zipball/df001611a97eab8f7acd7315ae90f0ce5c34f373",
+                "reference": "df001611a97eab8f7acd7315ae90f0ce5c34f373",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
             "require-dev": {
-                "codeception/module-asserts": "^1.0",
+                "codeception/lib-innerbrowser": "^1.0",
+                "codeception/module-asserts": "^1.1",
                 "codeception/module-cli": "^1.0",
                 "codeception/module-db": "^1.0",
                 "codeception/module-filesystem": "^1.0",
@@ -695,13 +696,13 @@
                 "codeception/util-universalframework": "^1.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "lucatume/wp-browser": "^3.0",
-                "phpcompatibility/phpcompatibility-wp": "2.1.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1.0",
                 "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^0.12.64",
+                "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^9.5",
                 "simpod/php-coveralls-mirror": "^3.0",
                 "squizlabs/php_codesniffer": "^3.5.8",
-                "szepeviktor/phpstan-wordpress": "^0.7.1",
+                "szepeviktor/phpstan-wordpress": "^0.7",
                 "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "wordpress-plugin",
@@ -718,10 +719,13 @@
                 {
                     "name": "Kellen Mace",
                     "email": "kellen@harnessup.com"
+                },
+                {
+                    "name": "Dovid Levine"
                 }
             ],
             "description": "WPGraphQL for Gravity Forms",
-            "time": "2021-03-18T16:43:25+00:00"
+            "time": "2021-04-10T04:06:34+00:00"
         },
         {
             "name": "monolog/monolog",
