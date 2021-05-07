@@ -256,25 +256,25 @@ if ( class_exists( 'WPGraphQL' ) ) {
 		foreach ( $errors->get_error_codes() as $error_code ) {
 			switch ( $error_code ) {
 				case 'empty_username':
-					$error_msg = __( 'Please enter a username.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'Please enter a username.', 'wds' );
 					break;
 				case 'invalid_username':
-					$error_msg = __( 'This username is invalid because it uses illegal characters. Please enter a valid username.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'This username is invalid because it uses illegal characters. Please enter a valid username.', 'wds' );
 					break;
 				case 'username_exists':
-					$error_msg = __( 'This username is already registered. Please choose another one.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
 					break;
 				case 'empty_email':
-					$error_msg = __( 'Please enter your email address.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'Please enter your email address.', 'wds' );
 					break;
 				case 'invalid_email':
-					$error_msg = __( 'Please enter a valid email address.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'Please enter a valid email address.', 'wds' );
 					break;
 				case 'email_exists':
-					$error_msg = __( 'This username is already registered. Please choose another one.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
 					break;
 				default:
-					$error_msg = __( 'Registration failed. Please contact the admin.', 'wds-headless-theme' );
+					$error_msg = esc_html__( 'Registration failed. Please contact the admin.', 'wds' );
 					break;
 			}
 			$new_errors_obj->add( $error_code, $error_msg );
