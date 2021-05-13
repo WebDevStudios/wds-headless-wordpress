@@ -244,16 +244,16 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	 *
 	 * @author WebDevStudios
 	 * @since 1.0
-	 * @param array $input_fields The array of fields for the FieldValuesInput object.
-	 * @return array              The filtered array of fields for the FieldValuesInput object.
+	 * @param array $fields The array of fields for the FieldValuesInput object.
+	 * @return array        The filtered array of fields for the FieldValuesInput object.
 	 */
-	function wds_add_file_upload_field( $input_fields ) {
-		$input_fields['fileUploadValues'] = [
+	function wds_add_file_upload_field( $fields ) {
+		$fields['fileUploadValues'] = [
 			'type'        => 'Upload',
 			'description' => esc_html__( 'The form field values for FileUpload fields.', 'wds' ),
 		];
 
-		return $input_fields;
+		return $fields;
 	}
 	add_filter( 'graphql_fieldValuesInput_fields', 'wds_add_file_upload_field' );
 }
