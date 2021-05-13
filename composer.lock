@@ -359,16 +359,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.173.0",
+            "version": "v0.174.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847"
+                "reference": "004c5280f5a26a8acbb6f6af6a792e4872b7648a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847",
-                "reference": "9034b5ba3e25c9ad8e49b6457b9cad21fd9d9847",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/004c5280f5a26a8acbb6f6af6a792e4872b7648a",
+                "reference": "004c5280f5a26a8acbb6f6af6a792e4872b7648a",
                 "shasum": ""
             },
             "require": {
@@ -392,7 +392,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-05-02T11:20:02+00:00"
+            "time": "2021-05-08T11:20:03+00:00"
         },
         {
             "name": "google/auth",
@@ -1833,15 +1833,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.5.3",
+            "version": "10.5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.5.3"
+                "reference": "tags/10.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.5.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.5.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1869,15 +1869,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.6",
+            "version": "1.3.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.6"
+                "reference": "tags/1.3.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2122,6 +2122,7 @@
             ],
             "description": "In-house PHP linting and coding standards for WebDevStudios",
             "homepage": "https://github.com/WebDevStudios/php-coding-standards",
+            "abandoned": "wp-coding-standards/wpcs",
             "time": "2020-11-16T21:56:03+00:00"
         },
         {
