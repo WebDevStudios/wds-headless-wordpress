@@ -8,6 +8,9 @@
  * @since 1.0
  */
 
+use GraphQL\Type\Definition\ResolveInfo;
+use WPGraphQLGravityForms\Utils\GFUtils;
+
 if ( class_exists( 'WPGraphQL' ) ) {
 
 	/**
@@ -256,6 +259,104 @@ if ( class_exists( 'WPGraphQL' ) ) {
 		return $fields;
 	}
 	add_filter( 'graphql_fieldValuesInput_fields', 'wds_add_file_upload_field' );
+
+	/**
+	 * Extend WP GraphQL Gravity Forms form submission resolver to allow file uploads.
+	 *
+	 * @author WebDevStudios
+	 * @since 1.0
+	 * @param array $fields Root mutation fields.
+	 * @return array        Modified root mutation fields.
+	 */
+	function wds_extend_gf_submission_resolver( array $fields ) {
+		// Retrieve original mutation resolver.
+		$resolver = $fields['submitGravityFormsForm']['resolve'];
+
+		// Create new wrapper resolver to handle file uploads.
+		$new_resolver = function( $root, $args, $context, ResolveInfo $info ) use ( $resolver ) {
+			$form_id = $args['input']['formId'] ?? 0;
+
+			if (!function_exists('wp_handle_sideload')) {
+				require_once(ABSPATH . 'wp-admin/includes/file.php');
+			}
+
+			// Track file upload fields.
+			$file_uploads = [];
+
+			// Iterate through field values to process file uploads.
+			$args['input']['fieldValues'] = array_map( function( $field ) use ( &$file_uploads, $form_id ) {
+				// Skip field if not a file upload.
+				if ( ! array_key_exists( 'fileUploadValues', $field ) ) {
+					return $field;
+				}
+
+				// Retrieve file data.
+				$file = $field['fileUploadValues'];
+
+				// Determine target uploads dir.
+				$target = wds_gravity_forms_upload_dir( $form_id );
+
+				// Upload file and retrieve upload data.
+				$upload = wds_handle_file_upload( $file, $target );
+
+				// If error occurs, skip field.
+				if ( ! $upload ) {
+					$field['value'] = '';
+
+					return $field;
+				}
+
+				// Save upload URL to field value to bypass WP GraphQL GF errors.
+				$field['value'] = $upload['url'];
+
+				// Add updated field data to file upload fields array.
+				$file_uploads[] = $field;
+
+				return $field;
+			}, $args['input']['fieldValues'] ?? [] );
+
+			// Call original resolver function and retrieve form entry ID.
+			$response = call_user_func( $resolver, $root, $args, $context, $info );
+			$entry_id = $response['entryId'] ?? null;
+
+			// Check for errors and entry ID.
+			if ( $response['errors'] || ! $entry_id ) {
+				return $response;
+			}
+
+			$entry = GFUtils::get_entry( $entry_id );
+			$form  = GFFormsModel::get_form_meta( $form_id );
+
+			global $wpdb;
+
+			// Add file upload values back into form entry (WP GraphQL GF strips them out).
+			array_map( function( $field ) use ( $form, $entry, $wpdb ) {
+				// Skip if no value set.
+				if ( ! $field['value'] ) {
+					return;
+				}
+
+				$entry_id = $entry['id'];
+				$field_id = $field['id'];
+
+				// Retrieve entry meta ID for file upload field.
+				$entry_meta_table_name = GFFormsModel::get_entry_meta_table_name();
+				$sql                   = $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
+				$entry_meta_id         = $wpdb->get_var( $sql );
+
+				// Update field with file upload data.
+				GFFormsModel::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field['value'] );
+			}, $file_uploads );
+
+			return $response;
+		};
+
+		// Override mutation resolver.
+		$fields['submitGravityFormsForm']['resolve'] = $new_resolver;
+
+		return $fields;
+	}
+	add_filter( 'graphql_rootMutation_fields', 'wds_extend_gf_submission_resolver', 20 );
 }
 
 /**
