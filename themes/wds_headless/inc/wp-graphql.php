@@ -259,6 +259,74 @@ if ( class_exists( 'WPGraphQL' ) ) {
 }
 
 /**
+ * Handle custom file upload.
+ *
+ * This mimics WP Core upload functionality but allows for uploading file to a custom directory rather than the standard WP uploads dir.
+ * @see https://developer.wordpress.org/reference/functions/_wp_handle_upload/
+ *
+ * @author WebDevStudios
+ * @since 1.0
+ * @param array $file   File data to upload.
+ * @param array $target Target upload directory; WP uploads dir will be used if none provided.
+ * @return array        Uploaded file data.
+ */
+function wds_handle_file_upload( array $file, array $target = null ) {
+	// Default to uploads dir if alternative not provided.
+	$target = $target ?? wp_upload_dir();
+
+	// Check if filetype & ext are valid.
+	$wp_filetype     = wp_check_filetype_and_ext( $file['tmp_name'], $file['name'] );
+	$ext             = empty( $wp_filetype['ext'] ) ? '' : $wp_filetype['ext'];
+	$type            = empty( $wp_filetype['type'] ) ? '' : $wp_filetype['type'];
+	$proper_filename = empty( $wp_filetype['proper_filename'] ) ? '' : $wp_filetype['proper_filename'];
+
+	// Check to see if wp_check_filetype_and_ext() determined the filename was incorrect.
+	if ( $proper_filename ) {
+		$file['name'] = $proper_filename;
+	}
+
+	// Return error if file type not allowed.
+	if ( ( ! $type || ! $ext ) && ! current_user_can( 'unfiltered_upload' ) ) {
+		return call_user_func_array( 'wp_handle_upload_error', array( &$file, esc_html__( 'Sorry, this file type is not permitted for security reasons.', 'wds' ) ) );
+	}
+
+	$type = ! $type ? $file['type'] : $type;
+
+
+	$filename = wp_unique_filename( $target['path'], $file['name'] );
+
+	// Move the file to the GF uploads dir.
+	$new_file = $target['path'] . "/{$filename}";
+
+	// Use copy and unlink because rename breaks streams.
+	$move_new_file = @copy( $file['tmp_name'], $new_file );
+	unlink( $file['tmp_name'] );
+
+	if ( ! $move_new_file ) {
+		$field['value'] = '';
+
+		return $field;
+	}
+
+
+	// Set correct file permissions.
+	$stat  = stat( dirname( $new_file ) );
+	$perms = $stat['mode'] & 0000666;
+	chmod( $new_file, $perms );
+
+	// Compute the URL.
+	$url = $target['url'] . "/{$filename}";
+
+	$upload = [
+		'file' => $new_file,
+		'url'  => $url,
+		'type' => $type,
+	];
+
+	return $upload;
+}
+
+/**
  * Determine appropriate GF form-specific uploads dir config and ensure folders are initiated as needed.
  *
  * @author WebDevStudios
