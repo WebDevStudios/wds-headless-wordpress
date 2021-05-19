@@ -257,3 +257,51 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	}
 	add_filter( 'graphql_fieldValuesInput_fields', 'wds_add_file_upload_field' );
 }
+
+/**
+ * Determine appropriate GF form-specific uploads dir config and ensure folders are initiated as needed.
+ *
+ * @author WebDevStudios
+ * @since 1.0
+ * @param int $form_id GF form ID.
+ * @return array       GF uploads dir config.
+ */
+function wds_gravity_forms_upload_dir( int $form_id ) {
+	// Determine YYYY/MM values.
+	$time = current_time( 'mysql' );
+	$y    = substr( $time, 0, 4 );
+	$m    = substr( $time, 5, 2 );
+
+	$date_dir = DIRECTORY_SEPARATOR . $y . DIRECTORY_SEPARATOR . $m;
+
+	// Determine upload directory.
+	$target_path = GFFormsModel::get_upload_path( $form_id ) . $date_dir;
+	$target_url = GFFormsModel::get_upload_url( $form_id ) . $date_dir;
+
+	// Create upload directory if doesn't exist.
+	if ( ! is_dir( $target_path ) ) {
+		if ( ! wp_mkdir_p( $target_path ) ) {
+			GFCommon::log_debug( "GFAsyncUpload::upload(): Couldn't create the upload folder: " . $target_path );
+			GFAsyncUpload::die_error( 500, __( 'Failed to upload file.', 'wds' ) );
+		}
+	}
+
+	// Add index.html files to upload directory subfolders.
+	if ( ! file_exists( GFFormsModel::get_upload_root() . '/index.html' ) ) {
+		GFForms::add_security_files();
+	} else if ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . '/index.html' ) ) {
+		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) );
+	} else if ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . "/$y/index.html" ) ) {
+		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) . "/$y" );
+	} else {
+		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) . "/$y/$m" );
+	}
+
+	return [
+		'path'    => $target_path,
+		'url'     => $target_url,
+		'subdir'  => $date_dir,
+		'basedir' => untrailingslashit( GFFormsModel::get_upload_root() ),
+		'baseurl' => untrailingslashit( GFFormsModel::get_upload_url_root() ),
+	];
+}
