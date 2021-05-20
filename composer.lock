@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aac349bf39a825d22ce0b04d560973d7",
+    "content-hash": "c5f6527d90031fab2917242b1cb21743",
     "packages": [
         {
             "name": "composer/installers",
@@ -157,7 +157,8 @@
             "version": "1.9.14",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar",
+                "shasum": "933a66f29103d565ece62636f3bd08e39d01bd42"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -181,12 +182,65 @@
             "version": "1.4.16",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar",
+                "shasum": "b2e706ad5038a6dde861c1bbaaae1bf6e2f77788"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin"
+        },
+        {
+            "name": "dre1080/wp-graphql-upload",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dre1080/wp-graphql-upload.git",
+                "reference": "6f1def0449b085b0c0b3dc30dd5f4c58157ba408"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dre1080/wp-graphql-upload/zipball/6f1def0449b085b0c0b3dc30dd5f4c58157ba408",
+                "reference": "6f1def0449b085b0c0b3dc30dd5f4c58157ba408",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^7",
+                "squizlabs/php_codesniffer": "*",
+                "webonyx/graphql-php": "^14.5"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\Upload\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ando",
+                    "email": "lifeandcoding@gmail.com"
+                }
+            ],
+            "description": "Adds file upload support to the WP GraphQL Plugin.",
+            "keywords": [
+                "graphql",
+                "upload",
+                "wordpress",
+                "wp-graphql"
+            ],
+            "time": "2021-02-06T17:30:04+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -1455,7 +1509,8 @@
             "version": "5.9.5",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar",
+                "shasum": "1eff76c921d1665d98a8391203494d089c7d578b"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1497,7 +1552,8 @@
             "dist": {
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
-                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91"
+                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
+                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1606,7 +1662,8 @@
             "version": "15.9.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar",
+                "shasum": "306d1b42da9194aacd1f2b9e8696122387cd6786"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -2065,6 +2122,7 @@
             ],
             "description": "In-house PHP linting and coding standards for WebDevStudios",
             "homepage": "https://github.com/WebDevStudios/php-coding-standards",
+            "abandoned": "wp-coding-standards/wpcs",
             "time": "2020-11-16T21:56:03+00:00"
         },
         {
