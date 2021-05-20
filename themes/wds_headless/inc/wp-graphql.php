@@ -242,7 +242,8 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	}
 	add_action( 'graphql_register_types', 'wds_register_archive_seo' );
 
-	/* Edit the error messages on user registration.
+	/**
+	 * Edit the error messages on user registration.
 	 *
 	 * @author WebDevStudios
 	 * @since 1.0
