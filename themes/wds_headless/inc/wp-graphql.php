@@ -304,7 +304,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	 * @param array $fields The array of fields for the FieldValuesInput object.
 	 * @return array        The filtered array of fields for the FieldValuesInput object.
 	 */
-	function wds_add_file_upload_field( $fields ) {
+	function wds_add_file_upload_field( array $fields ) {
 		$fields['fileUploadValues'] = [
 			'type'        => 'Upload',
 			'description' => esc_html__( 'The form field values for FileUpload fields.', 'wds' ),
