@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5f6527d90031fab2917242b1cb21743",
+    "content-hash": "7fcf9c9f09ea31cbbe54d3253f164271",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,11 +154,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "1.9.14",
+            "version": "2.0.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-1.9.14.tar",
-                "shasum": "933a66f29103d565ece62636f3bd08e39d01bd42"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-2.0.2.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -179,11 +178,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro-media-files",
-            "version": "1.4.16",
+            "version": "2.0.1",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-1.4.16.tar",
-                "shasum": "b2e706ad5038a6dde861c1bbaaae1bf6e2f77788"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-media-files/deliciousbrains-plugin-wp-migrate-db-pro-media-files-2.0.1.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -359,16 +357,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.174.0",
+            "version": "v0.175.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "004c5280f5a26a8acbb6f6af6a792e4872b7648a"
+                "reference": "316cbf9b02c575a140d8cbeca48a3ca0070fcd5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/004c5280f5a26a8acbb6f6af6a792e4872b7648a",
-                "reference": "004c5280f5a26a8acbb6f6af6a792e4872b7648a",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/316cbf9b02c575a140d8cbeca48a3ca0070fcd5a",
+                "reference": "316cbf9b02c575a140d8cbeca48a3ca0070fcd5a",
                 "shasum": ""
             },
             "require": {
@@ -392,7 +390,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-05-08T11:20:03+00:00"
+            "time": "2021-05-15T11:18:02+00:00"
         },
         {
             "name": "google/auth",
@@ -1367,16 +1365,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.7",
+            "version": "v5.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb"
+                "reference": "5d5f97809015102116208b976eb2edb44b689560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/59a684f5ac454f066ecbe6daecce6719aed283fb",
-                "reference": "59a684f5ac454f066ecbe6daecce6719aed283fb",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/5d5f97809015102116208b976eb2edb44b689560",
+                "reference": "5d5f97809015102116208b976eb2edb44b689560",
                 "shasum": ""
             },
             "require": {
@@ -1425,7 +1423,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-07T16:07:52+00:00"
+            "time": "2021-05-16T13:07:46+00:00"
         },
         {
             "name": "voku/simple_html_dom",
@@ -1509,8 +1507,7 @@
             "version": "5.9.5",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar",
-                "shasum": "1eff76c921d1665d98a8391203494d089c7d578b"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1525,10 +1522,10 @@
         },
         {
             "name": "webdevstudios/gravityforms",
-            "version": "2.4.24",
+            "version": "2.5.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.4.24.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.5.2.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1552,8 +1549,7 @@
             "dist": {
                 "type": "tar",
                 "url": "https://packages.wdslab.com/dist/webdevstudios/mu-autoload/webdevstudios-mu-autoload-v1.5-429874.tar",
-                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91",
-                "shasum": "6f371a7d3374d88877518a41849e4213d2b8477e"
+                "reference": "6cd400dc39043901c2c92b3c8ebe2fdc4ce17f91"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1662,8 +1658,7 @@
             "version": "15.9.2",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar",
-                "shasum": "306d1b42da9194aacd1f2b9e8696122387cd6786"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/wordpress-seo-premium/webdevstudios-wordpress-seo-premium-15.9.2.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1833,15 +1828,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.5.4",
+            "version": "10.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.5.4"
+                "reference": "tags/10.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.5.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.6.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

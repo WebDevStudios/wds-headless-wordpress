@@ -37,9 +37,9 @@
     }
   },
   "require": {
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^1.9",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.0.2",
     "deliciousbrains-plugin/wp-migrate-db-pro-cli": "^1.3",
-    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^1.4",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0.1",
     "dre1080/wp-graphql-upload": "^0.1",
     "harness-software/wp-graphql-gravity-forms": "^0.4",
     "pristas-peter/wp-graphql-gutenberg": "^0.3",
