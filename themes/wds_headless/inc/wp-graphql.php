@@ -243,57 +243,57 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	add_action( 'graphql_register_types', 'wds_register_archive_seo' );
 
 	/* Edit the error messages on user registration.
-	*
-	* @author WebDevStudios
-	* @since 1.0
-	* @param \WP_Error $errors A WP_Error object containing any errors encountered during registration.
-	* @return \WP_Error
-	*/
-   function wds_filter_registration_errors( \WP_Error $errors ) {
-	   if ( ! $errors->has_errors() ) {
-		   return $errors;
-	   }
+	 *
+	 * @author WebDevStudios
+	 * @since 1.0
+	 * @param \WP_Error $errors A WP_Error object containing any errors encountered during registration.
+	 * @return \WP_Error
+	 */
+	function wds_filter_registration_errors( \WP_Error $errors ) {
+		if ( ! $errors->has_errors() ) {
+			return $errors;
+		}
 
-	   $new_errors_obj = new \WP_Error();
-	   foreach ( $errors->get_error_codes() as $error_code ) {
-		   switch ( $error_code ) {
-			   case 'empty_username':
-				   $error_msg = esc_html__( 'Please enter a username.', 'wds' );
-				   break;
-			   case 'invalid_username':
-				   $error_msg = esc_html__( 'This username is invalid because it uses illegal characters. Please enter a valid username.', 'wds' );
-				   break;
-			   case 'username_exists':
-				   $error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
-				   break;
-			   case 'empty_email':
-				   $error_msg = esc_html__( 'Please enter your email address.', 'wds' );
-				   break;
-			   case 'invalid_email':
-				   $error_msg = esc_html__( 'Please enter a valid email address.', 'wds' );
-				   break;
-			   case 'email_exists':
-				   $error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
-				   break;
-			   default:
-				   $error_msg = esc_html__( 'Registration failed. Please contact the admin.', 'wds' );
-				   break;
-		   }
-		   $new_errors_obj->add( $error_code, $error_msg );
-	   }
-	   return $new_errors_obj;
-   }
+		$new_errors_obj = new \WP_Error();
+		foreach ( $errors->get_error_codes() as $error_code ) {
+			switch ( $error_code ) {
+				case 'empty_username':
+					$error_msg = esc_html__( 'Please enter a username.', 'wds' );
+					break;
+				case 'invalid_username':
+					$error_msg = esc_html__( 'This username is invalid because it uses illegal characters. Please enter a valid username.', 'wds' );
+					break;
+				case 'username_exists':
+					$error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
+					break;
+				case 'empty_email':
+					$error_msg = esc_html__( 'Please enter your email address.', 'wds' );
+					break;
+				case 'invalid_email':
+					$error_msg = esc_html__( 'Please enter a valid email address.', 'wds' );
+					break;
+				case 'email_exists':
+					$error_msg = esc_html__( 'This username is already registered. Please choose another one.', 'wds' );
+					break;
+				default:
+					$error_msg = esc_html__( 'Registration failed. Please contact the admin.', 'wds' );
+					break;
+			}
+			$new_errors_obj->add( $error_code, $error_msg );
+		}
+		return $new_errors_obj;
+	}
 
-   /**
-	* Add hooks that should only occur in the context of a GraphQL Request.
-	*
-	* @author WebDevStudios
-	* @since 1.0
-	*/
-   function wds_graphql_request_init() {
-	   add_filter( 'registration_errors', 'wds_filter_registration_errors' );
-   }
-   add_action( 'init_graphql_request', 'wds_graphql_request_init' );
+	/**
+	 * Add hooks that should only occur in the context of a GraphQL Request.
+	 *
+	 * @author WebDevStudios
+	 * @since 1.0
+	 */
+	function wds_graphql_request_init() {
+		add_filter( 'registration_errors', 'wds_filter_registration_errors' );
+	}
+	add_action( 'init_graphql_request', 'wds_graphql_request_init' );
 
 	/**
 	 * Add file upload field to GF FieldValuesInput.
