@@ -2,7 +2,7 @@
   "name": "webdevstudios/nextjs",
   "description": "A WordPress backend to power a Next.js frontend.",
   "type": "project",
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "WebDevStudios",
