@@ -357,7 +357,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.175.0",
+            "version": "v0.176.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -1504,10 +1504,10 @@
         },
         {
             "name": "webdevstudios/advanced-custom-fields-pro",
-            "version": "5.9.5",
+            "version": "5.9.6",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.5.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.6.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
