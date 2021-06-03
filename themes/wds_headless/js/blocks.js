@@ -1,6 +1,6 @@
 const { validateThemeColors } = wp.blockEditor;
 const { useEffect } = wp.element;
-const { addFilter } = wp.hooks;
+const { addFilter, applyFilters } = wp.hooks;
 
 /**
  * Additional Gutenberg block functionality.
@@ -21,12 +21,12 @@ wp.domReady(() => {
 
 addFilter(
 	"blocks.registerBlockType",
-	"wds/filterParagraphBlockAttrs1",
+	"wds/filterBlockColorAttrs",
 	wdsAddColorPaletteHexValues
 );
 
 /**
- * Filter block registration to add custom color attributes to paragraph block.
+ * Filter block registration to add custom color attributes to specified blocks.
  *
  * TODO: Extend this to apply to other blocks that use the color palette.
  *
@@ -35,7 +35,18 @@ addFilter(
  * @return {object}         Block settings config.
  */
 function wdsAddColorPaletteHexValues(settings, name) {
-	if ("core/paragraph" !== name) {
+	/**
+	 * Filter the array of blocks to receive hex color values.
+	 *
+	 * @author WebDevStudios
+	 * @param {array} allowedBlocks Array of blocks.
+	 */
+	const allowedBlocks = applyFilters(
+		"wds/colorPaletteHexValuesAllowedBlocks",
+		["core/button", "core/paragraph"]
+	);
+
+	if (!allowedBlocks.includes(name)) {
 		return settings;
 	}
 
