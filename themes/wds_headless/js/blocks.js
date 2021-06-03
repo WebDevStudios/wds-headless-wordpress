@@ -21,7 +21,7 @@ wp.domReady(() => {
 
 addFilter(
 	"blocks.registerBlockType",
-	"wds/filterParagraphBlockAttrs1",
+	"wds/filterParagraphBlockAttrs",
 	wdsAddColorPaletteHexValues
 );
 
