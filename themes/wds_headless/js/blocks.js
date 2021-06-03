@@ -21,12 +21,12 @@ wp.domReady(() => {
 
 addFilter(
 	"blocks.registerBlockType",
-	"wds/filterParagraphBlockAttrs",
+	"wds/filterBlockColorAttrs",
 	wdsAddColorPaletteHexValues
 );
 
 /**
- * Filter block registration to add custom color attributes to paragraph block.
+ * Filter block registration to add custom color attributes to specified blocks.
  *
  * TODO: Extend this to apply to other blocks that use the color palette.
  *
