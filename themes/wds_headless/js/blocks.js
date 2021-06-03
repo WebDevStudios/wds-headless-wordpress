@@ -43,7 +43,7 @@ function wdsAddColorPaletteHexValues(settings, name) {
 	 */
 	const allowedBlocks = applyFilters(
 		"wds/colorPaletteHexValuesAllowedBlocks",
-		["core/paragraph"]
+		["core/button", "core/paragraph"]
 	);
 
 	if (!allowedBlocks.includes(name)) {
