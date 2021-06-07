@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ruleset name="Project">
-    <rule ref="WebDevStudios"/>
-    <exclude-pattern>class-tgm-plugin-activation.php</exclude-pattern>
-</ruleset>
