@@ -28,28 +28,11 @@ addFilter(
 /**
  * Filter block registration to add custom color attributes to specified blocks.
  *
- * TODO: Extend this to apply to other blocks that use the color palette.
- *
+ * @author WebDevStudios
  * @param {object} settings Block settings config.
- * @param {string} name     Block name.
  * @return {object}         Block settings config.
  */
-function wdsAddColorPaletteHexValues(settings, name) {
-	/**
-	 * Filter the array of blocks to receive hex color values.
-	 *
-	 * @author WebDevStudios
-	 * @param {array} allowedBlocks Array of blocks.
-	 */
-	const allowedBlocks = applyFilters(
-		"wds/colorPaletteHexValuesAllowedBlocks",
-		["core/button", "core/paragraph", "core/pullquote"]
-	);
-
-	if (!allowedBlocks.includes(name)) {
-		return settings;
-	}
-
+function wdsAddColorPaletteHexValues(settings) {
 	// Add background color hex attribute.
 	if (settings.attributes.hasOwnProperty("backgroundColor")) {
 		settings.attributes.backgroundColorHex = {
