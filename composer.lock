@@ -357,16 +357,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.177.0",
+            "version": "v0.180.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "316cbf9b02c575a140d8cbeca48a3ca0070fcd5a"
+                "reference": "69b977fd15de892432f7f29ea93d57845cf26974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/316cbf9b02c575a140d8cbeca48a3ca0070fcd5a",
-                "reference": "316cbf9b02c575a140d8cbeca48a3ca0070fcd5a",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/69b977fd15de892432f7f29ea93d57845cf26974",
+                "reference": "69b977fd15de892432f7f29ea93d57845cf26974",
                 "shasum": ""
             },
             "require": {
@@ -390,7 +390,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-05-15T11:18:02+00:00"
+            "time": "2021-06-06T11:20:02+00:00"
         },
         {
             "name": "google/auth",
@@ -1522,10 +1522,10 @@
         },
         {
             "name": "webdevstudios/gravityforms",
-            "version": "2.5.4",
+            "version": "2.5.5.1",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.5.4.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/gravityforms/webdevstudios-gravityforms-2.5.5.1.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1774,15 +1774,15 @@
         },
         {
             "name": "wpackagist-plugin/add-wpgraphql-seo",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/add-wpgraphql-seo/",
-                "reference": "tags/4.14.0"
+                "reference": "tags/4.14.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.14.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/add-wpgraphql-seo.4.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1828,15 +1828,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "10.7.1",
+            "version": "10.7.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/10.7.1"
+                "reference": "tags/10.7.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.7.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.7.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2117,6 +2117,7 @@
             ],
             "description": "In-house PHP linting and coding standards for WebDevStudios",
             "homepage": "https://github.com/WebDevStudios/php-coding-standards",
+            "abandoned": "wp-coding-standards/wpcs",
             "time": "2020-11-16T21:56:03+00:00"
         },
         {

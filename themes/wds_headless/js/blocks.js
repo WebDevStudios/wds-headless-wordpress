@@ -43,31 +43,42 @@ function wdsAddColorPaletteHexValues(settings, name) {
 	 */
 	const allowedBlocks = applyFilters(
 		"wds/colorPaletteHexValuesAllowedBlocks",
-		["core/button", "core/paragraph"]
+		["core/button", "core/paragraph", "core/pullquote"]
 	);
 
 	if (!allowedBlocks.includes(name)) {
 		return settings;
 	}
 
-	// Add hex color attributes.
-	settings.attributes = {
-		...settings.attributes,
-		backgroundColorHex: {
+	// Add background color hex attribute.
+	if (settings.attributes.hasOwnProperty("backgroundColor")) {
+		settings.attributes.backgroundColorHex = {
 			type: "string",
 			default: "",
-		},
-		textColorHex: {
+		};
+	}
+
+	// Add main color hex attribute.
+	if (settings.attributes.hasOwnProperty("mainColor")) {
+		settings.attributes.mainColorHex = {
 			type: "string",
 			default: "",
-		},
-	};
+		};
+	}
+
+	// Add text color hex attribute.
+	if (settings.attributes.hasOwnProperty("textColor")) {
+		settings.attributes.textColorHex = {
+			type: "string",
+			default: "",
+		};
+	}
 
 	return {
 		...settings,
 		edit(props) {
 			const {
-				attributes: { backgroundColor, textColor },
+				attributes: { backgroundColor, mainColor, textColor },
 			} = props;
 
 			useEffect(() => {
@@ -85,8 +96,18 @@ function wdsAddColorPaletteHexValues(settings, name) {
 					// Retrieve color hex value.
 					props.attributes.backgroundColorHex =
 						backgroundColorObj?.[0]?.color || null;
-				} else {
-					props.attributes.backgroundColorHex = "";
+				}
+
+				// Check for presence of main color attr.
+				if (mainColor) {
+					// Get color object by slug.
+					const mainColorObj = defaultColors.filter(
+						(color) => color.slug === mainColor
+					);
+
+					// Retrieve color hex value.
+					props.attributes.mainColorHex =
+						mainColorObj?.[0]?.color || null;
 				}
 
 				// Check for presence of text color attr.
@@ -99,10 +120,8 @@ function wdsAddColorPaletteHexValues(settings, name) {
 					// Retrieve color hex value.
 					props.attributes.textColorHex =
 						textColorObj?.[0]?.color || null;
-				} else {
-					props.attributes.textColorHex = "";
 				}
-			}, [backgroundColor, textColor]);
+			}, [backgroundColor, mainColor, textColor]);
 
 			return settings.edit(props);
 		},

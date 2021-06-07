@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dabc95ee1a5d279e3c589e46002281eb",
+    "content-hash": "c5157d4c0d5ff1dac0e5535655ff032b",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,17 +153,69 @@
             "time": "2021-04-28T06:42:17+00:00"
         },
         {
-            "name": "firebase/php-jwt",
-            "version": "v5.2.1",
+            "name": "dre1080/wp-graphql-upload",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23"
+                "url": "https://github.com/dre1080/wp-graphql-upload.git",
+                "reference": "6f1def0449b085b0c0b3dc30dd5f4c58157ba408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
-                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "url": "https://api.github.com/repos/dre1080/wp-graphql-upload/zipball/6f1def0449b085b0c0b3dc30dd5f4c58157ba408",
+                "reference": "6f1def0449b085b0c0b3dc30dd5f4c58157ba408",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^7",
+                "squizlabs/php_codesniffer": "*",
+                "webonyx/graphql-php": "^14.5"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\Upload\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ando",
+                    "email": "lifeandcoding@gmail.com"
+                }
+            ],
+            "description": "Adds file upload support to the WP GraphQL Plugin.",
+            "keywords": [
+                "graphql",
+                "upload",
+                "wordpress",
+                "wp-graphql"
+            ],
+            "time": "2021-02-06T17:30:04+00:00"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "3c2d70f2e64e2922345e89f2ceae47d2463faae1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/3c2d70f2e64e2922345e89f2ceae47d2463faae1",
+                "reference": "3c2d70f2e64e2922345e89f2ceae47d2463faae1",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +252,7 @@
                 "jwt",
                 "php"
             ],
-            "time": "2021-02-12T00:02:00+00:00"
+            "time": "2021-05-20T17:37:02+00:00"
         },
         {
             "name": "opis/json-schema",
@@ -304,16 +356,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.9",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "5d5f97809015102116208b976eb2edb44b689560"
+                "reference": "fcd0b29a7a0b1bb5bfbedc6231583d77fea04814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/5d5f97809015102116208b976eb2edb44b689560",
-                "reference": "5d5f97809015102116208b976eb2edb44b689560",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/fcd0b29a7a0b1bb5bfbedc6231583d77fea04814",
+                "reference": "fcd0b29a7a0b1bb5bfbedc6231583d77fea04814",
                 "shasum": ""
             },
             "require": {
@@ -362,7 +414,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-16T13:07:46+00:00"
+            "time": "2021-05-26T17:40:38+00:00"
         },
         {
             "name": "voku/simple_html_dom",
@@ -440,51 +492,6 @@
                 }
             ],
             "time": "2020-04-09T21:20:43+00:00"
-        },
-        {
-            "name": "webdevstudios/wds-blocks",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WebDevStudios/wds-blocks.git",
-                "reference": "2fa787df616e8d5a67e5fb47184ff6ae650a1f08"
-            },
-            "require": {
-                "composer/installers": "^1.5"
-            },
-            "require-dev": {
-                "phpcompatibility/php-compatibility": "~9.3",
-                "webdevstudios/php-coding-standards": "~1.3.0"
-            },
-            "type": "wordpress-plugin",
-            "scripts": {
-                "lint": [
-                    "composer run lint:php"
-                ],
-                "lint:php": [
-                    "composer run lint:php-compat && composer run lint:phpcs"
-                ],
-                "lint:php-compat": [
-                    "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p . --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=-1"
-                ],
-                "lint:phpcs": [
-                    "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --standard=./.phpcs.xml.dist --extensions=php -n --colors **/*.php"
-                ],
-                "debug:phpcs": [
-                    "which phpcs && phpcs -i"
-                ]
-            },
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "WebDevStudios",
-                    "email": "contact@webdevstudios.com"
-                }
-            ],
-            "description": "WebDevStudios library of Gutenberg blocks.",
-            "time": "2021-03-09T20:11:38+00:00"
         },
         {
             "name": "wp-graphql/wp-graphql-acf",
@@ -661,15 +668,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "9.9.3",
+            "version": "10.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/9.9.3"
+                "reference": "tags/10.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.9.9.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.10.7.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -696,60 +703,6 @@
             "homepage": "https://wordpress.org/plugins/lazy-blocks/"
         },
         {
-            "name": "wpackagist-plugin/query-monitor",
-            "version": "3.7.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.7.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.7.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/query-monitor/"
-        },
-        {
-            "name": "wpackagist-plugin/resmushit-image-optimizer",
-            "version": "0.3.12",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/resmushit-image-optimizer/",
-                "reference": "tags/0.3.12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/resmushit-image-optimizer.0.3.12.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/resmushit-image-optimizer/"
-        },
-        {
-            "name": "wpackagist-plugin/stream",
-            "version": "3.7.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "tags/3.7.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.3.7.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/stream/"
-        },
-        {
             "name": "wpackagist-plugin/wordpress-seo",
             "version": "15.9.2",
             "source": {
@@ -769,15 +722,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.3.8",
+            "version": "1.3.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.3.8"
+                "reference": "tags/1.3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.3.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
