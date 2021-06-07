@@ -79,6 +79,8 @@ function wdsAddColorPaletteHexValues(settings) {
 					// Retrieve color hex value.
 					props.attributes.backgroundColorHex =
 						backgroundColorObj?.[0]?.color || null;
+				} else {
+					delete props.attributes.backgroundColorHex;
 				}
 
 				// Check for presence of main color attr.
@@ -91,6 +93,8 @@ function wdsAddColorPaletteHexValues(settings) {
 					// Retrieve color hex value.
 					props.attributes.mainColorHex =
 						mainColorObj?.[0]?.color || null;
+				} else {
+					delete props.attributes.mainColorHex;
 				}
 
 				// Check for presence of text color attr.
@@ -103,6 +107,8 @@ function wdsAddColorPaletteHexValues(settings) {
 					// Retrieve color hex value.
 					props.attributes.textColorHex =
 						textColorObj?.[0]?.color || null;
+				} else {
+					delete props.attributes.textColorHex;
 				}
 			}, [backgroundColor, mainColor, textColor]);
 
