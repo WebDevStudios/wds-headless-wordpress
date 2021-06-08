@@ -8,7 +8,7 @@
  * @since 1.0
  */
 
- if ( defined( 'ALGOLIA_VERSION' ) ) {
+if ( defined( 'ALGOLIA_VERSION' ) ) {
 
 	/**
 	 * Filter the searchable post types for Algolia.
@@ -98,4 +98,4 @@
 	}
 	add_filter( 'algolia_post_images_sizes', 'wds_algolia_set_image_sizes', 10, 2 );
 
- }
+}
