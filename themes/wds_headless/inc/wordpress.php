@@ -66,12 +66,15 @@ function wds_set_headless_preview_link( string $link, WP_Post $post ) {
 	$post_type = get_post_type_object( $post->post_type )->graphql_single_name ?? $post->post_type;
 
 	// Preview link will have format: <domain>/api/preview?name=<slug>&id=<post-id>&post_type=<postType>&token=<preview-token>.
-	return add_query_arg( [
-		'name'      => $slug,
-		'id'        => $post->ID,
-		'post_type' => $post_type,
-		'token'     => defined( 'WORDPRESS_PREVIEW_SECRET' ) ? WORDPRESS_PREVIEW_SECRET : '',
-	], "{$base_url}api/preview" );
+	return add_query_arg(
+		[
+			'name'      => $slug,
+			'id'        => $post->ID,
+			'post_type' => $post_type,
+			'token'     => defined( 'WORDPRESS_PREVIEW_SECRET' ) ? WORDPRESS_PREVIEW_SECRET : '',
+		],
+		"{$base_url}api/preview"
+	);
 }
 add_filter( 'preview_post_link', 'wds_set_headless_preview_link', 10, 2 );
 

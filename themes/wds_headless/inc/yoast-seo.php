@@ -26,13 +26,16 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 		$base_url = rtrim( HEADLESS_FRONTEND_URL, '/' );
 
 		// Override domain in breadcrumbs.
-		return array_map( function( $breadcrumb ) use ( $base_url ) {
-			$parsed_url        = wp_parse_url( $breadcrumb['url'] );
-			$path              = $parsed_url['path'] ?? '';
-			$breadcrumb['url'] = "{$base_url}{$path}";
+		return array_map(
+			function( $breadcrumb ) use ( $base_url ) {
+				$parsed_url        = wp_parse_url( $breadcrumb['url'] );
+				$path              = $parsed_url['path'] ?? '';
+				$breadcrumb['url'] = "{$base_url}{$path}";
 
-			return $breadcrumb;
-		}, $breadcrumbs );
+				return $breadcrumb;
+			},
+			$breadcrumbs
+		);
 	}
 	add_filter( 'wpseo_breadcrumb_links', 'wds_breadcrumb_links' );
 }

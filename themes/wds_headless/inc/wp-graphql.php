@@ -26,28 +26,31 @@ if ( class_exists( 'WPGraphQL' ) ) {
 			return [];
 		}
 
-		return array_map( function( $post_id ) {
+		return array_map(
+			function( $post_id ) {
 
-			// Return as-is if already array of post data.
-			if ( is_array( $post_id ) ) {
-				return $post_id;
-			}
+				// Return as-is if already array of post data.
+				if ( is_array( $post_id ) ) {
+					return $post_id;
+				}
 
-			$post = get_post( $post_id );
+				$post = get_post( $post_id );
 
-			// Return post ID as array if error encountered retrieving post object.
-			if ( ! $post || ! $post instanceof WP_Post ) {
-				return [ 'id' => $post_id ];
-			}
+				// Return post ID as array if error encountered retrieving post object.
+				if ( ! $post || ! $post instanceof WP_Post ) {
+					return [ 'id' => $post_id ];
+				}
 
-			$post_type = get_post_type_object( $post->post_type );
+				$post_type = get_post_type_object( $post->post_type );
 
-			return [
-				'id'         => $post_id,
-				'type'       => $post_type->graphql_single_name,
-				'pluralType' => $post_type->graphql_plural_name,
-			];
-		}, $post_ids );
+				return [
+					'id'         => $post_id,
+					'type'       => $post_type->graphql_single_name,
+					'pluralType' => $post_type->graphql_plural_name,
+				];
+			},
+			$post_ids
+		);
 	}
 
 	/**
@@ -58,51 +61,58 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	 */
 	function wds_add_homepage_settings_query() {
 
-		register_graphql_object_type( 'HomepageSettings', [
-			'description' => esc_html__( 'Front and posts archive page data', 'wds' ),
-			'fields'      => [
-				'frontPage' => [ 'type' => 'Page' ],
-				'postsPage' => [ 'type' => 'Page' ],
-			],
-		] );
+		register_graphql_object_type(
+			'HomepageSettings',
+			[
+				'description' => esc_html__( 'Front and posts archive page data', 'wds' ),
+				'fields'      => [
+					'frontPage' => [ 'type' => 'Page' ],
+					'postsPage' => [ 'type' => 'Page' ],
+				],
+			]
+		);
 
-		register_graphql_field( 'RootQuery', 'homepageSettings', [
-			'type'        => 'HomepageSettings',
-			'description' => esc_html__( 'Returns front and posts archive page data', 'wds' ),
-			'resolve'     => function( $source, array $args, \WPGraphQL\AppContext $context ) {
-				global $wpdb;
+		register_graphql_field(
+			'RootQuery',
+			'homepageSettings',
+			[
+				'type'        => 'HomepageSettings',
+				'description' => esc_html__( 'Returns front and posts archive page data', 'wds' ),
+				'resolve'     => function( $source, array $args, \WPGraphQL\AppContext $context ) {
+					global $wpdb;
 
-				// Get homepage settings.
-				$settings = $wpdb->get_row(
-					"
+					// Get homepage settings.
+					$settings = $wpdb->get_row(
+						"
 					SELECT
 						(select option_value from {$wpdb->prefix}options where option_name = 'page_for_posts') as 'page_for_posts',
 						(select option_value from {$wpdb->prefix}options where option_name = 'page_on_front') as 'page_on_front'
 					",
-					ARRAY_A
-				);
+						ARRAY_A
+					);
 
-				// Format settings data.
-				$settings_data = [];
+					// Format settings data.
+					$settings_data = [];
 
-				foreach ( $settings as $key => $value ) {
-					// Get page data.
-					$page_data = ! empty( $value ?? 0 ) ? $context->get_loader( 'post' )->load_deferred( intval( $value ) ) : null;
+					foreach ( $settings as $key => $value ) {
+						// Get page data.
+						$page_data = ! empty( $value ?? 0 ) ? $context->get_loader( 'post' )->load_deferred( intval( $value ) ) : null;
 
-					switch ( $key ) {
-						case 'page_for_posts':
-							$settings_data['postsPage'] = $page_data;
-							break;
+						switch ( $key ) {
+							case 'page_for_posts':
+								$settings_data['postsPage'] = $page_data;
+								break;
 
-						case 'page_on_front':
-							$settings_data['frontPage'] = $page_data;
-							break;
+							case 'page_on_front':
+								$settings_data['frontPage'] = $page_data;
+								break;
+						}
 					}
-				}
 
-				return $settings_data;
-			},
-		] );
+					return $settings_data;
+				},
+			]
+		);
 	}
 	add_action( 'graphql_register_types', 'wds_add_homepage_settings_query' );
 
@@ -172,21 +182,27 @@ if ( class_exists( 'WPGraphQL' ) ) {
 	 * @return void
 	 */
 	function wds_register_archive_seo() {
-		register_graphql_object_type( 'ArchiveSeo', [
-			'description' => esc_html__( 'Archive SEO data', 'wds' ),
-			'fields'      => [
-				'title'              => [ 'type' => 'String' ],
-				'metaDesc'           => [ 'type' => 'String' ],
-				'metaRobotsNoindex'  => [ 'type' => 'String' ],
-				'metaRobotsNofollow' => [ 'type' => 'String' ],
-				'canonical'          => [ 'type' => 'String' ],
-			],
-		] );
+		register_graphql_object_type(
+			'ArchiveSeo',
+			[
+				'description' => esc_html__( 'Archive SEO data', 'wds' ),
+				'fields'      => [
+					'title'              => [ 'type' => 'String' ],
+					'metaDesc'           => [ 'type' => 'String' ],
+					'metaRobotsNoindex'  => [ 'type' => 'String' ],
+					'metaRobotsNofollow' => [ 'type' => 'String' ],
+					'canonical'          => [ 'type' => 'String' ],
+				],
+			]
+		);
 
 		// Get post types that support archives (will not include "post" PT).
-		$post_types = get_post_types( [
-			'has_archive' => true,
-		], 'objects' );
+		$post_types = get_post_types(
+			[
+				'has_archive' => true,
+			],
+			'objects'
+		);
 
 		// Bail if we don't have an array of post types.
 		if ( empty( $post_types ) || ! is_array( $post_types ) ) {
@@ -330,44 +346,47 @@ if ( class_exists( 'WPGraphQL' ) ) {
 		$new_resolver = function( $root, $args, $context, ResolveInfo $info ) use ( $resolver ) {
 			$form_id = $args['input']['formId'] ?? 0;
 
-			if (!function_exists('wp_handle_sideload')) {
-				require_once(ABSPATH . 'wp-admin/includes/file.php');
+			if ( ! function_exists( 'wp_handle_sideload' ) ) {
+				require_once ABSPATH . 'wp-admin/includes/file.php';
 			}
 
 			// Track file upload fields.
 			$file_uploads = [];
 
 			// Iterate through field values to process file uploads.
-			$args['input']['fieldValues'] = array_map( function( $field ) use ( &$file_uploads, $form_id ) {
-				// Skip field if not a file upload.
-				if ( ! array_key_exists( 'fileUploadValues', $field ) ) {
+			$args['input']['fieldValues'] = array_map(
+				function( $field ) use ( &$file_uploads, $form_id ) {
+					// Skip field if not a file upload.
+					if ( ! array_key_exists( 'fileUploadValues', $field ) ) {
+						return $field;
+					}
+
+					// Retrieve file data.
+					$file = $field['fileUploadValues'];
+
+					// Determine target uploads dir.
+					$target = wds_gravity_forms_upload_dir( $form_id );
+
+					// Upload file and retrieve upload data.
+					$upload = wds_handle_file_upload( $file, $target );
+
+					// If error occurs, skip field.
+					if ( ! $upload ) {
+						$field['value'] = '';
+
+						return $field;
+					}
+
+					// Save upload URL to field value to bypass WP GraphQL GF errors.
+					$field['value'] = $upload['url'];
+
+					// Add updated field data to file upload fields array.
+					$file_uploads[] = $field;
+
 					return $field;
-				}
-
-				// Retrieve file data.
-				$file = $field['fileUploadValues'];
-
-				// Determine target uploads dir.
-				$target = wds_gravity_forms_upload_dir( $form_id );
-
-				// Upload file and retrieve upload data.
-				$upload = wds_handle_file_upload( $file, $target );
-
-				// If error occurs, skip field.
-				if ( ! $upload ) {
-					$field['value'] = '';
-
-					return $field;
-				}
-
-				// Save upload URL to field value to bypass WP GraphQL GF errors.
-				$field['value'] = $upload['url'];
-
-				// Add updated field data to file upload fields array.
-				$file_uploads[] = $field;
-
-				return $field;
-			}, $args['input']['fieldValues'] ?? [] );
+				},
+				$args['input']['fieldValues'] ?? []
+			);
 
 			// Call original resolver function and retrieve form entry ID.
 			$response = call_user_func( $resolver, $root, $args, $context, $info );
@@ -384,23 +403,27 @@ if ( class_exists( 'WPGraphQL' ) ) {
 			global $wpdb;
 
 			// Add file upload values back into form entry (WP GraphQL GF strips them out).
-			array_map( function( $field ) use ( $form, $entry, $wpdb ) {
-				// Skip if no value set.
-				if ( ! $field['value'] ) {
-					return;
-				}
+			array_map(
+				function( $field ) use ( $form, $entry, $wpdb ) {
+					// Skip if no value set.
+					if ( ! $field['value'] ) {
+						return;
+					}
 
-				$entry_id = $entry['id'];
-				$field_id = $field['id'];
+					$entry_id = $entry['id'];
+					$field_id = $field['id'];
 
-				// Retrieve entry meta ID for file upload field.
-				$entry_meta_table_name = GFFormsModel::get_entry_meta_table_name();
-				$sql                   = $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
-				$entry_meta_id         = $wpdb->get_var( $sql );
+					// Retrieve entry meta ID for file upload field.
+					$entry_meta_table_name = GFFormsModel::get_entry_meta_table_name();
 
-				// Update field with file upload data.
-				GFFormsModel::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field['value'] );
-			}, $file_uploads );
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					$entry_meta_id = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id ) );
+
+					// Update field with file upload data.
+					GFFormsModel::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field['value'] );
+				},
+				$file_uploads
+			);
 
 			return $response;
 		};
@@ -417,6 +440,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
  * Handle custom file upload.
  *
  * This mimics WP Core upload functionality but allows for uploading file to a custom directory rather than the standard WP uploads dir.
+ *
  * @see https://developer.wordpress.org/reference/functions/_wp_handle_upload/
  *
  * @author WebDevStudios
@@ -447,13 +471,13 @@ function wds_handle_file_upload( array $file, array $target = null ) {
 
 	$type = ! $type ? $file['type'] : $type;
 
-
 	$filename = wp_unique_filename( $target['path'], $file['name'] );
 
 	// Move the file to the GF uploads dir.
 	$new_file = $target['path'] . "/{$filename}";
 
 	// Use copy and unlink because rename breaks streams.
+	// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- duplicating default WP Core functionality.
 	$move_new_file = @copy( $file['tmp_name'], $new_file );
 	unlink( $file['tmp_name'] );
 
@@ -462,7 +486,6 @@ function wds_handle_file_upload( array $file, array $target = null ) {
 
 		return $field;
 	}
-
 
 	// Set correct file permissions.
 	$stat  = stat( dirname( $new_file ) );
@@ -499,7 +522,7 @@ function wds_gravity_forms_upload_dir( int $form_id ) {
 
 	// Determine upload directory.
 	$target_path = GFFormsModel::get_upload_path( $form_id ) . $date_dir;
-	$target_url = GFFormsModel::get_upload_url( $form_id ) . $date_dir;
+	$target_url  = GFFormsModel::get_upload_url( $form_id ) . $date_dir;
 
 	// Create upload directory if doesn't exist.
 	if ( ! is_dir( $target_path ) ) {
@@ -512,9 +535,9 @@ function wds_gravity_forms_upload_dir( int $form_id ) {
 	// Add index.html files to upload directory subfolders.
 	if ( ! file_exists( GFFormsModel::get_upload_root() . '/index.html' ) ) {
 		GFForms::add_security_files();
-	} else if ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . '/index.html' ) ) {
+	} elseif ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . '/index.html' ) ) {
 		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) );
-	} else if ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . "/$y/index.html" ) ) {
+	} elseif ( ! file_exists( GFFormsModel::get_upload_path( $form_id ) . "/$y/index.html" ) ) {
 		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) . "/$y" );
 	} else {
 		GFCommon::recursive_add_index_file( GFFormsModel::get_upload_path( $form_id ) . "/$y/$m" );

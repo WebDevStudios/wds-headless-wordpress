@@ -36,10 +36,16 @@
       ]
     }
   },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
   "require": {
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.0.2",
-    "deliciousbrains-plugin/wp-migrate-db-pro-cli": "^1.3",
-    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0.1",
+    "composer/composer": "^2.1.1",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.0",
+    "deliciousbrains-plugin/wp-migrate-db-pro-cli": "^1.4",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0",
     "dre1080/wp-graphql-upload": "^0.1",
     "harness-software/wp-graphql-gravity-forms": "^0.4",
     "pristas-peter/wp-graphql-gutenberg": "^0.3",
@@ -52,30 +58,21 @@
     "wp-graphql/wp-graphql-jwt-authentication": "^0.4",
     "wp-graphql/wp-graphql-tax-query": "^0.1.0",
     "wpackagist-plugin/add-wpgraphql-seo": "^4.14",
-    "wpackagist-plugin/block-manager": "^1.1",
+    "wpackagist-plugin/block-manager": "^1.2",
     "wpackagist-plugin/custom-post-type-ui": "^1.9",
     "wpackagist-plugin/gutenberg": "^10.7",
     "wpackagist-plugin/lazy-blocks": "^2.3",
     "wpackagist-plugin/wp-graphql": "^1.3",
-    "wpackagist-plugin/wp-search-with-algolia": "^1.7"
+    "wpackagist-plugin/wp-search-with-algolia": "^1.8"
   },
   "require-dev": {
-    "webdevstudios/php-coding-standards": "^1.3",
-    "phpcompatibility/php-compatibility": "^9.3"
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "phpcompatibility/phpcompatibility-wp": "^2.1.1",
+    "wp-cli/wp-cli-bundle": "^2.5.0",
+    "wp-coding-standards/wpcs": "^2.3.0"
   },
   "scripts": {
-    "lint": [
-      "@composer run compat",
-      "@composer run lint:php"
-    ],
-    "format": "@php ./vendor/bin/phpcbf -p -v ./themes/wds_headless --standard=.phpcs.xml.dist --extensions=php --report-summary --report-source --ignore='*/node_modules/*,*/vendor/*,*/dist/*'",
-    "lint:php": "@php ./vendor/bin/phpcs -p -s -n ./themes/wds_headless --standard=.phpcs.xml.dist --extensions=php -n --colors --ignore='*/node_modules/*,*/vendor/*,*/dist/*'",
-    "compat": "@php ./vendor/bin/phpcs -p ./themes/wds_headless --standard=PHPCompatibility --extensions=php --runtime-set testVersion 7.4 --ignore='.github/*,vendor/*' --warning-severity=8 -d memory_limit=4096M || true || exit",
-    "debug:phpcs": "which phpcs && phpcs -i"
-  },
-  "config": {
-    "platform": {
-      "php": "7.4"
-    }
+    "format": "./vendor/bin/phpcbf --standard=.phpcs.xml --report=summary,source",
+    "lint": "./vendor/bin/phpcs --standard=.phpcs.xml --report=summary,source"
   }
 }
