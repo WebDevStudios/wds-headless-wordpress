@@ -358,7 +358,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 				function( $field ) use ( &$file_uploads, $form_id ) {
 					// Skip field if not a file upload.
 					if ( ! array_key_exists( 'fileUploadValues', $field ) ) {
-						  return $field;
+						return $field;
 					}
 
 					// Retrieve file data.
