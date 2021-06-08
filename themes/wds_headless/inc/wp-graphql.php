@@ -477,6 +477,7 @@ function wds_handle_file_upload( array $file, array $target = null ) {
 	$new_file = $target['path'] . "/{$filename}";
 
 	// Use copy and unlink because rename breaks streams.
+	// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- duplicating default WP Core functionality.
 	$move_new_file = @copy( $file['tmp_name'], $new_file );
 	unlink( $file['tmp_name'] );
 
