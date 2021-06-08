@@ -358,7 +358,7 @@ if ( class_exists( 'WPGraphQL' ) ) {
 				function( $field ) use ( &$file_uploads, $form_id ) {
 					// Skip field if not a file upload.
 					if ( ! array_key_exists( 'fileUploadValues', $field ) ) {
-						  return $field;
+						return $field;
 					}
 
 					// Retrieve file data.
@@ -415,8 +415,9 @@ if ( class_exists( 'WPGraphQL' ) ) {
 
 					// Retrieve entry meta ID for file upload field.
 					$entry_meta_table_name = GFFormsModel::get_entry_meta_table_name();
-					$sql                   = $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
-					$entry_meta_id         = $wpdb->get_var( $sql );
+
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					$entry_meta_id = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id ) );
 
 					// Update field with file upload data.
 					GFFormsModel::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field['value'] );
@@ -476,6 +477,7 @@ function wds_handle_file_upload( array $file, array $target = null ) {
 	$new_file = $target['path'] . "/{$filename}";
 
 	// Use copy and unlink because rename breaks streams.
+	// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- duplicating default WP Core functionality.
 	$move_new_file = @copy( $file['tmp_name'], $new_file );
 	unlink( $file['tmp_name'] );
 
