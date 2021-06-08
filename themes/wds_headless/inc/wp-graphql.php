@@ -415,8 +415,9 @@ if ( class_exists( 'WPGraphQL' ) ) {
 
 					// Retrieve entry meta ID for file upload field.
 					$entry_meta_table_name = GFFormsModel::get_entry_meta_table_name();
-					$sql                   = $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id );
-					$entry_meta_id         = $wpdb->get_var( $sql );
+
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					$entry_meta_id = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$entry_meta_table_name} WHERE entry_id=%d AND meta_key = %s", $entry_id, $field_id ) );
 
 					// Update field with file upload data.
 					GFFormsModel::update_entry_field_value( $form, $entry, $field, $entry_meta_id, $field_id, $field['value'] );
