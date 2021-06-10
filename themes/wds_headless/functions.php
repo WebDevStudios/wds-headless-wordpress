@@ -51,9 +51,6 @@ function wds_theme_setup() {
 		]
 	);
 
-	// Disable background color gradient presets.
-	add_theme_support( 'editor-gradient-presets', [] );
-
 	// Reset available font size presets to only "normal" (16px).
 	add_theme_support(
 		'editor-font-sizes',
