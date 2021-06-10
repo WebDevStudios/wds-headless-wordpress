@@ -57,6 +57,14 @@ function wdsAddColorPaletteHexValues(settings) {
 		};
 	}
 
+	// Add overlay color hex attribute.
+	if (settings.attributes.hasOwnProperty("overlayColor")) {
+		settings.attributes.overlayColorHex = {
+			type: "string",
+			default: "",
+		};
+	}
+
 	// Add text color hex attribute.
 	if (settings.attributes.hasOwnProperty("textColor")) {
 		settings.attributes.textColorHex = {
@@ -69,7 +77,13 @@ function wdsAddColorPaletteHexValues(settings) {
 		...settings,
 		edit(props) {
 			const {
-				attributes: { backgroundColor, gradient, mainColor, textColor },
+				attributes: {
+					backgroundColor,
+					gradient,
+					mainColor,
+					overlayColor,
+					textColor,
+				},
 			} = props;
 
 			useEffect(() => {
@@ -119,6 +133,20 @@ function wdsAddColorPaletteHexValues(settings) {
 						mainColorObj?.[0]?.color || null;
 				} else {
 					delete props.attributes.mainColorHex;
+				}
+
+				// Check for presence of overlay color attr.
+				if (overlayColor) {
+					// Get color object by slug.
+					const overlayColorObj = defaultColors.filter(
+						(color) => color.slug === overlayColor
+					);
+
+					// Retrieve color hex value.
+					props.attributes.overlayColorHex =
+						overlayColorObj?.[0]?.color || null;
+				} else {
+					delete props.attributes.overlayColorHex;
 				}
 
 				// Check for presence of text color attr.
