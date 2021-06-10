@@ -1,4 +1,4 @@
-const { validateThemeColors } = wp.blockEditor;
+const { validateThemeColors, validateThemeGradients } = wp.blockEditor;
 const { useEffect } = wp.element;
 const { addFilter, applyFilters } = wp.hooks;
 
@@ -41,6 +41,14 @@ function wdsAddColorPaletteHexValues(settings) {
 		};
 	}
 
+	// Add gradient background hex attribute.
+	if (settings.attributes.hasOwnProperty("gradient")) {
+		settings.attributes.gradientHex = {
+			type: "string",
+			default: "",
+		};
+	}
+
 	// Add main color hex attribute.
 	if (settings.attributes.hasOwnProperty("mainColor")) {
 		settings.attributes.mainColorHex = {
@@ -61,13 +69,15 @@ function wdsAddColorPaletteHexValues(settings) {
 		...settings,
 		edit(props) {
 			const {
-				attributes: { backgroundColor, mainColor, textColor },
+				attributes: { backgroundColor, gradient, mainColor, textColor },
 			} = props;
 
 			useEffect(() => {
 				// Note: This may not work as expected if a custom theme palette has been set.
 				// In that case, this filter may need to be customized.
 				const defaultColors = validateThemeColors();
+
+				const defaultGradients = validateThemeGradients();
 
 				// Check for presence of background color attr.
 				if (backgroundColor) {
@@ -81,6 +91,20 @@ function wdsAddColorPaletteHexValues(settings) {
 						backgroundColorObj?.[0]?.color || null;
 				} else {
 					delete props.attributes.backgroundColorHex;
+				}
+
+				// Check for presence of gradient color attr.
+				if (gradient) {
+					// Get color object by slug.
+					const gradientObj = defaultGradients.filter(
+						(color) => color.slug === gradient
+					);
+
+					// Retrieve color hex value.
+					props.attributes.gradientHex =
+						gradientObj?.[0]?.gradient || null;
+				} else {
+					delete props.attributes.gradientHex;
 				}
 
 				// Check for presence of main color attr.
