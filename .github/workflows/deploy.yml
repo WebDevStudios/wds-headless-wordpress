@@ -3,7 +3,7 @@ name: Deploy to Dev
 on:
   push:
     branches:
-      - main
+      - develop
 
   workflow_dispatch:
 
