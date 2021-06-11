@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: composer install
 
-      - name: Rsync to prod
+      - name: Rsync to dev
         uses: easingthemes/ssh-deploy@v2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
