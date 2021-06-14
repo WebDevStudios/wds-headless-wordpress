@@ -42,7 +42,6 @@
     }
   },
   "require": {
-    "composer/composer": "^2.1.1",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2.0",
     "deliciousbrains-plugin/wp-migrate-db-pro-cli": "^1.4",
     "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0",
