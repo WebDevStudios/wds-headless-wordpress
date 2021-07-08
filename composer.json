@@ -59,7 +59,7 @@
     "wpackagist-plugin/add-wpgraphql-seo": "^4.14",
     "wpackagist-plugin/block-manager": "^1.2",
     "wpackagist-plugin/custom-post-type-ui": "^1.9",
-    "wpackagist-plugin/gutenberg": "^10.9",
+    "wpackagist-plugin/gutenberg": "^11.0",
     "wpackagist-plugin/lazy-blocks": "^2.3",
     "wpackagist-plugin/wp-graphql": "^1.5",
     "wpackagist-plugin/wp-search-with-algolia": "^1.8"
