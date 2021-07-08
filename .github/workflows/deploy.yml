@@ -49,7 +49,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_PATH }}
-          EXCLUDE: ".git*,.env,composer.json,composer.lock,auth.json,package.json,package-lock.json,node_modules/,/uploads/,/upgrade/,/advanced-cache.php,/object-cache.php,/debug.log,/mysql.sql,/mu-plugins/mu-plugin.php,/mu-plugins/wpengine-common/,/mu-plugins/wpe-wp-sign-on-plugin.php,/mu-plugins/wpe-wp-sign-on-plugin/,/mu-plugins/slt-force-strong-passwords.php,/mu-plugins/force-strong-passwords/,/mu-plugins/wpengine-security-auditor.php"
+          EXCLUDE: ".git*,.env,composer.json,composer.lock,auth.json,package.json,package-lock.json,node_modules/,/uploads/,/upgrade/,/advanced-cache.php,/object-cache.php,/debug.log,/mysql.sql,/mu-plugins/mu-plugin.php,/mu-plugins/wpengine-common/,/mu-plugins/wpe-wp-sign-on-plugin.php,/mu-plugins/wpe-wp-sign-on-plugin/,/mu-plugins/slt-force-strong-passwords.php,/mu-plugins/force-strong-passwords/,/mu-plugins/wpengine-security-auditor.php,/mu-plugins/wpe-elasticpress-autosuggest-logger/"
 
       - name: Notify Slack
         uses: rtCamp/action-slack-notify@v2
