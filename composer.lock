@@ -376,16 +376,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.202.0",
+            "version": "v0.203.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "c72cb04fde47a2cc3336c1f513f9ff5db27ccc35"
+                "reference": "e397f35251a49e0f4284d5f7d934164ca1274066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/c72cb04fde47a2cc3336c1f513f9ff5db27ccc35",
-                "reference": "c72cb04fde47a2cc3336c1f513f9ff5db27ccc35",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/e397f35251a49e0f4284d5f7d934164ca1274066",
+                "reference": "e397f35251a49e0f4284d5f7d934164ca1274066",
                 "shasum": ""
             },
             "require": {
@@ -414,9 +414,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.202.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.203.0"
             },
-            "time": "2021-07-03T11:20:23+00:00"
+            "time": "2021-07-10T11:20:23+00:00"
         },
         {
             "name": "google/auth",
@@ -1600,10 +1600,10 @@
         },
         {
             "name": "webdevstudios/advanced-custom-fields-pro",
-            "version": "5.9.7",
+            "version": "5.9.8",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.7.tar"
+                "url": "https://packages.wdslab.com/dist/webdevstudios/advanced-custom-fields-pro/webdevstudios-advanced-custom-fields-pro-5.9.8.tar"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -1968,15 +1968,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.5.0"
+                "reference": "tags/1.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.5.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
