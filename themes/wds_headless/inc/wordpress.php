@@ -164,3 +164,4 @@ function wds_set_headless_rest_preview_link( WP_REST_Response $response, WP_Post
 	return $response;
 }
 add_filter( 'rest_prepare_page', 'wds_set_headless_rest_preview_link', 10, 2 );
+add_filter( 'rest_prepare_post', 'wds_set_headless_rest_preview_link', 10, 2 );
