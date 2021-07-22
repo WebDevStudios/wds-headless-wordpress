@@ -71,7 +71,7 @@ function wds_set_headless_preview_link( string $link, WP_Post $post ) {
 			'name'      => $slug,
 			'id'        => $post->ID,
 			'post_type' => $post_type,
-			'token'     => defined( 'WORDPRESS_PREVIEW_SECRET' ) ? WORDPRESS_PREVIEW_SECRET : '',
+			'token'     => defined( 'PREVIEW_SECRET_TOKEN' ) ? PREVIEW_SECRET_TOKEN : '',
 		],
 		"{$base_url}api/preview"
 	);
@@ -164,3 +164,4 @@ function wds_set_headless_rest_preview_link( WP_REST_Response $response, WP_Post
 	return $response;
 }
 add_filter( 'rest_prepare_page', 'wds_set_headless_rest_preview_link', 10, 2 );
+add_filter( 'rest_prepare_post', 'wds_set_headless_rest_preview_link', 10, 2 );
