@@ -62,7 +62,7 @@
     "wpackagist-plugin/gutenberg": "^11.0",
     "wpackagist-plugin/lazy-blocks": "^2.3",
     "wpackagist-plugin/wp-graphql": "^1.5",
-    "wpackagist-plugin/wp-search-with-algolia": "^1.8"
+    "wpackagist-plugin/wp-search-with-algolia": "^2.0"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
