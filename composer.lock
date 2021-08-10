@@ -158,10 +158,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "2.0.4",
+            "version": "2.1",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-2.0.4.tar"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro/deliciousbrains-plugin-wp-migrate-db-pro-2.1.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -170,10 +170,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro-cli",
-            "version": "1.4.1",
+            "version": "1.5",
             "dist": {
                 "type": "tar",
-                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-cli/deliciousbrains-plugin-wp-migrate-db-pro-cli-1.4.1.tar"
+                "url": "https://packages.wdslab.com/dist/deliciousbrains-plugin/wp-migrate-db-pro-cli/deliciousbrains-plugin-wp-migrate-db-pro-cli-1.5.tar"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -376,16 +376,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.206.0",
+            "version": "v0.207.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "8ac3f4a7c201bbf794801b215e63f75f15cd0208"
+                "reference": "bd88717a5526f0db721e8f4309ef06d142894844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/8ac3f4a7c201bbf794801b215e63f75f15cd0208",
-                "reference": "8ac3f4a7c201bbf794801b215e63f75f15cd0208",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/bd88717a5526f0db721e8f4309ef06d142894844",
+                "reference": "bd88717a5526f0db721e8f4309ef06d142894844",
                 "shasum": ""
             },
             "require": {
@@ -414,9 +414,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.206.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.207.0"
             },
-            "time": "2021-07-31T11:20:25+00:00"
+            "time": "2021-08-08T11:20:24+00:00"
         },
         {
             "name": "google/auth",
@@ -1165,16 +1165,16 @@
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.8",
+            "version": "v0.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7"
+                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/2f35359fd306fff98dcb25063735e9b584a625f7",
-                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/ef6db567f6a9e6c54beed797c4e16921925633f1",
+                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1",
                 "shasum": ""
             },
             "require": {
@@ -1200,9 +1200,9 @@
             "description": "Query gutenberg blocks with wp-graphql",
             "support": {
                 "issues": "https://github.com/pristas-peter/wp-graphql-gutenberg/issues",
-                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.8"
+                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.10"
             },
-            "time": "2021-03-05T09:39:59+00:00"
+            "time": "2021-08-06T22:18:20+00:00"
         },
         {
             "name": "psr/cache",
@@ -2016,15 +2016,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "11.1.0",
+            "version": "11.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/11.1.0"
+                "reference": "tags/11.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.11.1.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.11.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2052,15 +2052,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-graphql",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-graphql/",
-                "reference": "tags/1.6.1"
+                "reference": "tags/1.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.6.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-graphql.1.6.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -4754,16 +4754,16 @@
         },
         {
             "name": "wp-cli/db-command",
-            "version": "v2.0.14",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/db-command.git",
-                "reference": "6034921c7696865946ec0986f06b911c8a56ad3a"
+                "reference": "4a2c43bd75569a3961dd9af63949596227ca90ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/db-command/zipball/6034921c7696865946ec0986f06b911c8a56ad3a",
-                "reference": "6034921c7696865946ec0986f06b911c8a56ad3a",
+                "url": "https://api.github.com/repos/wp-cli/db-command/zipball/4a2c43bd75569a3961dd9af63949596227ca90ce",
+                "reference": "4a2c43bd75569a3961dd9af63949596227ca90ce",
                 "shasum": ""
             },
             "require": {
@@ -4822,9 +4822,9 @@
             "homepage": "https://github.com/wp-cli/db-command",
             "support": {
                 "issues": "https://github.com/wp-cli/db-command/issues",
-                "source": "https://github.com/wp-cli/db-command/tree/v2.0.14"
+                "source": "https://github.com/wp-cli/db-command/tree/v2.0.15"
             },
-            "time": "2021-07-26T13:56:24+00:00"
+            "time": "2021-08-06T13:42:22+00:00"
         },
         {
             "name": "wp-cli/embed-command",
