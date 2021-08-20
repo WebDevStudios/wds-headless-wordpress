@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WDS Headless
+ * Plugin Name: WDS Headless (Core)
  * Plugin URI: https://github.com/WebDevStudios/wds-headless-wordpress
  * Description: This plugin supports the JAMStack-powered frontend.
  * Author: WebDevStudios <contact@webdevstudios.com>
@@ -23,3 +23,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once 'inc/editor.php';
 require_once 'inc/links.php';
 require_once 'inc/menus.php';
+require_once 'inc/wp-graphql.php';
