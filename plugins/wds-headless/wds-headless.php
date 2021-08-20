@@ -19,3 +19,5 @@ namespace WDS_Headless;
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
+
+require_once 'inc/editor.php';
