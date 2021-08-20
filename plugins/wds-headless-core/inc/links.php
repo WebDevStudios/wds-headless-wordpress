@@ -130,5 +130,5 @@ function set_headless_rest_preview_link( WP_REST_Response $response, WP_Post $po
 
 	return $response;
 }
-add_filter( 'rest_prepare_page', 'set_headless_rest_preview_link', 10, 2 );
-add_filter( 'rest_prepare_post', 'set_headless_rest_preview_link', 10, 2 );
+add_filter( 'rest_prepare_page', __NAMESPACE__ . 'et_headless_rest_preview_link', 10, 2 );
+add_filter( 'rest_prepare_post', __NAMESPACE__ . 'et_headless_rest_preview_link', 10, 2 );
