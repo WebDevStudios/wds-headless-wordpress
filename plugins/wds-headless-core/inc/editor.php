@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\customize_editor' );
  * Wrap WYSIWYG embed in a div wrapper for responsive
  *
  * @author WebDevStudios
- * @since 1.0
+ * @since 1.0.0
  * @param string $html HTML string.
  * @param string $url  Current URL.
  * @param string $attr Embed attributes.

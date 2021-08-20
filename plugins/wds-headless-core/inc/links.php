@@ -16,7 +16,7 @@ use \WP_REST_Response;
  * Customize the preview button in the WordPress admin to point to the headless client.
  *
  * @author WebDevStudios
- * @since 1.0
+ * @since 1.0.0
  * @param  string  $link WordPress preview link.
  * @param  WP_Post $post Current post object.
  * @return string        The headless WordPress preview link.
@@ -49,7 +49,7 @@ add_filter( 'preview_post_link', __NAMESPACE__ . '\set_headless_preview_link', 1
  * Customize WP home URL to point to frontend.
  *
  * @author WebDevStudios
- * @since 1.0
+ * @since 1.0.0
  * @param  string $url    Complete home URL, including path.
  * @param  string $path   Path relative to home URL.
  * @param  string $scheme Context for home URL.
@@ -87,7 +87,7 @@ add_filter( 'home_url', __NAMESPACE__ . '\set_headless_home_url', 10, 3 );
  * Customize the REST preview link to point to the headless client.
  *
  * @author WebDevStudios
- * @since 1.0
+ * @since 1.0.0
  * @param  WP_REST_Response $response Response object.
  * @param  WP_Post          $post     Current post object.
  * @return WP_REST_Response           Response object.
