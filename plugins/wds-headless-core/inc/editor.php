@@ -35,3 +35,19 @@ function customize_editor() {
 	);
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\customize_editor' );
+
+/**
+ * Wrap WYSIWYG embed in a div wrapper for responsive
+ *
+ * @author WebDevStudios
+ * @since 1.0
+ * @param string $html HTML string.
+ * @param string $url  Current URL.
+ * @param string $attr Embed attributes.
+ * @param string $id   Post ID.
+ * @return string
+ */
+function embed_wrapper( $html, $url, $attr, $id ) {
+	return '<div class="iframe-wrapper">' . $html . '</div>';
+}
+add_filter( 'embed_oembed_html', __NAMESPACE__ . '\embed_wrapper', 10, 4 );
