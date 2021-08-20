@@ -23,4 +23,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once 'inc/editor.php';
 require_once 'inc/links.php';
 require_once 'inc/menus.php';
-require_once 'inc/wp-graphql.php';
