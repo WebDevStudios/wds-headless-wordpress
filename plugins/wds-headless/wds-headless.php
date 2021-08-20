@@ -21,3 +21,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once 'inc/editor.php';
+require_once 'inc/menus.php';
