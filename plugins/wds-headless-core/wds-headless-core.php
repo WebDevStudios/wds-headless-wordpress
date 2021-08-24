@@ -22,6 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'WDS_HEADLESS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
+// Load TGM Plugin Activation.
+require_once 'inc/tgm/tgm.php';
+
 require_once 'inc/editor.php';
 require_once 'inc/links.php';
 require_once 'inc/media.php';
