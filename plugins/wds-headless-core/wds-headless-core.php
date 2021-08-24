@@ -20,8 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
+define( 'WDS_HEADLESS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+
 require_once 'inc/editor.php';
 require_once 'inc/links.php';
 require_once 'inc/media.php';
 require_once 'inc/menus.php';
+require_once 'inc/settings.php';
 require_once 'inc/wp-graphql.php';
