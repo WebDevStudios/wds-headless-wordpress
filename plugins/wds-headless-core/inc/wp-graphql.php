@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-use Google\Service\Classroom\Name;
+namespace WDS_Headless;
 
 if ( ! class_exists( 'WPGraphQL' ) ) {
 	return;
