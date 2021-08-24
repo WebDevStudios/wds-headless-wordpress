@@ -21,18 +21,6 @@ function customize_editor() {
 
 	// Add excerpts to pages.
 	add_post_type_support( 'page', 'excerpt' );
-
-	// Reset available font size presets to only "normal" (16px).
-	add_theme_support(
-		'editor-font-sizes',
-		[
-			[
-				'name' => 'Normal',
-				'size' => 16,
-				'slug' => 'normal',
-			],
-		]
-	);
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\customize_editor' );
 
