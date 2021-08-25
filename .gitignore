@@ -23,7 +23,7 @@ vendor/
 
 # plugins
 /plugins/*
-!/plugins/wds-headless-core
+!/plugins/wds-headless-*
 
 # mu-plugins
 /mu-plugins/*
