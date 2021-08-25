@@ -21,9 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define constants.
-define( 'WDS_HEADLESS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'WDS_HEADLESS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'WDS_HEADLESS_VERSION', '1.0.0' );
+define( 'WDS_HEADLESS_CORE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'WDS_HEADLESS_CORE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'WDS_HEADLESS_CORE_VERSION', '1.0.0' );
 
 // Register de/activation hooks.
 register_activation_hook( __FILE__, __NAMESPACE__ . '\activation_callback' );

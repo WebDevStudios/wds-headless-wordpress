@@ -25,7 +25,7 @@ function load_json( array $paths ) : array {
 	return array_merge(
 		$paths,
 		[
-			WDS_HEADLESS_PLUGIN_DIR . 'acf-json',
+			WDS_HEADLESS_CORE_PLUGIN_DIR . 'acf-json',
 		]
 	);
 }

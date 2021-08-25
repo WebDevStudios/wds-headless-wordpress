@@ -19,5 +19,5 @@ function activation_callback() {
 	do_action( 'wds_headless_core_activate' );
 
 	// Save current plugin version.
-	update_option( 'wds_headless_core_version', WDS_HEADLESS_VERSION );
+	update_option( 'wds_headless_core_version', WDS_HEADLESS_CORE_VERSION );
 }
