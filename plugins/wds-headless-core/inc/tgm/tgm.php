@@ -36,12 +36,6 @@ function register_required_plugins() {
 			'source'   => 'https://github.com/pristas-peter/wp-graphql-gutenberg/archive/develop.zip',
 			'required' => true,
 		],
-		[
-			'name'     => 'WPGraphQL Tax Query',
-			'slug'     => 'wp-graphql-tax-query',
-			'source'   => 'https://github.com/wp-graphql/wp-graphql-tax-query/archive/develop.zip',
-			'required' => true,
-		],
 
 		// Plugins from the WordPress Plugin Repository.
 		[
@@ -53,11 +47,6 @@ function register_required_plugins() {
 		[
 			'name' => 'Gutenberg',
 			'slug' => 'gutenberg',
-		],
-		[
-			'name'     => 'Gutenberg Block Manager',
-			'slug'     => 'block-manager',
-			'required' => true,
 		],
 		[
 			'name'     => 'WPGraphQL',
