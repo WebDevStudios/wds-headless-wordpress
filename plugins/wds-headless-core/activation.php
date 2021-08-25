@@ -3,11 +3,11 @@
  * Plugin activation functionality.
  *
  * @author WebDevStudios
- * @package WDS_Headless
+ * @package WDS_Headless_Core
  * @since 1.0.0
  */
 
-namespace WDS_Headless;
+namespace WDS_Headless_Core;
 
 /**
  * Plugin activation callback.

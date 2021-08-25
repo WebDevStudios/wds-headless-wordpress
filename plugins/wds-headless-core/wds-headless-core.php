@@ -11,10 +11,10 @@
  * License: GPL-2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
- * @package WDS_Headless
+ * @package WDS_Headless_Core
  */
 
-namespace WDS_Headless;
+namespace WDS_Headless_Core;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
