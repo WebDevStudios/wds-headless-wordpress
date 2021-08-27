@@ -21,26 +21,6 @@ function wds_register_required_plugins() {
 
 	$plugins = [
 
-		// Plugins only available on Github.
-		[
-			'name'     => 'WPGraphQL for Advanced Custom Fields',
-			'slug'     => 'wp-graphql-acf',
-			'source'   => 'https://github.com/wp-graphql/wp-graphql-acf/archive/develop.zip',
-			'required' => true,
-		],
-		[
-			'name'     => 'WPGraphQL Gutenberg',
-			'slug'     => 'wp-graphql-gutenberg',
-			'source'   => 'https://github.com/pristas-peter/wp-graphql-gutenberg/archive/develop.zip',
-			'required' => true,
-		],
-		[
-			'name'     => 'WPGraphQL Tax Query',
-			'slug'     => 'wp-graphql-tax-query',
-			'source'   => 'https://github.com/wp-graphql/wp-graphql-tax-query/archive/develop.zip',
-			'required' => true,
-		],
-
 		// Plugins from the WordPress Plugin Repository.
 		[
 			'name'        => 'Advanced Custom Fields',
@@ -55,32 +35,6 @@ function wds_register_required_plugins() {
 		[
 			'name' => 'Gutenberg',
 			'slug' => 'gutenberg',
-		],
-		[
-			'name'     => 'Gutenberg Block Manager',
-			'slug'     => 'block-manager',
-			'required' => true,
-		],
-		[
-			'name'        => 'WordPress SEO by Yoast',
-			'slug'        => 'wordpress-seo',
-			'is_callable' => 'wpseo_init',
-			'required'    => true,
-		],
-		[
-			'name'     => 'WPGraphQL',
-			'slug'     => 'wp-graphql',
-			'required' => true,
-		],
-		[
-			'name'     => 'WPGraphQL Yoast SEO Addon',
-			'slug'     => 'add-wpgraphql-seo',
-			'required' => true,
-		],
-		[
-			'name'     => 'WP Search with Algolia',
-			'slug'     => 'wp-search-with-algolia',
-			'required' => true,
 		],
 	];
 
