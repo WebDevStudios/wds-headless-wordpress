@@ -1,1 +1,1 @@
-This codebase has been moved to a [monorepo](https://github.com/WebDevStudios/nextjs-wordpress-starter). Please see the [documentation](http://localhost:3000/nextjs-wordpress-starter/docs/backend/index) to learn more. 🍻
+This codebase has been moved to a [monorepo](https://github.com/WebDevStudios/nextjs-wordpress-starter). Please see the [documentation](https://webdevstudios.github.io/nextjs-wordpress-starter/docs/index) to learn more. 🍻
